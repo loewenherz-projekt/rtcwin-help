@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>The while Loop</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="while" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Loops</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">The </span><span class="f_Heading2" style="font-style: italic;">while</span><span class="f_Heading2"> loop</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="switch-anweisung.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="do-while-schleife.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The statement <span style="font-style: italic;">while</span> creates a loop where the condition for continuation is checked <span style="text-decoration: underline;">prior</span> to the execution of the loop itself. The structure is as follows:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(Expression)</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;Statement;</span><br>
+<span class="f_CodeExample">&nbsp;</span></p>
+<p><span style="font-style: italic;">Statement</span> is executed as long as the result of the Boolean expression is <span style="font-style: italic;">true</span>. If the result of <span style="font-style: italic;">expression</span> is <span style="font-style: italic;">false</span>, the loop is terminated.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">There is no semicolon behind Expression,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none"><span style="font-style: italic;">Statement</span> may consist of multiple statements, combined by a pair of curved brackets (compound statement),</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">If <span style="font-style: italic;">Expression</span> already results in <span style="font-style: italic;">false</span> at first check, <span style="font-style: italic;">Statement</span> is not executed at all.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;ReadString&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;port)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;ReceiveBuffer[</span><span class="f_CodeExample" style="color: #000080;">80</span><span class="f_CodeExample">]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;i&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">charreceived&nbsp;</span><span class="f_CodeExample">(port)&nbsp;&amp;&amp;&nbsp;i&nbsp;&lt;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">80</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ReceiveBuffer[i++]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readchar&nbsp;</span><span class="f_CodeExample">(port);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return&nbsp;</span><span class="f_CodeExample">(ReceiveBuffer);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

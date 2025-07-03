@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Declaration of Structures</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Variables and Constants</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Declaration of Structures</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="arrays.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="if-anweisung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<h2 class="p_Heading2">Variables in certain contexts that are always used together may be combined to a so-called structure. The declaration word <a href="struct.htm" class="topiclink">struct</a> is followed by an identifier and – in curved brackets – by a list of associated variables.</h2>
+<p style="margin: 10px 0px 10px 96px;"><span style="font-weight: bold;">struct</span> name<br>
+{<br>
+ &nbsp;type &nbsp;element<br>
+ ...<br>
+}</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">struct</span><span class="f_CodeExample">&nbsp;st_message&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Every&nbsp;message&nbsp;consists&nbsp;of&nbsp;a&nbsp;text&nbsp;and&nbsp;a&nbsp;background&nbsp;color</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;text;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 10px 0px 10px 0px;"><span style="font-style: italic;">name</span> may be used as a declaration word subsequently:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample">st_message&nbsp;Message;</span><br>
+<span class="f_CodeExample">st_message&nbsp;Warning;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The thus declared struct variables may be assigned each other or provided as parameters as applies to ordinary variables.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;ShowOperatorMessage&nbsp;(st_message&nbsp;msg)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">fontsize&nbsp;</span><span class="f_CodeExample">(18);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">font&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">FT_RTC</span><span class="f_CodeExample">);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">background&nbsp;</span><span class="f_CodeExample">(msg.color);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">posto&nbsp;</span><span class="f_CodeExample">(0,&nbsp;105);&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">boxto&nbsp;</span><span class="f_CodeExample">(320,&nbsp;130,&nbsp;1);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(5,&nbsp;108,&nbsp;mid&nbsp;(msg.text,&nbsp;32));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Each struct element can be addressed with its unique identifier consisting of the struct name, a full stop and the element name.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample">Warning.text&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Weigh&nbsp;hopper&nbsp;not&nbsp;empty!&quot;</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Warning.color&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">CL_YELLOW</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ShowOperatorMessage&nbsp;(Warning);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

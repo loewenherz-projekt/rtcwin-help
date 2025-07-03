@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>settime</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="settime" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">settime</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="setpassword.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="systemtimer.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Set the internal real-time clock.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">settime</span> (int y, int m, int d, int h, int n, int s)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">System</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:78px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">y<br>
+m<br>
+d<br>
+h<br>
+n<br>
+s</p>
+</td>
+<td style="vertical-align:top; width:995px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Year<br>
+Month<br>
+Day<br>
+Hour<br>
+Minute<br>
+Second</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">settime</span> sets the internal real-time clock according to the provided parameters. The year may be specified in short or in long writing (e.g. 8 or 2008). For the hour, the 24-hour system is presumed.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">bool</span><span class="f_CodeExample">&nbsp;SetDateTime&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;yy,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;mm,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;dd,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;hh,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;nn,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;ss)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;((dd&nbsp;&gt;=&nbsp;1&nbsp;&amp;&amp;&nbsp;dd&nbsp;&lt;=&nbsp;31)&nbsp;&amp;&amp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(mm&nbsp;&gt;=&nbsp;1&nbsp;&amp;&amp;&nbsp;mm&nbsp;&lt;=&nbsp;12)&nbsp;&amp;&amp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(yy&nbsp;&gt;=&nbsp;0&nbsp;&amp;&amp;&nbsp;yy&nbsp;&lt;=&nbsp;99)&nbsp;&amp;&amp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(hh&nbsp;&gt;=&nbsp;0&nbsp;&amp;&amp;&nbsp;hh&nbsp;&lt;=&nbsp;23)&nbsp;&amp;&amp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(nn&nbsp;&gt;=&nbsp;0&nbsp;&amp;&amp;&nbsp;nn&nbsp;&lt;=&nbsp;59)&nbsp;&amp;&amp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ss&nbsp;&gt;=&nbsp;0&nbsp;&amp;&amp;&nbsp;ss&nbsp;&lt;=&nbsp;59))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">settime</span><span class="f_CodeExample">&nbsp;(yy,&nbsp;mm,&nbsp;dd,&nbsp;hh,&nbsp;nn,&nbsp;ss);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Set&nbsp;date&nbsp;and&nbsp;time&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">true</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Invalid&nbsp;parameter&nbsp;!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

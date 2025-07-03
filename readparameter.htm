@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>readparameter</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="readparameter" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">readparameter</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="printservicedata.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="saveservicedata.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Reads a Service Mode parameter.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">string <span style="font-weight: bold;">readparameter</span> (string group, string par)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">System</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:85px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">group<br>
+par</p>
+</td>
+<td style="vertical-align:top; width:988px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Parameter group<br>
+Parameter name</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Result string</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">readparameter</span><span style="font-style: italic;"> </span>reads the parameter <span style="font-style: italic;">par</span> from the Service Mode group <span style="font-style: italic;">group</span> and returns the current setting as result string.</p>
+<p>Following an incomplete list of <a href="service_mode_parameter.htm" class="topiclink">Service Mode parameters</a>: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Example</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">General</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Language<br>
+Dateformat<br>
+Timeformat<br>
+Decimal Char<br>
+Approval Signs<br>
+Terminal</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 10px;">&quot;1,German,15&quot;<br>
+&quot;9,DD.MM.YYYY&quot;<br>
+&quot;1,HH:MM:SS&quot;<br>
+&quot;,&quot;<br>
+&quot;0<br>
+&quot;001</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">15= number of the ISO character set used for this language</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Network</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">IP<br>
+Netmask<br>
+Gateway</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;10.0.1.175&quot;<br>
+&quot;255.255.0.0&quot;<br>
+&quot;0.0.0.0&quot;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Sio0<br>
+Sio1 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Baudrate<br>
+Bits<br>
+Parity<br>
+Handshake<br>
+Protocol</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;19200&quot;<br>
+&quot;8&quot;<br>
+&quot;0&quot;<br>
+&quot;0&quot;<br>
+&quot;0&quot;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Sio0 refers to the Ethernet port whereas Sio1 and higher refer to the serial ports COM1 etc.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AIn1<br>
+AIn2 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AOut1<br>
+AOut2 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Combus</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Address<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:138px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;3&quot;<br>
+&quot;0&quot;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 12px;">System</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 12px;">ErrorNo</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Beispiel:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Read&nbsp;configured&nbsp;date&nbsp;format&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;result[32]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readparameter</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;General&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Dateformat&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;if&nbsp;(result&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;0&quot;</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Date&nbsp;format:&nbsp;DD.MM.YY&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">/*...*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;else&nbsp;if&nbsp;(result&nbsp;==&nbsp;&quot;6&quot;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Date&nbsp;format:&nbsp;DD/MM/YY&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">/*...*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

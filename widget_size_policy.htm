@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>widget_size_policy</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="widget_size_policy" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">widget_size_policy</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="widget_show.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="widget_style.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets the size policy for an object within a layout.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">widget_size_policy</span> (int id, int hp, int vp)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+hp<br>
+vp</p>
+</td>
+<td style="vertical-align:top; width:684px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the object<br>
+Policy for horizontal expansion of the object<br>
+Policy for vertical expansion of the object</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">widget_size_policy</span> defines the size policy for the object specified by the parameter <span style="font-style: italic;">id</span>. Horizontal and vertical expansion of the object within the parent layout is specified by the two parameters <span style="font-style: italic;">hp</span> and <span style="font-style: italic;">vp</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_FIXED</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The size of the object is fix and cannot be changed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_MINIMUM</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The object has a minimum size, but can be enlarged if needed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_MAXIMUM</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The object has a maximum size, but can be decreased if needed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_PREFERRED</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The object has a preferred size, but size can be changed if needed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_EXPANDING</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The object has a reasonable size but can be expanded or shrunken and then adjusts its contents accordingly. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">5</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_MINIMUMEXPANDING</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The object has a sufficient size, but can be expanded and then adjusts its contents accordingly. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">6</p>
+</td>
+<td style="vertical-align:top; width:238px; padding:0px;"><p>SIZE_POLICY_IGNORED</p>
+</td>
+<td style="vertical-align:top; width:603px; padding:0px;"><p>The size is ignored and the object gets all available space.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;CreateInfoBox&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">begindraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwindow</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WINDOW_TYPE_POPUP</span><span class="f_CodeExample">,&nbsp;&quot;&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">windowstyle</span><span class="f_CodeExample">&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">ST_BOX_STYLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">beginlayout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_VBOX</span><span class="f_CodeExample">,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_TEXT_OUTPUT</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_size_policy</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_style</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">ST_BOXTEXT_STYLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontsize</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;30);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_foreground</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;white&quot;</span><span class="f_CodeExample">);&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;white&nbsp;or&nbsp;#FFFFF</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text_alignment</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TEXT_ALIGN_HCENTER&nbsp;</span><span class="f_CodeExample">|</span><span class="f_CodeExample" style="color: #800000;">&nbsp;WIDGET_TEXT_ALIGN_VCENTER</span><span class="f_CodeExample">));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">endlayout</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">enddraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Applicable preprocessor constants (e.g. SIZE_POLICY_FIXED) are available in the file &quot;qtmonitor.h.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

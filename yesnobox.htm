@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>yesnobox</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="yesnobox" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">yesnobox</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="readkey_2.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="availablelabels.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Instruction to show a pop-up message with Yes/No entry.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">char <span style="font-weight: bold;">yesnobox</span> (string text, bool f)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:91px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">text<br>
+f</p>
+</td>
+<td style="vertical-align:top; width:982px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Prompt<br>
+Flag</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Code of terminating function key</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">yesnobox</span> produces an embossed box in the center of the application screen that contains the text string specified by the parameter <span style="font-style: italic;">text</span>. The text is shown in black proportional characters on white background and may extend over up to three lines. Line wraps can be specified by the sequence '\n'.</p>
+<p>Below the provided text the two options 'No' and 'Yes' are presented for selection via keys 0 'No' and 1 'Yes' or via the horizontal cursor keys. The currently valid selection is highlighted with a blue background and may be confirmed via Enter key.</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">yesnobox</span> is terminated by either pressing the Enter key or the F6 key (Cancel). The key pressed for termination is returned as function result. The status yes or no can be preset and checked afterward using the Boolean variable <span style="font-style: italic;">f</span>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">yesnobox&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Abort&nbsp;order,&nbsp;are&nbsp;you&nbsp;sure?&quot;</span><span class="f_CodeExample">,&nbsp;f)&nbsp;==&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">ok</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;if</span><span class="f_CodeExample">&nbsp;(f)&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><br>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><img src="yesnobox.png" width="320" height="240" alt="" style="width:320px;height:240px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The instruction <span style="font-style: italic; color: #008000;">yesnobox</span> provides multi-language operator prompting; the use of the function <a href="lsub.htm" class="topiclink">lsub</a> is not necessary.</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">yesnobox</span> saves the original content of the application screen and restores it after execution.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

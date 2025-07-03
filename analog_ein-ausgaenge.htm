@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Analog Inputs/Outputs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Analog inputs,Analog outputs" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">External Inputs/Outputs</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Analog Inputs/Outputs</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="externe_ausgange_unter_echtzeit.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="serielle_kommunikation.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The following two functions are available for the handling of the analog inputs and outputs:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:218px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="aout.htm" class="topiclink">aout</a> (int no, float v)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Output of value to the specified analog output port. The output value has to be specified as percentage (0...100&nbsp;%) of the maximum value.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:218px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">float <a href="ain.htm" class="topiclink">ain</a> (int no)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Read the specified analog input port. The return value is understood as percentage (0...100&nbsp;%) of the maximum value.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The configuration of the analog input or output is contained in the Service Mode of the weighing terminal. The analog value is always understood as percentage of the maximum value and thus is independent of the configuration (0–20&nbsp;mA, 4–20&nbsp;mA, 0–10&nbsp;V, 2–10&nbsp;V) and the resolution (12&nbsp;bit/15&nbsp;bit) of the installed module.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

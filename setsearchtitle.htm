@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>setsearchtitle</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="setsearchtitle" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">setsearchtitle</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="setinfo.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="setunit.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Assigns a database table a headline for the search function.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">setsearchtitle</span> (dbase db, string title)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">db<br>
+title </p>
+</td>
+<td style="vertical-align:top; width:409px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Database table<br>
+Title string</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">setsearchtitle</span> assigns the given database table a title string for the function <a href="searchbox.htm" class="topiclink">searchbox</a>. The given title string contains the headers of the individual table fields, separated by semicolons. The title is written on top in black bold characters, underlined, followed by the list of records.</p>
+<p>If the database table is not assigned a title string, a headline is not printed and the list of records starts from the topmost position of the application screen. </p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">dbase</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Customer&nbsp;file&quot;</span><span class="f_CodeExample">&nbsp;Client[200]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Client&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;No%3.0;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectmode&nbsp;</span><span class="f_CodeExample">=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">input</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Name&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Name[24];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&nbsp;&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Name2[24];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Street&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Street[24];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;ZIP&nbsp;code&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Zip[5];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;City&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;City[24];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">setsearchtitle&nbsp;</span><span class="f_CodeExample">(Client,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;No.;Name;;Street;ZIP;City&quot;)</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><br>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><img src="select_2.png" width="320" height="240" alt="" style="width:320px;height:240px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>background</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="background" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">background</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="arc.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="begindraw.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Specifies the background color.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">background</span> (int color)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">color</p>
+</td>
+<td style="vertical-align:top; width:993px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Color code</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">background</span> specifies the background color for the consecutive write or draw instruction. The color is specified by the provided parameter <span style="font-style: italic;">color</span> and may be passed as 8-bit or 32-bit value. When provided as 8-bit value, the color is taken from a <a href="farbpalette.htm" class="topiclink">lookup table</a>. Examples are:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">56</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">black</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">88</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">red</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">72</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark red</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">63</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">green</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">60</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark green</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">95</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">yellow</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">76</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark yellow</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">216</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">blue</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">136</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark blue</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">248</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">magenta</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">152</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark magenta</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">223</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">cyan</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">140</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">dark cyan</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:68px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">255</p>
+</td>
+<td style="vertical-align:top; width:121px; padding:0px;"><p style="margin: 0px 0px 8px 0px;">white</p>
+</td>
+<td style="vertical-align:top; width:57px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; padding:0px;"><p style="text-align: center;">32–55</p>
+</td>
+<td style="vertical-align:top; width:680px; padding:0px;"><p>grayscale from black to white</p>
+</td>
+</tr>
+</table>
+</div>
+<p>RTC dialog functions use the following default background colors:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; padding:0px;"><p style="text-align: center;">020</p>
+</td>
+<td style="vertical-align:top; width:122px; padding:0px;"><p>light blue/gray</p>
+</td>
+<td style="vertical-align:top; width:697px; padding:0px;"><p>Normal background</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; padding:0px;"><p style="text-align: center;">238</p>
+</td>
+<td style="vertical-align:top; width:122px; padding:0px;"><p>blue</p>
+</td>
+<td style="vertical-align:top; width:697px; padding:0px;"><p>Background of input/selection (e.g. <a href="input.htm" class="topiclink">input</a>, <a href="select.htm" class="topiclink">select</a>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; padding:0px;"><p style="text-align: center;">029</p>
+</td>
+<td style="vertical-align:top; width:122px; padding:0px;"><p>gray</p>
+</td>
+<td style="vertical-align:top; width:697px; padding:0px;"><p>Background of <a href="infobox.htm" class="topiclink">infobox</a>, <a href="yesnobox.htm" class="topiclink">yesnobox</a>, <a href="codebox.htm" class="topiclink">codebox</a></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; padding:0px;"><p style="text-align: center;">255</p>
+</td>
+<td style="vertical-align:top; width:122px; padding:0px;"><p>white</p>
+</td>
+<td style="vertical-align:top; width:697px; padding:0px;"><p>Background of additional help text (<a href="setinfo.htm" class="topiclink">setinfo</a>)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Alternatively, the background color can be given as 32-bit value. When shown as hexadecimal number, the digits are interpreted as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:189px; padding:0px;"><p style="text-align: right;"><img src="background.png" width="149" height="112" alt="" style="margin:0px 0px 0px auto;width:149px;height:112px;border:none"></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">&nbsp;</p>
+<p style="margin: 0px 0px 9px 0px;"> Fixed value 00</p>
+<p style="margin: 0px 0px 9px 0px;"> Value from 0x00 to 0xff for blue</p>
+<p style="margin: 0px 0px 9px 0px;"> Value from 0x00 to 0xff for green</p>
+<p style="margin: 0px 0px 9px 0px;"> Value from 0x00 to 0xff for red</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">background&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">255</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">clearscreen</span><span class="f_CodeExample">();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;clear&nbsp;screen&nbsp;to&nbsp;white&nbsp;*/</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

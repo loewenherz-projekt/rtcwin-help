@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>division</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="division" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">division</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="clrtare.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="dp.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Variable</span></p>
+<p>Increments of the most recently accessed scale.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">loc decimal &nbsp; <span style="font-weight: bold; color: #0000ff;">division </span>%8.dp</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale functions</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The variable <span style="font-style: italic; color: #008000;">division</span> is a predefined variable of type <a href="decimal.htm" class="topiclink">decimal</a> containing the increments of the scale most recently accessed by one of the functions <a href="getweight.htm" class="topiclink">getweight</a> or <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a>. In case of a multi-interval or multiple range scale, the variable <span style="font-style: italic; color: #008000;">division</span> contains the increments of the currently valid range. The variable <span style="font-style: italic; color: #008000;">division</span> has a length of 8&nbsp;digits. The number of trailing decimals corresponds with the most recently accessed scale.</p>
+<p>The variable <span style="font-style: italic; color: #008000;">division</span> is a <a href="deklaration_von_variablen.htm#task-local" class="topiclink">task local variable</a>, i.e. it may be used in multiple tasks, however assigns different physical memory for each task.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Round&nbsp;variable&nbsp;to&nbsp;the&nbsp;increments&nbsp;of&nbsp;scale&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;RoundWeight&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;weight)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;i;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;if&nbsp;(weight&nbsp;&lt;&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int&nbsp;</span><span class="f_CodeExample">(weight&nbsp;/&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">division</span><span class="f_CodeExample">&nbsp;-&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">.</span><span class="f_CodeExample" style="color: #000080;">5</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int&nbsp;</span><span class="f_CodeExample">(weight&nbsp;/&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">division</span><span class="f_CodeExample">&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">.</span><span class="f_CodeExample" style="color: #000080;">5</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return&nbsp;</span><span class="f_CodeExample">(i&nbsp;*&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">division</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

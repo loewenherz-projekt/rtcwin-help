@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>keymatrix_key_id</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="keymatrix_key_id" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">keymatrix_key_id</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="keymatrix_generate.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="keymatrix_select.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span class="f_Caption">RTC Function</span></p>
+<p>Determines the object ID of a button within a matrix.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">keymatrix_key_id</span> (int key_no)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">key_no</p>
+</td>
+<td style="vertical-align:top; width:689px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Number of the button within the matrix</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Object ID of the button</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">keymatrix_key_id</span> returns the object ID of a given button in a key matrix. The page with a matrix of buttons has to be generated beforehand using the instruction <a href="keymatrix_generate.htm" class="topiclink">keymatrix_generate</a>. The button is defined using the parameter <span style="font-style: italic;">key_no</span>. Counting of <span style="font-style: italic;">key_no</span> starts from 0 for the leftmost button in the top row and continues row by row from left to right.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Start&nbsp;button&nbsp;'green'...&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">widget_foreground&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">keymatrix_key_id&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">3),&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">CL_GREEN</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

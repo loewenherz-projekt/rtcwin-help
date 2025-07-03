@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>cssub</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="cssub" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">cssub</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="crc16.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="head.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Separates a substring from a string.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">string <span style="font-weight: bold;">cssub</span> (string s, char separator, int n)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">String functions</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">s<br>
+sc<br>
+n</p>
+</td>
+<td style="vertical-align:top; width:999px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Source string<br>
+Separating character<br>
+Number of substring</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Result string</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">cssub</span> returns the substring specified by the integer parameter <span style="font-style: italic;">n</span>. Counting starts from 0. The substrings contained in <span style="font-style: italic;">s</span> are separated by the separator character <span style="font-style: italic;">sc</span>. If <span style="font-style: italic;">s</span> contains less than <span style="font-style: italic;">n+1</span> substrings, an empty string is returned as function result. If the separator specified by <span style="font-style: italic;">sc</span> cannot be found in <span style="font-style: italic;">s</span>, the function result is the complete string in case of <span style="font-style: italic;">n </span>= 0 or an empty string in case of <span style="font-style: italic;">n </span>&gt; 0.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span class="f_CodeExample">i = 0;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">for </span><span class="f_CodeExample">(;;)</span><br>
+<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;s0&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">cssub&nbsp;</span><span class="f_CodeExample">(ReceiveBuffer,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">';'</span><span class="f_CodeExample">,&nbsp;i++);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(s0&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;</span><span class="f_CodeExample">)&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">break</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;...&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

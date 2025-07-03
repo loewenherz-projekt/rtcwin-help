@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Defining Constants</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Preprocessor</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Defining Constants</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="uebersicht.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="einbinden_externer_dateien.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Via the preprocessor statement <span style="font-family: Courier;">#define</span> constants may be defined. Thus – for example – digital inputs and outputs can be assigned meaningful names or language dependent texts can be grouped together and kept in the header of the program for easy maintenance. Syntax is as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">#define&nbsp;&nbsp;Name&nbsp;&nbsp;Value</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Before program compilation is carried out, the preprocessor replaces Name with the assigned value, wherever it may appear.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;External&nbsp;inputs/outputs&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;O_FAST&nbsp;&nbsp;&nbsp;&nbsp;0</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;O_SLOW&nbsp;&nbsp;&nbsp;&nbsp;1</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;O_READY&nbsp;&nbsp;&nbsp;2</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;O_ERROR&nbsp;&nbsp;&nbsp;3</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;I_START&nbsp;&nbsp;&nbsp;0</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;I_ABORT&nbsp;&nbsp;&nbsp;1</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Text&nbsp;constants&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;TX_READY&nbsp;&nbsp;&nbsp;&nbsp;&quot;Startbereit|Ready&nbsp;to&nbsp;start&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;TX_FINISH&nbsp;&nbsp;&nbsp;&quot;Fertig!|Finished&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;TX_FAST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Grobstrom...|Filling&nbsp;fast...&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#define&nbsp;&nbsp;TX_SLOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Feinstrom...|Filling&nbsp;slow...&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;FastFilling&nbsp;(decimal&nbsp;target)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;StatusMessage&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">TX_FAST</span><span class="f_CodeExample">);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">net&nbsp;</span><span class="f_CodeExample">&lt;&nbsp;target)&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;{&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">bout&nbsp;</span><span class="f_CodeExample">(O</span><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">_FAST</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">true</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">getweight&nbsp;</span><span class="f_CodeExample">(1);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">bout&nbsp;</span><span class="f_CodeExample">(O</span><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">_FAST</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

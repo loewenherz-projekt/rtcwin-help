@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>widget_image_index</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="widget_image_index" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">widget_image_index</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="widget_image.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="widget_label.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span class="f_Caption">RTC Function</span></p>
+<p>Installs an image for a given status of an object.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">widget_image_index</span> (int id, string fname, int state)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:81px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+fname<br>
+status</p>
+</td>
+<td style="vertical-align:top; width:685px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the object<br>
+Name of image file<br>
+Object status to that the image is assigned</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">widget_image_index</span> assigns the image file specified by the parameter <span style="font-style: italic;">fname</span> to a given status of the object specified by <span style="font-style: italic;">id</span>. The image formats PNG, BMP and JPEG are supported; when PNG is used, transparency is also supported. Where necessary, images are scaled up/down to fit into the object. The object status (e.g. 0 = inactive; 1 = active) is defined using the parameter <span style="font-style: italic;">state</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;CreateOnOffButton&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;id,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;image_ON,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;image_OFF)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(id,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">WIDGET_TYPE_ONOFF</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_size_policy</span><span class="f_CodeExample">&nbsp;(id,&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">SIZE_POLICY_MINIMUMEXPANDING</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_content_margins</span><span class="f_CodeExample">&nbsp;(id,&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;0);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_image_index</span><span class="f_CodeExample">&nbsp;(id,&nbsp;image_ON,&nbsp;1);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_image_index</span><span class="f_CodeExample">&nbsp;(id,&nbsp;image_OFF,&nbsp;0);&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The function <span style="font-style: italic; color: #008000;">widget_image_index</span> is currently only available for the object type WIDGET_TYPE_ONOFF.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

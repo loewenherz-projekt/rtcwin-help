@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Handling Events</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Handling Events</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="stylesheets.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="laufzeitfehler.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Most of the objects (widgets) can raise events when activated by the operator. The type of the event generally depends on the kind of object. As soon as a button is activated, it generates an event of type EVENT_TYPE_BUTTON_PRESS, whereas a text input field raises an event of type EVENT_TYPE_TEXT_ENTERED as soon as data entry is finished.</p>
+<p>Following is a list of events that can be raised by the application (EVENT_CLASS_APPLICATION):</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p><span style="font-weight: bold;">Event</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_BUTTON_PRESS</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A button was pressed. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TEXT_ENTERED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The input into an entry field was completed. Contains the entered text as argument.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_LIST_ITEM_SELECTED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>An item from a list was selected. Contains the ID and text of the list element as arguments.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TABLE_ITEM_CHANGED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A field of a table was modified. Contains column and row number of the field and the new text as arguments.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_CHECKBOX_CHANGED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A checkbox was activated. Contains as argument if the box is checked (true) or unchecked (false).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_COMBOBOX_ACTIVATED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>An item was selected from a drop-down menu. Contains the number and text of the selected item as argument.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_SKETCH_PRESSED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The surface of an image (<a href="outputbox.htm" class="topiclink">outputbox</a>) was activated. Contains as arguments the x and y coordinates of the point that was touched.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_MESSAGEBOX_BUTTON</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>One of the function keys in the <a href="messagebox.htm" class="topiclink">messagebox</a> was pressed. Contains as argument the number of the button that was pressed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_SKETCH_SIZE_CHANGED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The size of an image (<a href="createwidget.htm#widget_type_sketch" class="topiclink">WIDGET_TYPE_SKETCH</a>) was changed. Contains the new width and height as arguments, so the application can re-arrange the items. The <a href="widget_size_policy.htm" class="topiclink">SIZE_POLICY</a> of this object may not be set to 'fixed' in this case.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TEXT_ABORTED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The text entry was aborted.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TEXT_DROPDOWN_ENTERED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A text was entered into the drop-down menu of the keypad. Contains as argument the text that was entered.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TEXT_DROPDOWN_CHANGED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The text in the drop-down menu was changed (e.g. a character was entered or deleted). The modified text is returned as argument.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_TEXT_DROPDOWN_ABORTED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The entry into the drop-down menu was aborted.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_USER_TEXT_INPUT_CLICKED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>An object of the type <a href="createwidget.htm#widget_type_text_input_user" class="topiclink">WIDGET_TYPE_TEXT_INPUT_USER</a> was activated. The application could react on this e.g. by opening the onscreen keypad.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Furthermore, events can also be generated by the monitor (EVENT_CLASS_MONITOR). In detail:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p><span style="font-weight: bold;">Event</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_STATUS_BUTTON</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A field in the status bar at the top of the screen was activated (e.g. time or battery status). Contains as argument the number of the field clicked.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_CONNECTION_ESTABLISHED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>A new monitor has connected to the application. The application may need to redraw or create the screen content.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:291px; padding:0px;"><p>EVENT_TYPE_INDICATED_SCALE_CHANGED</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The indicated scale was changed. Contains the number of the now indicated scale as argument. See also <a href="indicatedscale.htm" class="topiclink">indicatedscale</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">main</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">int&nbsp;</span><span class="f_CodeExample">source,&nbsp;type,&nbsp;ident;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;data[4][1023];</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectpage</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">PAGE_1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;for</span><span class="f_CodeExample">&nbsp;(;;)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;wait&nbsp;for&nbsp;next&nbsp;event:</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;while</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">eventreceived</span><span class="f_CodeExample">())</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readevent&nbsp;</span><span class="f_CodeExample">(source,&nbsp;type,&nbsp;ident,&nbsp;data);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Source&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #800000;">EVENT_CLASS_APPLICATION</span><span class="f_CodeExample">)&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</span><span class="f_CodeExample">;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Only&nbsp;events&nbsp;raised&nbsp;by&nbsp;the&nbsp;application...</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;if</span><span class="f_CodeExample">&nbsp;(type&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #800000;">EVENT_TYPE_BUTTON_PRESS</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">switch</span><span class="f_CodeExample">&nbsp;(ident)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #800000;">bt_start</span><span class="f_CodeExample">:&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;if&nbsp;start&nbsp;button&nbsp;was&nbsp;pressed...</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;...&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

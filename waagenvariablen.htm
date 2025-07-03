@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Variables</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Scale variables" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">The Scale Interface</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Variables</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="die_waagenschnittstelle.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="waagenfunktionen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The internal scale function interface provides the following variables:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 10px 7px;"><span style="font-weight: bold;">Variable</span></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 10px 0px;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="gross.htm" class="topiclink">gross</a>%8.dp</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Gross weight as number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="gross.htm" class="topiclink">tare</a>%8.dp</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Tare weight as number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="gross.htm" class="topiclink">net</a>%8.dp</p>
+</td>
+<td style="vertical-align:top; width:466px; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Net weight as number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="gross.htm" class="topiclink">nethires</a>%10.dp+2</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Net weight in a 100-fold resolution</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">string <a href="fgross.htm" class="topiclink">fgross</a>[x]</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Gross weight as readily formatted string</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">string <a href="fgross.htm" class="topiclink">ftare</a>[x]</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Tare weight as readily formatted string</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">string <a href="fgross.htm" class="topiclink">fnet</a>[x]</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Net weight as readily formatted string</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="capacity.htm" class="topiclink">capacity</a>8.dp</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Maximum capacity (weighing range) of the scale</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="division.htm" class="topiclink">division</a>%8.dp</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Increment size of the scale (scale interval)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="dp.htm" class="topiclink">dp</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Number of decimals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">string <a href="unit.htm" class="topiclink">unit</a>[2]</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Weight unit</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">bool <a href="issettled.htm" class="topiclink">issettled</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Status variable for &quot;scale settled&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">bool <a href="iszero.htm" class="topiclink">iszero</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Status variable for &quot;scale in zero range&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="range.htm" class="topiclink">range</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Current weighing range of a multiple-range or multi-interval scale</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="taremode.htm" class="topiclink">taremode</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Tare status</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="alibino.htm" class="topiclink">alibino</a>%4.0 <span style="font-style: italic;">or</span> %6.0</p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Number against that the weighing is stored in the approved weight storage</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">bool <a href="sealed.htm" class="topiclink">sealed</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p>Status variable for &quot;calibration data sealed&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">bool <a href="ntep.htm" class="topiclink">ntep</a></p>
+</td>
+<td style="vertical-align:top; width:466px; padding:0px;"><p>Status variable for &quot;calibration according NTEP regulations&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The variables are updated by the functions <a href="getweight.htm" class="topiclink">getweight</a> and <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a> (<span style="font-style: italic;">alibino</span> only by <span style="font-style: italic;">getapprovedweight</span>) and thus always refer to the most recently read scale.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

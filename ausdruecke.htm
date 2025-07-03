@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Expressions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Expressions,NOT operator,Operators,Shift bitwise" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Program Design</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Expressions</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="anweisungen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="kommentare.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Expressions consist of operands and operators. Most of the operators link two operands and are thus called &quot;binary.&quot; The top three operators of the table below, however, are &quot;unary&quot; and only work upon one operand. </p>
+<p>Operators:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">! ~ -</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Not, Complement, Minus.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">* / %</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Multiplication, Division, Modulo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">+ -</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Addition, Subtraction.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">&lt;&lt; &gt;&gt;</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Bitwise shift to the left and to the right.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">&lt;= &lt; &gt; &gt;= == !=</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Logical comparison on less-equal, less, greater, greater-equal, equal and unequal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">&amp;</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Bitwise And</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">^</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Bitwise Exclusive-Or</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">|</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Bitwise Or</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">&amp;&amp;</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Logical And</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">||</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Logical Or</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Priority of the operators listed above is from top downwards. Operators within a line have identical priority. Where multiple operands are to be linked up, the operation with highest priority is executed first. Operations with identical priority are executed from left to right.</p>
+<p>The following table shows the availability of operators in respect of the data type of the operands.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">! &amp;&amp; ||</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Data type <span style="font-style: italic;">bool</span> only.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">~ % &lt;&lt; &gt;&gt; &amp; ^ |</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Data type <span style="font-style: italic;">int</span> only.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">+</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Data types <span style="font-style: italic;">char</span>, <span style="font-style: italic;">int</span>, <span style="font-style: italic;">float</span>, <span style="font-style: italic;">decimal</span> and <span style="font-style: italic;">string</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">- * /</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Data types <span style="font-style: italic;">char</span>, <span style="font-style: italic;">int</span>, <span style="font-style: italic;">float </span>and <span style="font-style: italic;">decimal</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:192px; padding:0px;"><p style="margin: 0px 0px 10px 24px;"><span style="font-family: 'Courier New';">&lt;= &lt; &gt; &gt;= == !=</span></p>
+</td>
+<td style="vertical-align:top; width:1026px; padding:0px;"><p>Data types <span style="font-style: italic;">char</span>, <span style="font-style: italic;">int</span>, <span style="font-style: italic;">float</span>, <span style="font-style: italic;">decimal</span> and <span style="font-style: italic;">string</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The result of the addition of types <span style="font-style: italic;">char</span> and <span style="font-style: italic;">string</span> is a concatenated string.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The comparison of types <span style="font-style: italic;">char</span> and <span style="font-style: italic;">string</span> is based on the ASCII code of the individual characters. Comparison of <span style="font-style: italic;">strings</span> is carried out from left to right. </td></tr></table></div><p>&nbsp;</p>
+<p>RTC allows the following simplified syntax:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:99px; padding:0px;"><p style="margin: 0px 0px 10px 23px;"><span style="font-family: 'Courier New';">i++;</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="text-align: center;">complies with</p>
+</td>
+<td style="vertical-align:top; width:116px; padding:0px;"><p style="margin: 0px 0px 10px 11px;"><span style="font-family: 'Courier New';">i = i + 1;</span></p>
+</td>
+<td style="vertical-align:top; width:255px; padding:0px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:99px; padding:0px;"><p style="margin: 0px 0px 10px 23px;"><span style="font-family: 'Courier New';">i--;</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="text-align: center;">&quot;</p>
+</td>
+<td style="vertical-align:top; width:116px; padding:0px;"><p style="margin: 0px 0px 10px 11px;"><span style="font-family: 'Courier New';">i = i–1;</span></p>
+</td>
+<td style="vertical-align:top; width:255px; padding:0px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:99px; padding:0px;"><p style="margin: 0px 0px 10px 23px;"><span style="font-family: 'Courier New';">i += 2;</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:0px;"><p style="text-align: center;">&quot;</p>
+</td>
+<td style="vertical-align:top; width:99px; padding:0px;"><p style="margin: 0px 0px 10px 11px;"><span style="font-family: 'Courier New';">i = i + 2;</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:0px;"><p>Also with operators <span style="font-family: 'Courier New';">+ – * / % &amp; | &lt;&lt; &gt;&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Incrementing or decrementing of a variable may also be included in an expression. In the expression</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:157px; padding:0px;"><p style="margin: 0px 0px 10px 23px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:159px; padding:0px;"><p style="text-align: center;"><span style="font-family: Courier;">j = i++;</span></p>
+</td>
+<td style="vertical-align:top; width:188px; padding:0px;"><p style="margin: 0px 0px 10px 11px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:407px; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>the first variable j is assigned the value of i and i incremented afterward; whereas in the case</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:157px; padding:0px;"><p style="margin: 0px 0px 10px 23px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:159px; padding:0px;"><p style="text-align: center;"><span style="font-family: Courier;">j = ++i;</span></p>
+</td>
+<td style="vertical-align:top; width:188px; padding:0px;"><p style="margin: 0px 0px 10px 11px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:407px; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>first the variable i is incremented and then the new value assigned to the variable j.</p>
+
+</td></tr></table>
+
+</body>
+</html>

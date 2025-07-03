@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Forward Declarations</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Program Design</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Forward Declarations</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="funktionsparameter.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="die_waagenschnittstelle.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Functions have to be declared prior to the first usage. In some situations, this is not possible, for instance when the function accesses other functions that can only be defined in a later part of the program. If this is the case, the function can be announced using a so-called forward declaration. </p>
+<p>The forward declaration consists of the name of the function, its parameter list and the type of the return value; the forward declaration is concluded by a semicolon.</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">Type&nbsp;Name&nbsp;(&nbsp;Parameters&nbsp;);</span></p>
+<p>&nbsp;</p>
+<p>The actual function can be defined in the code below with type and parameters matching the settings of the forward declaration.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Forward&nbsp;declaration</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;StartUp&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Configuration&nbsp;menu&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;Configuration&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">codebox&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">TX_PLEASE_ENTER_PASSW</span><span class="f_CodeExample">,&nbsp;MasterPassword)&nbsp;==&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">ok</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectbox&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">TX_SETTINGS_CONFIG</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">TX_BASIC_SETTINGS</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BasicSettings();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">TX_FACTORY_DEFAULTS</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LoadFactoryDefaults();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;StartUp();&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Enable&nbsp;modifications</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Starting...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;StartUp&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

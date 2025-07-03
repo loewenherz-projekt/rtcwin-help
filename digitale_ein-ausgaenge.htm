@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Digital Inputs/Outputs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Digital outputs,Digital inputs" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">External Inputs/Outputs</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Digital Inputs/Outputs</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="dialog-funktionen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="externe_ausgange_unter_echtzeit.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>RTC provides a range of functions for the handling of the digital inputs and outputs. They allow to read inputs and set outputs both individually and in groups.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="bout.htm" class="topiclink">bout</a> (int bitno, bool stat)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Set the specified digital output.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="bin.htm" class="topiclink">bin</a> (int bitno)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Read the specified digital input.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="out.htm" class="topiclink">out</a> (int bitno)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Read the specified digital output.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="pout.htm" class="topiclink">pout</a> (int n, int msb, int lsb)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Write a value to a group of digital outputs. The group is specified by the most and least significant bits.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="pin.htm" class="topiclink">pin</a> (int msb, int lsb)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Read a group of digital inputs. The group is specified by the most and least significant bits.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:248px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="outputs.htm" class="topiclink">outputs</a> (int msb, int lsb)</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p>Read a group of digital outputs. The group is specified by the most and least significant bits.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The configuration of digital inputs and outputs is contained in the Service Mode of the weighing terminal. Thus, the functions listed above are independent of the type of I/O module.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

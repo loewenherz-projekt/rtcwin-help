@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Declaration of Variables</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Constants,Declaration of Variables,Task local,Variables" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Variables and Constants</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Declaration of Variables</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="datentypen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="arrays.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Variables are reserved memory locations with variable content. In a program, variables are referred to by their names. Prior to the first usage, a variable has to be declared:</p>
+<p style="margin: 0px 0px 10px 96px;">Type &nbsp;Name</p>
+<p><span style="font-style: italic;">Type</span> is the data type specifying the value facet of the variable; <span style="font-style: italic;">Name</span> is the name of the variable. Valid variable declarations are:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="int.htm" class="topiclink">int</a></span> i;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of an integer variable with name <span style="font-style: italic;">i</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="float.htm" class="topiclink">float</a></span> pi;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Floating-point variable with name <span style="font-style: italic;">pi</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="double.htm" class="topiclink">double</a> </span>CorrFactor</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Floating-point variable with double precision with name <span style="font-style: italic;">CorrFactor</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="decimal.htm" class="topiclink">decimal</a></span> Total%8.2;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Formatted floating-point variable <span style="font-style: italic;">Total</span> with 2&nbsp;trailing decimals and an overall length of 8&nbsp;characters</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="bool.htm" class="topiclink">bool</a></span> WithPrinter;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Boolean variable</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="string.htm" class="topiclink">string</a></span> RxBuffer[80];</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>String variable <span style="font-style: italic;">RxBuffer</span> with a maximum length of 80&nbsp;characters</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;">  <a href="char.htm" class="topiclink">char</a></span> ch;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Variable <span style="font-style: italic;">ch</span> for a single character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p>  <span style="font-weight: bold;"><a href="timer.htm" class="topiclink">timer</a></span> t1;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Variable t1 for timer functions</p>
+</td>
+</tr>
+</table>
+</div>
+<p>A format specification for data type <span style="font-style: italic;">decimal</span> as well as length specification for data type <span style="font-style: italic;">string</span> is mandatory. For the data types <span style="font-style: italic;">int</span>, <span style="font-style: italic;">float</span> and <span style="font-style: italic;">double</span>, format specifications are optional.</p>
+<p>The thus declared variables occupy memory space in RAM and need to be initialized after power-up or before first usage. However, by putting the statement <a href="nov.htm" class="topiclink">nov</a> in front of the declaration a variable can be designed as non-volatile. Non-volatile variables are located in battery-backed memory and do not loose contents at power-down.</p>
+<p style="margin: 0px 0px 10px 96px;"><span style="font-weight: bold;">nov</span> &nbsp; Type &nbsp;Name</p>
+<p style="margin: 0px 0px 10px 96px;">&nbsp;</p>
+<p>Where variable contents must not be lost even in case of a failure of the battery backup, these variables may be stored in the flash EPROM by putting the statement <a href="flash.htm" class="topiclink">flash</a> in front of the declaration.</p>
+<p style="margin: 0px 0px 10px 97px;"><span style="font-weight: bold;">flash</span> Type Name</p>
+<p>The thus declared variables have to be copied to the battery-backed memory using the instruction <a href="flashload.htm" class="topiclink">flashload</a> before they can be used by subsequent operations. The instruction <a href="flashsave.htm" class="topiclink">flashsave</a> has to be used to store the variables again in the flash memory, so they will be saved permanently and independently of the backup battery.</p>
+<p>When using multitasking, variables might be needed independently of functions but dependent from the individual tasks. Such variables can be declared task local by putting the statement <a href="loc.htm" class="topiclink">loc</a><a name="task-local"></a> in front of the type statement. The thus declared variables may be used in various tasks, however assign different physical memory areas for each task. Thus, they cannot be accessed from another task.</p>
+<p style="margin: 0px 0px 10px 96px;"><span style="font-weight: bold;">loc</span> &nbsp; Type &nbsp;Name</p>
+<p style="margin: 0px 0px 10px 96px;">&nbsp;</p>
+<p>With one declaration word, multiple variables of the same type may be declared in one stroke, e.g.:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;int</span> i, j;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of two integer variables with name <span style="font-style: italic;">i</span> and <span style="font-style: italic;">j</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Also, an initial value can be assigned to a variable during declaration:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;int</span> i = 0;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of an integer variable with name <span style="font-style: italic;">i</span> and initial value 0.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;float</span> pi = 3.1416;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of the variable <span style="font-style: italic;">pi</span> including initialization</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Local variables declared within a function – they are only valid within this function – can simply be declared during first use:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 95px;"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;InputOrderNo&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 95px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 95px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">22</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">&quot;Order&nbsp;No.&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 95px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">char</span><span class="f_CodeExample">&nbsp;ch&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">input&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">100</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">22</span><span class="f_CodeExample">,&nbsp;OrderNo);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 95px;"><span class="f_CodeExample">}</span></p>
+<p>&nbsp;</p>
+<p>RTC does not know constants. But what else is a variable with an initial value that is never changed?</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

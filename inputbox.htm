@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>inputbox</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="inputbox" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">inputbox</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="input.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="inputlabel.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Input dialog for variables.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">inputbox</span> (string title)<br>
+{<br>
+ &nbsp;[if (expr)] &nbsp;prompt &nbsp; [decl] &nbsp;var &nbsp; [until (expr)] ;<br>
+ &nbsp;...<br>
+ &nbsp;fn &nbsp; text &nbsp; procname( ) ;<br>
+ &nbsp;...<br>
+}</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">title<br>
+expr<br>
+prompt<br>
+decl<br>
+var<br>
+fn<br>
+text<br>
+procname</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Headline<br>
+Logical expression<br>
+Prompt<br>
+Declaration word<br>
+Variable<br>
+Function key<br>
+Function key label<br>
+Executable function </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">inputbox</span> generates a complete input dialog according to the example below. As parameter the instruction is given a text for the title bar after which – enclosed by a pair of curved brackets – the variable inputs are specified. Each input consists at least of a <span style="font-style: italic;">prompt</span> and the variable name <span style="font-style: italic;">var</span>. If applicable, the variable may also be declared within the function by putting the declaration word in front of it.</p>
+<p>The function <span style="font-style: italic; color: #008000;">inputbox</span> displays text in black proportional font at a size of 13&nbsp;pixels. Variables are shown in a monospaced font, bold. During entry, the background of a variable changes to blue.</p>
+<p>The entry of the individual variables fully complies with the function <a href="input.htm" class="topiclink">input</a>, including the option to use the F5 key to call up additional help information that previously has been assigned to the variable via the instruction <a href="setinfo.htm" class="topiclink">setinfo</a>.</p>
+<p>If the operator prompt <span style="font-style: italic;">prompt</span> is appended a list of options, enclosed in a pair of curved brackets, the input field complies with the function <a href="inputselection.htm" class="topiclink">inputselection</a>, i.e. the operator can choose an option from the provided list using the horizontal cursor keys. The number of the chosen option within the list is written as result into the target variable.</p>
+<p>As an alternative to normal variables, the <span style="font-style: italic; color: #008000;">inputbox</span> may also contain index fields of database tables. In that case, the entry fully complies with the function <a href="select.htm" class="topiclink">select</a>, including the option to press the F3 key to choose a record from a list.</p>
+<p>The inputbox may precede an optional <a href="if-anweisung.htm" class="topiclink">if</a> statement with <span style="font-style: italic;">expr</span> being a Boolean expression of any complexity. If the expression returns <span style="font-style: italic;">false</span>, the input is skipped. For visualization, the prompts of disabled inputs are written with light gray text. </p>
+<p>Furthermore, the variable may be appended an optional <a name="until"></a><span style="font-style: italic; color: #008000;">until</span> statement. Again, <span style="font-style: italic;">expr</span> is a Boolean expression of any complexity that determines whether the entered data is accepted.</p>
+<p>If applicable, the various function keys (soft keys) may be assigned a function. To do so, the number of the function key is entered, followed by the key label and the name of a function without parameters that is to be executed.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;GeneralSettings&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">inputbox&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Settings\\General&quot;</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Date&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">date</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Time&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">time</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Ticket&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TicketNo;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Cons.&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConsNo;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Min.&nbsp;load&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MinLoad&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">until&nbsp;</span><span class="f_CodeExample">(MinLoad&nbsp;&gt;&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Printer)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Printer{off,COM1,COM2,USB}&quot;</span><span class="f_CodeExample">&nbsp;PrinterPort;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;With&nbsp;host&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WithHost;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Password&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UserPassword;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">fct2</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Print&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PrintSetting();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><br>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><img src="inputbox.png" width="320" height="240" alt="" style="width:320px;height:240px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The instruction <span style="font-style: italic; color: #008000;">inputbox</span> provides multi-language operator prompting; the use of the function <a href="lsub.htm" class="topiclink">lsub</a> is not necessary.</p>
+<p>If the dialog contains more than 7&nbsp;variable inputs, the dialog is arranged on multiple pages. Triangles on the left indicate preceding or subsequent pages.</p>
+<p>Variables declared inside the <span style="font-style: italic; color: #008000;">inputbox</span> statement are stored in the nov RAM.</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">inputbox</span> does not save the original content of the application screen or the previously selected font attributes. This has to be considered in the design of the program.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

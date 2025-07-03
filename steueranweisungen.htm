@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Control Statements</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Preprocessor</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Control Statements</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="bedingte_programmerstellung.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="touchscreenprogrammierung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Through the directive </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">#pragma&nbsp;(key,&nbsp;value)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>certain preprocessor control statements can be embedded in the application program. The #pragma statement is followed by a pair of brackets containing the name of a key and – separated by a comma – the value of the key. Currently, only the following key is defined:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="margin: 0px 0px 10px 7px;"><span style="font-weight: bold;">Key</span></p>
+</td>
+<td style="vertical-align:top; width:222px; padding:0px;"><p style="margin: 0px 0px 10px 7px;"><span style="font-weight: bold;">Value</span></p>
+</td>
+<td style="vertical-align:top; width:540px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">languages</p>
+</td>
+<td style="vertical-align:top; width:222px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">Language string, e.g. <br>
+&quot;Deutsch,15,de;English,15,[gb,us]&quot;</p>
+</td>
+<td style="vertical-align:top; width:540px; padding:0px;"><p>Installation of language, character set and keyboard layout.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The language string contains – separated by semicolons – the setup for several languages. Each setup again consists of a text, the number of the required ISO&nbsp;8859 character set and the layout of the external PC keyboard. If applicable, multiple keyboard layouts can be stated using square brackets.</p>
+<p>The preprocessor uses the given language string on the one hand to initiate the compiler for using the right character set for the given texts and on the other hand to embed a <a href="writeparameter.htm" class="topiclink">writeparameter</a> statement in the <a href="programmstruktur.htm#main" class="topiclink">main</a> function that configures the language selection of the Service Mode accordingly.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

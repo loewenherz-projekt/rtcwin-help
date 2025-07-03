@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Scale Functions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Scale functions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">The Scale Interface</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Scale Functions</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="waagenvariablen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="totalisierende_waagen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The scale interface provides the following scale functions:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;"><span style="font-weight: bold;">Function</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="getweight.htm" class="topiclink">getweight</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Read scale and update weight and status variables.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a> (int sno, string custom_data, float timeout)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Request an approved weight and update weight and status variables. The weight is logged in the approved weight storage.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="autotare.htm" class="topiclink">autotare</a> (int sno, float timeout)</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Perform automatic taring.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="mantare.htm" class="topiclink">mantare</a> (int sno, float tv)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Tare scale with the provided value <span style="font-style: italic;">tv</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="clrtare.htm" class="topiclink">clrtare</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Clear tare and set scale to gross mode.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="setzero.htm" class="topiclink">setzero</a> (int sno, float timeout)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Set scale to zero.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The listed functions all refer to the scale specified by the parameter <span style="font-style: italic;">sno</span>. If this optional parameter is not provided, the function is executed upon the first scale.</p>
+<p>Furthermore, the following functions are available to handle the weight display.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 6px;"><span style="font-weight: bold;">Function</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">int <a href="indicatescale.htm" class="topiclink">indicatescale</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Switch weight display to the specified scale.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">int <a href="indicatedscale.htm" class="topiclink">indicatedscale</a> (void)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Determine number of the scale currently shown in the weight display.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:216px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">void <a href="weightdisplay.htm" class="topiclink">weightdisplay</a> (int mode)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Switch weight display on (mode = 1) or off (mode = 0) (for non-approved applications only).</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

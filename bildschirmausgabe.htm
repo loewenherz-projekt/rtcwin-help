@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>General</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Output to the display" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Output to the Display</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">General</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="zusammensetzen_und_auswerten.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="elementare_funktionen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The programming language RTC provides a wide range of functions for the output to the screen of the weighing terminal. They are very powerful and help the programmer to create dialogs most efficiently in a relatively short period of time.</p>
+<p>On the other hand, also very basic functions are contained to allow the creation of very individual display functions, if the need arises.</p>
+<p>As a basic principle, only the lower part of the screen is accessible for the application programmer; the upper part is reserved for the weight display. Accordingly, the x-y coordinate 0-0 addresses the left and topmost pixel just below the weight display. The x-coordinate specifies the horizontal position from left to right whereas the vertical position is described by the y-coordinate from top to down.</p>
+<p>For applications that are not subject of Weights &amp; Measures the weight display may be switched off using the instruction <a href="weightdisplay.htm" class="topiclink">weightdisplay</a> (false). In this case, the origin of the coordinates indeed is the topmost left pixel of the screen. In the upper right corner of the screen a red rectangle containing an exclamation point and an out-crossed &quot;kg&quot; sign is shown that cannot be overwritten. Thus, the application is inhibited from faking an approved weight display.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><img src="nullkoordinate.png" width="320" height="240" alt="" style="width:320px;height:240px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Looking from this zero coordinate some helpful information:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:249px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:349px; padding:0px;"><p><span style="font-weight: bold;">ITx000E</span></p>
+</td>
+<td style="vertical-align:top; width:620px; padding:0px;"><p><span style="font-weight: bold;">IT6000ET / IT8000ET</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:249px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">Display width:</p>
+</td>
+<td style="vertical-align:top; width:349px; padding:0px;"><p>320 pixel</p>
+</td>
+<td style="vertical-align:top; width:620px; padding:0px;"><p>800 pixel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:249px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">Height of application screen:</p>
+</td>
+<td style="vertical-align:top; width:349px; padding:0px;"><p>129 pixel, 224 when weight display is switched off</p>
+</td>
+<td style="vertical-align:top; width:620px; padding:0px;"><p>320 pixel, 480 pixel when weight display is switched off</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:249px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">Height of function key bar:</p>
+</td>
+<td style="vertical-align:top; width:349px; padding:0px;"><p>16 pixel</p>
+</td>
+<td style="vertical-align:top; width:620px; padding:0px;"><p>—</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:249px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">Total height of screen:</p>
+</td>
+<td style="vertical-align:top; width:349px; padding:0px;"><p>240 pixel</p>
+</td>
+<td style="vertical-align:top; width:620px; padding:0px;"><p>480 pixel</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>print</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="print" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">print</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="preceived.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="ptxready.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Output a print format on a communication channel.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">print</span> (int port, form format, [string layout])</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Communication</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">port<br>
+format<br>
+layout</p>
+</td>
+<td style="vertical-align:top; width:983px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical port number<br>
+Print format<br>
+Name of optional layout file</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">print</span> outputs the provided print format on the communication channel specified by the logical port number <span style="font-style: italic;">port</span>. The port has to be opened first (e.g. using <a href="popen.htm" class="topiclink">popen</a>). The print format is referenced by the name that was assigned during definition using <a href="form.htm" class="topiclink">form</a>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">form</span><span class="f_CodeExample">&nbsp;Header</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Ticket&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #000080;">66</span><span class="f_CodeExample">&nbsp;FTicketNo</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Date&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #000080;">66</span><span class="f_CodeExample">&nbsp;date</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;PrintTicket&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">int&nbsp;</span><span class="f_CodeExample">port)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;i;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;gettime</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;TicketNo++;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">20</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">90</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Printing&nbsp;...&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;print&nbsp;</span><span class="f_CodeExample">(port,&nbsp;Header);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;for</span><span class="f_CodeExample">&nbsp;(i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">;&nbsp;i&nbsp;&lt;=&nbsp;PosNo;&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;...&nbsp;print&nbsp;details&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>If the <span style="font-style: italic;">shared</span> directory of the weighing terminal contains a layout file with the same name as the print format and with the file extension 'lab' (e.g. 'Header.lab'), this layout is send to the printer instead of the print format, replacing any placeholders by the corresponding variables. Thus, an <a href="einbinden_externer_etiketten.htm" class="topiclink">external layout</a> for a label printer can be embedded in the program. </p>
+<p>The instruction <span style="font-style: italic; color: #008000;">print</span> may also be assigned the name of a layout file as additional parameter to enable printing in different formats.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>External Outputs under Real-Time Conditions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Digital output under real-time condition" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">External Inputs/Outputs</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">External Outputs under Real-Time Conditions</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="digitale_ein-ausgaenge.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="analog_ein-ausgaenge.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>For the handling of the digital outputs under real-time conditions, RTC provides a number of highly efficient comparators. The comparators are assigned to a scale and actuate the associated output according to the current weight. Each scale can be assigned up to 8&nbsp;comparators. The associated output and the switching condition are configurable.</p>
+<p>The functions in detail:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:290px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="setcomparator.htm" class="topiclink">setcomparator</a> (int sno, int compno,<br>
+ &nbsp;int bitno, float value, string op, int mode)</p>
+</td>
+<td style="vertical-align:top; width:928px; padding:0px;"><p>Start specified comparator.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:290px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="tstcomparator.htm" class="topiclink">tstcomparator</a> (int sno, int n)</p>
+</td>
+<td style="vertical-align:top; width:928px; padding:0px;"><p>Check status of specified comparator.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:290px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="clrcomparator.htm" class="topiclink">clrcomparator</a> (int sno, int n)</p>
+</td>
+<td style="vertical-align:top; width:928px; padding:0px;"><p>Stop specified comparator.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The comparator can be set-up to react on gross or net weight. All switching conditions (greater, less, equal, etc.) are available. On switching condition becoming true, the associated output can be set or cleared.</p>
+<p>The comparators are executed by the operating system and guarantee an optimal reaction time. Thus, the comparators allow the realization of fast filling applications.</p>
+<p>Following a short example:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;Filling&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">char</span><span class="f_CodeExample">&nbsp;ch&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Start&nbsp;comparators&nbsp;for&nbsp;fast&nbsp;and&nbsp;slow&nbsp;feed...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;setcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;O_Fast,&nbsp;Target&nbsp;-&nbsp;FastPreact,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&lt;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">setcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample">,&nbsp;O_Slow,&nbsp;Target&nbsp;-&nbsp;SlowPreact,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&lt;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(!</span><span class="f_CodeExample" style="font-weight: bold;">tstcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">)&nbsp;&amp;&amp;&nbsp;!</span><span class="f_CodeExample" style="font-weight: bold;">tstcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample">)&nbsp;&amp;&amp;&nbsp;(ch!&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #339966;">fct6</span><span class="f_CodeExample">))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">keypressed</span><span class="f_CodeExample">())&nbsp;ch&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readkey</span><span class="f_CodeExample">();&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delay</span><span class="f_CodeExample">(0.05);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Except&nbsp;of&nbsp;optional&nbsp;display&nbsp;output&nbsp;no&nbsp;further&nbsp;actions&nbsp;</span><br>
+<span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;are&nbsp;required&nbsp;in&nbsp;the&nbsp;filling&nbsp;loop...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Reset&nbsp;comparators...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;clrcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">clrcomparator&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

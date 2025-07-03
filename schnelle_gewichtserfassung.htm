@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Fast Weight Reading</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Fast weight reading" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">The Scale Interface</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Fast Weight Reading</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="totalisierende_waagen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="der_datentyp_dbase.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>For most applications, the functions <a href="getweight.htm" class="topiclink">getweight</a> and <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a> are quite sufficient. However, where the maximum update rate of the weighing processor needs to be utilized, e.g. for the realization of a fast check weighing application, the two functions are by far too slow.</p>
+<p>For this purpose, the RTC operating system provides a set of functions that allow to read the weight at high speed into a buffer and to make it thereafter available for evaluation.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">void <a href="startlog.htm" class="topiclink">startlog</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:981px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Starts fast logging of weight readings.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">void <a href="stoplog.htm" class="topiclink">stoplog</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:981px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Stops fast logging of weight readings.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 6px;">int <a href="readlog.htm" class="topiclink">readlog</a> (int sno, int at, int aw)</p>
+</td>
+<td style="vertical-align:top; width:981px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Reads log buffer contents into the provided variables.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Besides the weight readings, also the current system time is written into the log buffer. Thus, also dynamic processes may be analyzed once the logging is finished. For performance reasons both system time and weight are stored as data type <a href="datentypen.htm" class="topiclink">int</a>.</p>
+<p>The function <span style="font-style: italic;">readlog</span> can be used to read the log buffer into two integer <a href="arrays.htm" class="topiclink">arrays</a>, one each for the weights and the times. <span style="font-style: italic;">readlog</span> returns the number of saved weight readings as function result.</p>
+<p>The log buffer has a capacity for 24,000 weight readings. Thus, even at an update rate of 400&nbsp;Hz dynamic processes of up to one minute may be evaluated.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;wlog[</span><span class="f_CodeExample" style="color: #000080;">1000</span><span class="f_CodeExample">],&nbsp;tlog[</span><span class="f_CodeExample" style="color: #000080;">1000</span><span class="f_CodeExample">];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Capture&nbsp;dynamic&nbsp;weight&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">float</span><span class="f_CodeExample">&nbsp;CatchWeight&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;i,&nbsp;cnt,&nbsp;max,&nbsp;sum,&nbsp;j;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">float</span><span class="f_CodeExample">&nbsp;w;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">startlog&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delay&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Measure&nbsp;time&nbsp;=&nbsp;1&nbsp;second</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;stoplog&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Evaluate&nbsp;buffer&nbsp;and&nbsp;determine&nbsp;weight...&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;cnt&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readlog&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;tlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">],&nbsp;wlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">]);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;max&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;sum&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;j&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">&nbsp;(i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;&nbsp;i&nbsp;&lt;&nbsp;cnt;&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(wlog[i]&nbsp;&gt;&nbsp;max)&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max&nbsp;=&nbsp;wlog[i];&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Search&nbsp;for&nbsp;max.&nbsp;value;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">&nbsp;(i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;&nbsp;i&nbsp;&lt;&nbsp;cnt;&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(wlog[i]&nbsp;&gt;&nbsp;max&nbsp;*&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">.</span><span class="f_CodeExample" style="color: #000080;">9</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;+=&nbsp;wlog[i];&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Totalize&nbsp;weights</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;w&nbsp;=&nbsp;sum&nbsp;/&nbsp;j;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Calculate&nbsp;average&nbsp;weight</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">&nbsp;(i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;&nbsp;i&nbsp;&lt;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dp&nbsp;</span><span class="f_CodeExample">+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample">;&nbsp;i++)&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;/=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Set&nbsp;decimal&nbsp;point</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return&nbsp;</span><span class="f_CodeExample">(w);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>jsonfrommsg</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="jsonfrommsg" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">jsonfrommsg</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="jsonexists.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="jsonfromstring.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Transfers a statement from the message queue to a JSON statement list.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">jsonfrommsg</span> (int id, string *data)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">JSON interface</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+data</p>
+</td>
+<td style="vertical-align:top; width:492px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the JSON statement list<br>
+Variable for transferring metadata</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">jsonfrommsg</span><span style="font-style: italic;"> </span>reads a JSON statement from the message queue. The availability of a not yet handled message matching the filter settings (set-up by the instruction <a href="msgsetfilter.htm" class="topiclink">msgsetfilter</a>) can be checked beforehand using the function <span style="color: #008000;"><a href="msgreceived.htm" class="topiclink">msgreceived</a></span>. If the instruction can be read successfully, it is written into the JSON statement list specified by the parameter <span style="font-style: italic;">id</span> for subsequent evaluation. Possibly available additional data, e.g. information about how to interpret the statement, is copied into the provided string variable <span style="font-style: italic;">data</span>. If the function can be executed successfully, <span style="font-style: italic; color: #008000;">jsonfrommsg</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">xmlfrommsg</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">JSON_HANDLE</span><span class="f_CodeExample">,&nbsp;data);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">jsongetvalue&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">JSON_HANDLE</span><span class="f_CodeExample" style="font-weight: bold;">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;cmd&quot;</span><span class="f_CodeExample">,&nbsp;cmd)</span><span class="f_CodeExample" style="font-weight: bold;">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">(cmd&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;current-state&quot;</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;//&nbsp;send&nbsp;all&nbsp;data&nbsp;again...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The statement list is automatically cleared before new content is written to it. Calling <span style="color: #008000;"><a href="jsonclear.htm" class="topiclink">jsonclear</a></span> is not necessary.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

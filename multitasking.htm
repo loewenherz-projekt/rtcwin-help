@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>General</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Multitasking</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">General</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="attribute.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="nebenablauf.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The RTC operating system gives the programmer the option to run several tasks in parallel as it where at the same time. For this purpose, two different algorithms are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">In parallel to the main application, a second thread is run every 10&nbsp;milliseconds that accomplishes the update of internal system variables. This thread can be assigned further functions by the application program. The benefit of having one fix <a href="nebenablauf.htm" class="topiclink">background task</a> consists in the fix time frame that guarantees a predictable reaction time and eliminates drawbacks on the real-time behavior of the system.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Alternatively, any own function may be <a href="funktionen_als_task_starten.htm" class="topiclink">started as a task</a> and run in parallel by the operating system. This allows the programmer to design this task independent from the application. However, a predictable reaction time on any event and thus a reliable real time behavior cannot be guaranteed anymore. Rather, system reaction time depends on the number and load of the individual tasks.</td></tr></table></div><p>Generally, both types of multitasking require that simultaneous access to system resources has to be avoided or, as a minimum, should be synchronized through semaphore variables. Especially reading the keyboard or output to the display should be accomplished by one task only, typically the main task.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Embedding of External Files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Preprocessor</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Embedding of External Files</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="allgemein.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="bedingte_programmerstellung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Using the preprocessor statement</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">#include&nbsp;&nbsp;&quot;file_name&quot;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>extended programs may be split up in modules. Thus, for example, certain drivers or function packages can be developed and maintained from a central place and made available as include file for various applications. Also, text constants for language dependent operator prompts may be excluded into a separate file for easy-to-handle translation.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Embed&nbsp;operator&nbsp;prompts&nbsp;from&nbsp;external&nbsp;file&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#include&nbsp;&nbsp;&quot;ITSQC_Prompts.h&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #7c4b23;">#include&nbsp;&nbsp;&quot;RTC_Constants.h&quot;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span></p>
+<p>When an external file is included in a program, all functions and definitions of that file are embedded in the program code regardless if they are needed or not. There is no dynamic adaptation or optimization.</p>
+
+</td></tr></table>
+
+</body>
+</html>

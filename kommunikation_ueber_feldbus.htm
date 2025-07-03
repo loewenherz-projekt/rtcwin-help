@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Fieldbus Communication</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Communication and File Access</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Fieldbus Communication</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="zugriff_auf_externe_dateien.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="xml-interface.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The communication via fieldbus is completely handled by the operating system of the weighing terminal and has to be set-up in the Service Mode accordingly, e.g. to Profibus&nbsp;DP. The predefined integer array <span style="font-style: italic;">dw</span> serves as an interface to the application program.</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 97px;"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dw</span><span class="f_CodeExample">[128]</span></p>
+<p>&nbsp;</p>
+<p>The elements 0 to 63 of the integer array represent output words, which correspond to the input words IW0 to IW63 of the PLC. Accordingly, the elements 64 to 127 of the array <span style="font-style: italic;">dw</span> serve as input words corresponding to the output words OW0 to OW63 of the connected PLC.</p>
+<p>For access to individual status bits in a data word, the following functions can be used:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="bit.htm" class="topiclink">bit</a> (int bitno, int v)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Check status of a certain bit in an integer variable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="setbit.htm" class="topiclink">setbit</a> (int bitno, int v)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Set the specified bit in the given integer variable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="clrbit.htm" class="topiclink">clrbit</a> (int bitno, int v)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Clear the specified bit in the given integer variable.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

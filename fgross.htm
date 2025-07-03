@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>fgross</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="fgross,fnet,ftare" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">fgross, ftare, fnet</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="dp.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="getapprovedweight.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Variable</span></p>
+<p>Weight variables formatted for approval.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">loc string &nbsp; <span style="font-weight: bold; color: #0000ff;">fgross</span>[x]<br>
+loc string &nbsp; <span style="font-weight: bold; color: #0000ff;">ftare</span>[x]<br>
+loc string &nbsp; <span style="font-weight: bold; color: #0000ff;">fnet</span>[x]</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale functions</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The variables <span style="font-style: italic; color: #008000;">fgross</span>, <span style="font-style: italic; color: #008000;">fnet</span> and <span style="font-style: italic; color: #008000;">ftare</span> are predefined variables of type <a href="string.htm" class="topiclink">string</a>. They are used for the approved representation of weights. They are updated by the functions <a href="getweight.htm" class="topiclink">getweight</a> and <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a> and have a fix length that is calculated as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:0px;"><p style="text-align: right; margin: 10px 0px 10px 0px;">&nbsp;<br>
+<span style="font-weight: bold;">+  </span><br>
+<span style="font-weight: bold;">+  </span><br>
+<span style="font-weight: bold;">+  </span><br>
+<span style="font-weight: bold;">+  </span><br>
+<span style="font-weight: bold;">+  </span></p>
+</td>
+<td style="vertical-align:top; width:570px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Number of digits to represent the maximum capacity of the scale<br>
+Number of decimal digits plus 1 for the decimal point, if applicable<br>
+One digit for the sign (minus or space)<br>
+Two characters for the weight unit<br>
+One space character between value and weight unit<br>
+Three characters after the weight unit (space plus 'N', 'T', 'PT or space only)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For a weighing range of 1500&nbsp;kg and a resolution of 0.5&nbsp;kg, the length of the formatted weight variables results in 12&nbsp;digits. If the representation of weights with approval signs is selected in Service Mode (Approval Signs = Y), the length of the variable increases by another digit.</p>
+<p>The variables <span style="font-style: italic; color: #008000;">fgross</span>, <span style="font-style: italic; color: #008000;">fnet</span> and <span style="font-style: italic; color: #008000;">ftare</span> are <a href="deklaration_von_variablen.htm#task-local" class="topiclink">task local variables</a>, i.e. they may be used in multiple tasks, however assign different physical memory areas for each task.</p>
+<p>For unformatted numeric representation of the weights, the variables <a href="gross.htm" class="topiclink">gross</a>, <a href="gross.htm" class="topiclink">net</a> and <a href="gross.htm" class="topiclink">tare</a> are available.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;UpdateWeightDisplay(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;buffer[</span><span class="f_CodeExample" style="color: #000080;">40</span><span class="f_CodeExample">];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;buffer&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Brutto:&quot;</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="font-weight: bold;">space&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">7</span><span class="f_CodeExample">),&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">fgross</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">20</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">30</span><span class="f_CodeExample">,&nbsp;buffer);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;buffer&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Netto:&nbsp;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">space&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">7</span><span class="f_CodeExample">),&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">fnet</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">20</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample">,&nbsp;buffer);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;buffer&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Tara:&nbsp;&nbsp;&quot;&nbsp;</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="font-weight: bold;">space&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">7</span><span class="f_CodeExample">),&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">ftare</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">20</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">70</span><span class="f_CodeExample">,&nbsp;buffer);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

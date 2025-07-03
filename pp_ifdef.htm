@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>#ifdef</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="#else,#endif,#ifdef" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">#ifdef</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="pp_if.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="pp_ifndef.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Checks a preprocessor constant.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">#ifdef</span> &nbsp;name</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Preprocessor</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">name</p>
+</td>
+<td style="vertical-align:top; width:996px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Name of constant</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>With the <span style="font-style: italic; color: #008000;">#ifdef</span> statement, the existence of a preprocessor constant can be checked. If the constant does exist, the subsequent program lines up to the <span style="font-style: italic; color: #008000;">#endif</span> statement are included in the process of compilation. If the constant does not exist, the subsequent program lines are discounted.</p>
+<p>Between the <span style="font-style: italic; color: #008000;">#if</span> and <span style="font-style: italic; color: #008000;">#endif</span> statements an optional <span style="font-style: italic; color: #008000;">#else</span> statement may be included. If the constant does exist, the lines between <span style="font-style: italic; color: #008000;">#ifdef</span> and <span style="font-style: italic; color: #008000;">#else</span> are considered for compilation. If the constant does not exist, the part between <span style="font-style: italic; color: #008000;">#else</span> and <span style="font-style: italic; color: #008000;">#endif</span> is used instead.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#ifdef&nbsp;REMOTE_ACCESS</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">writestring&nbsp;</span><span class="f_CodeExample">(Port,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Ready&nbsp;to&nbsp;start&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ch&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">preadchar&nbsp;</span><span class="f_CodeExample">(Port);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Ready&nbsp;to&nbsp;start&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ch&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readkey</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(ch&nbsp;==&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">ok</span><span class="f_CodeExample">)&nbsp;StartFilling();</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-style: italic; color: #008000;"># ifdef</span> statements may be nested. However, only one preprocessor statement is accepted per line.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

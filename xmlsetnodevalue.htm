@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>xmlsetnodevalue</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="xmlsetnodevalue" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">xmlsetnodevalue</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="xmlsetchildvalue.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="xmltomsg.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets the value of a node in an XML instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">xmlsetnodevalue</span> (int id, string node, string value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">XML interface</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+node<br>
+value</p>
+</td>
+<td style="vertical-align:top; width:487px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the XML instance<br>
+Path and name of the node<br>
+Value of the node</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">xmlsetnodevalue</span><span style="font-style: italic;"> </span>sets the value of a node from an <a href="xml-interface.htm" class="topiclink">XML instance</a> specified by the parameter <span style="font-style: italic;">id</span> to the provided <span style="font-style: italic;">value</span>. The node is specified by the parameter <span style="font-style: italic;">node</span> which contains the full path and name of the node. If the node does not exist, it is created.</p>
+<p>If the value can be set successfully, <span style="font-style: italic; color: #008000;">xmlsetnodevalue</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;WriteErrorLogFile(</span><span class="f_CodeExample" style="font-weight: bold;">string&nbsp;</span><span class="f_CodeExample">errmsg)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;node[4];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ErrorCnt++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;increase&nbsp;error&nbsp;counter...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;</span><span class="f_CodeExample">node&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">adj</span><span class="f_CodeExample">(ErrorCnt,4,0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;node&nbsp;name&nbsp;=&nbsp;ErrorCounter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">xmlloadfile</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">XML_ERROR_LOG</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;shared/errorlog.xml&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;xmlsetnodevalue</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">XML_ERROR_LOG</span><span class="f_CodeExample">,&nbsp;concat(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;error/&quot;</span><span class="f_CodeExample">,node),&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concat</span><span class="f_CodeExample">(node,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;:&nbsp;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">date</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&nbsp;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">time</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;:&nbsp;&quot;,&nbsp;</span><span class="f_CodeExample">errmsg));</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;xmlsavefile</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">XML_ERROR_LOG</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;shared/errorlog.xml&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><br>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">error</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">27</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;2:&nbsp;17.11.2013&nbsp;2:22:08&nbsp;PM:&nbsp;Batch&nbsp;aborted</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/</span><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">27&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/error</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

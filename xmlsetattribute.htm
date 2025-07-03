@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>xmlsetattribute</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="xmlsetattribute" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">xmlsetattribute</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="xmlsavestring.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="xmlsetchildvalue.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets an attribute of a node in an XML instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">xmlsetattribute</span> (int id, string node, string attr, string value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">XML interface</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+node<br>
+attr<br>
+value</p>
+</td>
+<td style="vertical-align:top; width:490px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the XML instance<br>
+Path and name of the node<br>
+Attribute name<br>
+Value of the attribute</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">xmlsetattribute</span> searches the <a href="xml-interface.htm" class="topiclink">XML instance</a> specified by the parameter <span style="font-style: italic;">id</span> for the given node. The node is specified by the parameter <span style="font-style: italic;">node</span> which contains the full path and name of the node. If the node does contain the specified attribute, it is set to the provided <span style="font-style: italic;">value</span>. If the node does not have the requested attribute, it is created. </p>
+<p>If the attribute of the node can be set successfully, <span style="font-style: italic; color: #008000;">xmlsetattribute</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;WriteErrorMessage(</span><span class="f_CodeExample" style="font-weight: bold;">string&nbsp;</span><span class="f_CodeExample">msg)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;xmlsetattribute</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">XML_MSG</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;message&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;type&quot;</span><span class="f_CodeExample">,&nbsp;2));&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//Type=error</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">xmlsetnodevalue</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">XML_MSG</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;message&quot;</span><span class="f_CodeExample">,&nbsp;msg);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">xmlpwrite</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">XML_MSG</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="color: #800000;">&nbsp;XML_PORT</span><span class="f_CodeExample">);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

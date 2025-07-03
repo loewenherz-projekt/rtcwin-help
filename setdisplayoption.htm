@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>setdisplayoption</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="setdisplayoption" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">setdisplayoption</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="selectwindow.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="show_startup_message.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets specific properties of the display.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">setdisplayoption</span> (int opt, any val)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">opt<br>
+val</p>
+</td>
+<td style="vertical-align:top; width:689px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display option to be set<br>
+Value the option is set to</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">setdisplayoption</span> sets specific properties of the standard display. The parameter <span style="font-style: italic;">opt</span> determines the property to be modified with the value specified by the parameter <span style="font-style: italic;">val</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Property</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_NONE</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>No option</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_SHOW_WIDGET</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Activates the weight display (<span style="font-style: italic;">val</span>=0).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_HIDE_WIDGET</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Deactivates the weight display (<span style="font-style: italic;">val</span>=0). In the upper right corner of the screen, a red rectangle containing an exclamation point and an out-crossed &quot;kg&quot; sign is shown.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_STATUS_WIDGETS</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Activates the following options for the header objects specified by <span style="font-style: italic;">val</span>. Objects not contained in the parameter <span style="font-style: italic;">val</span> are deactivated.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;"> 1</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>STATUS_WIDGET_USER_TEXT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Headline with application-specific text (see next option)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;"> 2</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>STATUS_WIDGET_WEIGHING_LABEL</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>On-screen electronic marking plate</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;"> 4</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>STATUS_WIDGET_POWER</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Battery status indication</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;"> 8</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>STATUS_WIDGET_DATE_TIME</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Current time</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_STATUS_USER_TEXT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> contains an application-specific text to be shown in the headline. The text is shown in double angle brackets, e.g. &laquo;TEXT&raquo;. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">5</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_KEYBOARD_MODE</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> defines the layout of the on-screen keypad as follows:</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>KEYBOARD_MODE_ALPHANUMERIC</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Alphanumeric keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>KEYBOARD_MODE_NUMERIC</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Numeric keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">6</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_SCALE_BUTTONS</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> enables the four scale function keys as follows. Inactive keys are invisible.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_BUTTON_ZERO</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Zero key</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_BUTTON_SELECT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Selection key for the secondary weight display</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_BUTTON_PRESET_TARE</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Preset tare key (PT)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_BUTTON_TARE</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Tare key (T)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">7</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_SCALE_LINE_FUNCTIONS</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> enables the information to be shown in the secondary weight display as follows. Inactive functions cannot be chosen by the toggle key.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_LINE_TARE_WEIGHT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Tare weight</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_LINE_GROSS_WEIGHT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Gross weight</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_LINE_BARGRAPH</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Bargraph</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>SCALE_LINE_APPROVALDATA</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Approved weight storage (alibi memory)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_KEYBOARD_BEEP_FREQUENCY</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> defines the frequency of the beep as feedback of the keyboard. If <span style="font-style: italic;">val</span>=0, the beeper is deactivated.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">9</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_APPLICATION_BEEP_FREQUENCY</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> defines the frequency of the beep when activated by the application. If <span style="font-style: italic;">val</span>=0, the beeper is deactivated.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">10</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>-</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">11</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:344px; padding:0px;"><p>DISPLAY_OPTION_DISPLAY_MODE</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The parameter <span style="font-style: italic;">val</span> controls the weight display as follows:</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>DISPLAY_MODE_WEIGHT</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The display contains the weight with current units.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:62px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:45px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:287px; padding:0px;"><p>DISPLAY_MODE_PIECES</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The display shows the current number of pieces with unit &quot;pieces.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Activate&nbsp;electronic&nbsp;marking&nbsp;plate&nbsp;and&nbsp;time&nbsp;in&nbsp;head&nbsp;line</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">setdisplayoption&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">DISPLAY_OPTION_STATUS_WIDGET</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">STATUS_WIDGET_WEIGHING_LABEL</span><span class="f_CodeExample">&nbsp;|&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #800000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS_WIDGET_DATE_TIME</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Applicable preprocessor constants (e.g. DISPLAY_OPTION_SHOW_WIDGET) are available in the file &quot;qtmonitor.h.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

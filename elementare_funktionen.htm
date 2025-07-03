@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Basic Functions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Display functions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Output to the Display</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Basic Functions</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="bildschirmausgabe.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="dialog-funktionen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Following table shows the basic display functions contained in RTC:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="background.htm" class="topiclink">background</a> (int color)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Specification of background color.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="foreground.htm" class="topiclink">foreground</a> (int color)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Specification of writing/drawing color.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="posto.htm" class="topiclink">posto</a> (int x, int&nbsp;y)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Specification of start position for the next drawing function.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="lineto.htm" class="topiclink">lineto</a> (int x, int&nbsp;y)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a line from current to specified position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="boxto.htm" class="topiclink">boxto</a> (int x, int y, int&nbsp;type)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a box of given type from current to specified position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="triangle.htm" class="topiclink">triangle</a> (int x1, int&nbsp;y1, int&nbsp;x2, int&nbsp;y2)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a triangle between current position and the two specified points.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="rectangle.htm" class="topiclink">rectangle</a> (int w, int&nbsp;h)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a square of given width and height starting at current position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="polygon.htm" class="topiclink">polygon</a> (int mode)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a filled polygon in combination with subsequent lineto statements.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="arc.htm" class="topiclink">arc</a> (int w, int h, int&nbsp;w0, int&nbsp;w1)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw an elliptical arc of given width and height. The two other parameters specify start and end angle of the arc.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="pie.htm" class="topiclink">pie</a> (int w, int h, int w0, int w1)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a filled elliptical pie of given width and height. The two other parameters specify start and end angle of the pie.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="clearscreen.htm" class="topiclink">clearscreen</a> (void)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Clear screen with current background color.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="clearto.htm" class="topiclink">clearto</a> (int x, int&nbsp;y)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Clear a square screen area from current to specified position and fill with current background color.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="font.htm" class="topiclink">font</a> (int f)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Specify font and attribute (if applicable) for subsequent write operations.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="fontsize.htm" class="topiclink">fontsize</a> (int fs)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Specify font size for subsequent write operations.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="showtext.htm" class="topiclink">showtext</a> (int x, int y, string&nbsp;s)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Output a text at the specified position. Current font style, size and attributes are used.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="input.htm" class="topiclink">input</a> (int x, int v, any&nbsp;v)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Entry of a variable at the specified position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="tinput.htm" class="topiclink">tinput</a> (int x, int v, any v, float&nbsp;t)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Entry of a variable at the specified position with timeout.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="drawarrow.htm" class="topiclink">drawarrow</a> (int x, int y, int&nbsp;dir)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Draw a direction triangle at the specified position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="begindraw.htm" class="topiclink">begindraw</a> (void)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Starts buffering of subsequent display functions.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:332px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="enddraw.htm" class="topiclink">enddraw</a> (void)</p>
+</td>
+<td style="vertical-align:top; width:1238px; padding:0px;"><p>Stops buffering of display functions and outputs all buffered instructions.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

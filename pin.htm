@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>pin</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="pin" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">pin</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="outputs.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="pout.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Reads data from a group of digital inputs.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">pin</span> (int msb, int lsb)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">External inputs/outputs</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:83px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">msb<br>
+lsb</p>
+</td>
+<td style="vertical-align:top; width:990px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Number of the most significant input of the group<br>
+Number of the least significant input of the group</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Status of digital inputs as binary number</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">pin</span> reads a group of digital inputs specified by the two parameters <span style="font-style: italic;">msb</span> and <span style="font-style: italic;">lsb</span>. <span style="font-style: italic;">msb</span> defines the input with the highest number and <span style="font-style: italic;">lsb</span> defines the lowest input in the group. Counting starts from 0. The status of the inputs is represented by the bits of an integer number and returned as function result. Bit #0 represents the lowest bit in the group (digital input <span style="font-style: italic;">lsb</span>), bit #1 the next bit (input <span style="font-style: italic;">lsb+1</span>) and so on.The value 1 reflects the status &quot;set&quot; and 0 the status &quot;not set&quot; of the corresponding input.</p>
+<p>The case <span style="font-style: italic;">msb</span> = <span style="font-style: italic;">lsb</span> reads one discrete input only and thus complies with the function <a href="bin.htm" class="topiclink">bin</a>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Read&nbsp;material&nbsp;No.&nbsp;through&nbsp;inputs&nbsp;5–8&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MatNo&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">pin&nbsp;</span><span class="f_CodeExample">(8,&nbsp;5);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>If <span style="font-style: italic; color: #808000;">pin</span> is used to read more inputs than available, the obsolete bits of the function result are set to 0.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

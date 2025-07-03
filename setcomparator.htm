@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>setcomparator</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="setcomparator" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">setcomparator</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="pout.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="tstcomparator.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Activates a real-time comparator.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">setcomparator</span> (int sno, int n, int bitno, float value, string op, int mode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">External inputs/outputs</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:83px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">sno<br>
+n<br>
+bitno<br>
+value<br>
+op<br>
+mode</p>
+</td>
+<td style="vertical-align:top; width:990px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale number<br>
+Number of comparator<br>
+Number of assigned digital output<br>
+Setpoint<br>
+Setting condition<br>
+Operating mode of comparator</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">setcomparator</span> activates a switching function for the digital output specified by the parameter <span style="font-style: italic;">bitno</span>. The switching is carried out by a real-time comparator that is assigned to a scale. Each scale can be assigned up to eight comparators and thus control up to eight digital outputs. The parameter <span style="font-style: italic;">sno</span> specifies the scale whereas <span style="font-style: italic;">n</span> is the number 1 to 8 of the comparator assigned to it. The comparator number is used as reference for subsequent calls of <a href="tstcomparator.htm" class="topiclink">tstcomparator</a> and <a href="clrcomparator.htm" class="topiclink">clrcomparator</a>. The parameter <span style="font-style: italic;">value</span> is the setpoint, i.e. the value where switching is carried out. The switching condition is specified by the <a href="string.htm" class="topiclink">string</a> parameter <span style="font-style: italic;">op</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">&gt; &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Switching condition is true if the current weight of the scale is greater than the provided <span style="font-style: italic;">value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">&gt;= &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Switching condition is true if the current weight of the scale is greater than or equal to the provided <span style="font-style: italic;">value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">&lt;= &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Switching condition is true if the current weight of the scale is smaller than or equal to the provided <span style="font-style: italic;">value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">&lt; &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Switching condition is true if the current weight of the scale is smaller than the provided <span style="font-style: italic;">value</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Alternatively, the following notations can be used instead of the mathematical comparison operators: <span style="font-style: italic;">gr</span> for 'greater', <span style="font-style: italic;">ge</span> for 'greater-equal', <span style="font-style: italic;">le</span> for 'smaller-equal' and <span style="font-style: italic;">ls</span> for 'smaller.' Furthermore, the comparison may be carried out using the absolute values by putting the character '<span style="font-style: italic;">a</span>' in front of the operand (e.g. <span style="font-style: italic;">agr</span> for 'absolute greater').</p>
+<p>The final parameter <span style="font-style: italic;">mode</span> determines whether gross or net weight (100-times-higher resolution) is taken into account and if the output is set or cleared when the switching condition is true:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">0 &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Comparison with gross weight, output is set if condition is true</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">1 &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Comparison with net weight, output is set if condition is true</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">2 &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Comparison with gross weight, output is cleared if condition is true</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;">3 &nbsp; &nbsp; &nbsp;  </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">Comparison with net weight, output is cleared if condition is true</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#define&nbsp;ANALOG_OUTPUT</span><span class="f_CodeExample">&nbsp;0</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#define&nbsp;OUT0_FAST</span><span class="f_CodeExample">&nbsp;0</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Start&nbsp;filling&nbsp;loop&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;InitFastFilling&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;ProcessState:&nbsp;PS_INIT_FAST_FILL</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ProcessRepeat&nbsp;=&nbsp;PS_INIT_FAST_FILL;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">setcomparator</span><span class="f_CodeExample">&nbsp;(1,&nbsp;1,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">OUT0_FAST</span><span class="f_CodeExample">,&nbsp;Target&nbsp;-&nbsp;Preact,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&lt;&quot;</span><span class="f_CodeExample">,&nbsp;1);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ProcessState&nbsp;=&nbsp;PS_FAST_FILL;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;FastFilling&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;ProcessState:&nbsp;PS_FAST_FILL</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">tstcomparator</span><span class="f_CodeExample">&nbsp;(1,&nbsp;1))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">aout</span><span class="f_CodeExample">&nbsp;(ANALOG_OUTPUT,&nbsp;&nbsp;FastAnalogValue);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Filling&nbsp;complete&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">clrcomparator</span><span class="f_CodeExample">&nbsp;(1,&nbsp;1);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">aout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">ANALOG_OUTPUT</span><span class="f_CodeExample">,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ProcessState&nbsp;=&nbsp;PS_INIT_TOLERANCE_CHECK;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Note: </span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The comparison can also be based on absolute values. In that case, the syntax of the switching condition <span style="font-style: italic;">op</span> is as follows:</td></tr></table></div><p><span class="f_CodeExample" style="font-weight: bold;"> &nbsp;setcomparator</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">, </span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">, O_Fast, Target-FastPreact, </span><span class="f_CodeExample" style="color: #0000ff;">&quot;abs(&lt;)&quot;</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">When the alternative notation is used, an <span style="font-style: italic;">a</span> must be put in front of the operator. Example:</td></tr></table></div><p><span class="f_CodeExample" style="font-weight: bold;"> &nbsp;setcomparator</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">, </span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">, O_Fast, Target-FastPreact, </span><span class="f_CodeExample" style="color: #0000ff;">&quot;als&quot;</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">A target weight with 100-times-higher resolution can also be used for comparison</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

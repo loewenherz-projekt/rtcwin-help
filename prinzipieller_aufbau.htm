@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Principal Structure</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Functions,Procedures,return" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading2" style="font-style: italic;">Functions and Procedures</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Principal Structure</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="die_anweisung_break.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="funktionsparameter.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Functions are program parts realizing certain repetitive tasks. Once declared, the functions are later called up by their names. Thus, they significantly contribute to a good structure and readability of a program.</p>
+<p>The principal design of a function is as follows:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">Type&nbsp;Name&nbsp;(Parameters)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;&nbsp;Declarations</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;&nbsp;Statements</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return<a name="return"></a></span><span class="f_CodeExample">&nbsp;(return&nbsp;value);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p><span style="font-style: italic;">Type</span> determines the data type of the function or – to be precise – the data type of the return value. Following the <span style="font-style: italic;">Name</span> of the function a list of parameters is added in a pair of parentheses. After that, the function code is appended in a pair of curved brackets. Typically, the locally needed variables are declared first, followed by the statements making up the function. The statement <span style="font-style: italic;">return</span> terminates the function.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The indication of parameters is made – like the declaration of variables – via data type and parameter name.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Multiple parameters in a list are separated by a comma.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">If no parameters are needed, the word <a name="void"></a><span style="font-weight: bold;">void</span> is written instead.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Declaration of local variables is optional and may be omitted.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The return value is optional and has to comply with the data type of the function. If the return value is missing, also no function result is passed to the calling routine (void).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The statement <span style="font-style: italic;">return</span> is optional and may be omitted for statements without return value. In that case, the function is terminated after execution of the last statement.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The statement <span style="font-style: italic;">return</span> can be used multiple times within a function (e.g. in an if-else struct). The function is terminated immediately after the execution of <span style="font-style: italic;">return</span> – subsequent instructions are discounted.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Recursive function calls (function calling itself) are not permitted.</td></tr></table></div><p>RTC does not distinguish between functions and procedures. Instead of a procedure, a function without return value is defined by stating <span style="font-style: italic;">void</span> instead of a data type.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

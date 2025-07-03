@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>struct</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="struct" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">struct</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="string.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="timer.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">RTC Declaration Word</span></p>
+<p>Declaration of a struct.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">struct</span> name<br>
+{<br>
+ &nbsp;type &nbsp;element<br>
+ ...<br>
+}</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Declaration words</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">name<br>
+type<br>
+element</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Name of the struct<br>
+Data type of the struct item<br>
+Item name</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The instruction <span style="font-style: italic; color: #008000;">struct</span> may be used for the declaration of a struct. The declaration word <span style="font-style: italic; color: #008000;">struct</span> is followed by the name of the struct and – embraced in curved brackets – the individual struct items. Each item consists of a declaration word for the data type and the item name. The data types <a href="bool.htm" class="topiclink">bool</a>, <a href="char.htm" class="topiclink">char</a>, <a href="int.htm" class="topiclink">int</a>, <a href="float.htm" class="topiclink">float</a>, <a href="decimal.htm" class="topiclink">decimal</a> and <a href="string.htm" class="topiclink">string</a> are allowed. Each struct item can be addressed with its unique identifier consisting of the struct name, a full stop and the item name, e.g. struct.item.</p>
+<p>Data structures defined by <span style="font-style: italic; color: #008000;">struct</span> allow to make functions available as parameters. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">struct</span><span class="f_CodeExample">&nbsp;st_message</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string&nbsp;</span><span class="f_CodeExample">text[64];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">int&nbsp;</span><span class="f_CodeExample">color;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">st_message&nbsp;Message;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;ShowOperatorMessage&nbsp;(st_message&nbsp;msg)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">fontsize&nbsp;</span><span class="f_CodeExample">(18);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">font&nbsp;</span><span class="f_CodeExample">(24);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">background&nbsp;</span><span class="f_CodeExample">(msg.color);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">posto&nbsp;</span><span class="f_CodeExample">(0,&nbsp;105);&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">boxto&nbsp;</span><span class="f_CodeExample">(320,&nbsp;130,&nbsp;1);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(5,&nbsp;108,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">mid</span><span class="f_CodeExample">&nbsp;(msg.text,&nbsp;32));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Message.text&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Weigh&nbsp;hopper&nbsp;not&nbsp;empty!&quot;</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Message.color&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">CL_RED</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ShowOperatorMessage&nbsp;(Message);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

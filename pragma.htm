@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>#pragma</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="#pragma" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">#pragma</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="pp_include.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="pp_error_2.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Preprocessor control statement.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">#pragma</span> ( key, value )</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Preprocessor</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:49px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">key<br>
+value</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Name of keyword<br>
+Assigned value</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>With the <span style="font-style: italic; color: #008000;">#pragma</span> statement, certain preprocessor control statements can be embedded in the application program. The <span style="font-style: italic; color: #008000;">#pragma</span> statement is followed by a pair of brackets containing the name of a key and – separated by a comma – the value of the key. At the moment only the key 'language' is defined which is assigned a language string.</p>
+<p>The language string contains – separated by semicolons – the setup for several languages. Each setup consists of a text, the number of the required <a href="laendercodes.htm" class="topiclink">ISO&nbsp;8859 character set</a> and the <a href="laendercodes.htm" class="topiclink">country code</a> for the layout of an external PC keyboard. If applicable, multiple keyboard layouts can be stated using square brackets.</p>
+<p>The preprocessor uses the given language string on the one hand to initiate the compiler for using the right ISO code pages and on the other hand to embed a <a href="writeparameter.htm" class="topiclink">writeparameter</a> statement in the function <span style="font-style: italic;">main</span> that configures the language selection of the Service Mode accordingly.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;&nbsp;available&nbsp;languages:&nbsp;&nbsp;&nbsp;&nbsp;German|English</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#pragma&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">(languages,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">&quot;German,15,[de,ch];English,15,[us,gb];&quot;</span><span class="f_CodeExample" style="font-weight: bold;">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#define&nbsp;TX_ABORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">&quot;Abbruch|Abort&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#define&nbsp;TX_ABORT_BATCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">&quot;Charge&nbsp;abbrechen?|Abort&nbsp;batch?&quot;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>If the <a href="translate.htm" class="topiclink">translate</a> statement is used, the name of the language in the <span style="font-style: italic; color: #008000;">#pragma</span> statement has to be identical to the identifier of the corresponding language in the <span style="font-style: italic;">translate.ini</span> file. </p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

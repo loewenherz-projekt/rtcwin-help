@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Service Mode Parameters</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Tables</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Service Mode Parameters</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="laendercodes.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="bool.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">General</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Language<br>
+Keyboard<br>
+Dateformat<br>
+Timeformat<br>
+Decimal Char<br>
+Approval Signs<br>
+Terminal<br>
+Webaccess<br>
+Webpassword<br>
+Sharedpassword</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&quot;0,German,15&quot;, &quot;1,English,15&quot; etc. (see <a href="pragma.htm" class="topiclink">pragma</a> statement)<br>
+&quot;0,DE&quot;, &quot;1,CH&quot; etc. (see <span style="font-style: italic;">pragma</span> statement)<br>
+&quot;0,DD.MM.YY', etc. (see Service Mode)<br>
+&quot;0,HH:MM&quot;, &quot;1,HH:MM:SS&quot;<br>
+&quot;,&quot;, &quot;.&quot;<br>
+0 = No<br>
+Terminal number<br>
+Number of connections to the web server<br>
+Web password<br>
+Password for the access to 'shared'</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Scale</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Type<br>
+Port</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">0 = 'None', 1 = 'ADM', 2 = 'DWU' etc. (see Service Mode)<br>
+0 = 'Internal', 1–6 = Com Port</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Sio0<br>
+Sio1 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Baudrate<br>
+Bits<br>
+Parity<br>
+Handshake<br>
+Protocol<br>
+Charset<br>
+Tabulator<br>
+StartChar<br>
+EndChar<br>
+Chksum<br>
+WithEnd<br>
+WithStart</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200<br>
+7, 8.<br>
+0 = 'None', 1 = 'Even', 2 = 'Odd<br>
+0 = 'None', 1 = Xon/Xoff, 2 = RTS/CTS<br>
+0 = 'None', 1 = 'TTY', 2 = 'AckNak', 3 = 'NoAck'<br>
+'None', '850', '852', '866', 'Star'<br>
+0 = 'ESC/P', 1 = 'Spaces'<br>
+ASCII Code<br>
+ASCII Code<br>
+0 = 'None', 1 = 'XOR', 2 = 'CPL'<br>
+0 = 'N', 1 = 'Y'<br>
+0 = 'N', 1 = 'Y'</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">BIO1<br>
+BIO2 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Type<br>
+Port<br>
+Address</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">0 = 'None', 1 = 'PIM', 2 = 'Rel/Trio', 3 = 'Modbus&nbsp;TCP', 4 = 'SIO'<br>
+PIM socket or Com port<br>
+Rel/Trio address</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AOut1<br>
+AOut2 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Type<br>
+Port<br>
+Address<br>
+Module<br>
+Mode<br>
+Outputmode<br>
+Scale<br>
+Offset<br>
+Maximum</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">0 = 'None', 1 = 'MAI', 2 = 'DAU8', 3 = 'DAU15'<br>
+PIM socket or Com port<br>
+MAI address<br>
+MAI module<br>
+0 = 0–10 V, 1 = 2–10 V, 2 = 0–20 mA, 3 = 4–20 mA<br>
+0 = 'Application', 1 = Gross, 2 = Net<br>
+Scale number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AIn1<br>
+AIn2 ...</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Type<br>
+Port<br>
+Address<br>
+Module<br>
+Mode<br>
+Offset<br>
+Maximum</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">0 = 'None', 1 = 'MAI', 2 = 'ADI'<br>
+PIM socket or Com port<br>
+MAI address<br>
+MAI module<br>
+0 = 0–10 V, 1 = 2–10 V, 2 = 0–20 mA, 3 = 4–20 mA</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:97px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Combus</p>
+</td>
+<td style="vertical-align:top; width:124px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Type<br>
+Address</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">0 = 'Off', 1 = Profibus&nbsp;DP, 2 = Modbus&nbsp;TCP<br>
+Slave address</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

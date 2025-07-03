@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Access to External Files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Communication and File Access</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Access to External Files</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="ordnerfunktionen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="kommunikation_ueber_feldbus.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Access to external files is possible via FTP (File Transfer Protocol), SFTP (Secure File Transfer Protocol) or through a SAMBA server.</p>
+<p>For access via FTP, the following functions can be used:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpopen.htm" class="topiclink">ftpopen</a> (int handle, string host, int port)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Open an FTP connection for subsequent file transfer</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpauthenticate.htm" class="topiclink">ftpauthenticate</a> (int handle, string name, string pw)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Perform a log-in on an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpconnected.htm" class="topiclink">ftpconnected</a> (int handle)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Check connection status to an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpclose.htm" class="topiclink">ftpclose</a> (int handle)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Close connection to an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpget.htm" class="topiclink">ftpget</a> (int handle, string source, string dest)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Copy a file from an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpput.htm" class="topiclink">ftpput</a> (int handle, string source, string dest)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Copy a file to an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftpremove.htm" class="topiclink">ftpremove</a> (int handle, string fname)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Remove a file from an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftplist.htm" class="topiclink">ftplist</a> (int handle, string path)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Open a directory on an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftplistread.htm" class="topiclink">ftplistread</a> (int handle, string *name)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Read a file name from an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ftprename.htm" class="topiclink">ftprename</a> (int handle, string path, string oldname, string newname)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Rename a file on the FTP server.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For access via the secured protocol SFTP, the following functions can be used:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpopen.htm" class="topiclink">sftpopen</a> (int handle, string hostname, int port, string user, string pw)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Open an SFTP connection for subsequent file transfer</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpconnected.htm" class="topiclink">sftpconnected</a> (int handle)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Check connection status to an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpclose.htm" class="topiclink">sftpclose</a> (int handle)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Close connection to an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpget.htm" class="topiclink">sftpget</a> (int handle, string source, string dest)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Copy a file from an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpput.htm" class="topiclink">sftpput</a> (int handle, string source, string dest)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Copy a file to an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftpremove.htm" class="topiclink">sftpremove</a> (int handle, string fname)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Remove a file from an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftplist.htm" class="topiclink">sftplist</a> (int handle, string path)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Open a directory on an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftplistread.htm" class="topiclink">sftplistread</a> (int handle, string *name)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Read a file name from an SFTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="sftprename.htm" class="topiclink">sftprename</a> (int handle, string oldname, string newname)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Rename a file on the SFTP server.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For access through a SAMBA server, an SMB connection to the server has to be established first. The files can then be accessed by the standard functions for <a href="zugriff_auf_dateien.htm" class="topiclink">file access</a>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">string <a href="smbconnect.htm" class="topiclink">smbconnect</a> (string&nbsp;host, string&nbsp;share, string&nbsp;user, string&nbsp;pw, string&nbsp;*res)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Provide access to external network drive</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="smbconnected.htm" class="topiclink">smbconnected</a> (string path)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Check connection status to an external network drive</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="smbdisconnect.htm" class="topiclink">smbdisconnect</a> (string&nbsp;host)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Disconnect from an external network drive</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>concat</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="concat" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">concat</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="adj.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="copy.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Converts various data types into strings and concatenates them to a result string.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">string <span style="font-weight: bold;">concat</span> (any v0, …&nbsp;vn)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">String functions</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">v</p>
+</td>
+<td style="vertical-align:top; width:991px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Source element</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Result string</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">concat</span> converts the provided source elements of any data type into strings and combines them to a result string. According to their data type, the individual elements are converted as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="string.htm" class="topiclink">string</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The string is embedded into the result string without modification (up to the first Null character).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="char.htm" class="topiclink">char</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The ASCII code of the character is embedded into the result string as one byte.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="int.htm" class="topiclink">int</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The integer number is converted into a string with a fix length of 10&nbsp;characters. Leading non-used digits are shown as spaces. If a format is specified during declaration of an integer variable, it is included in the result string accordingly. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="decimal.htm" class="topiclink">decimal</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Variables are converted according to their format specified during declaration.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="float.htm" class="topiclink">float</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The floating-point number is converted into a string with a total length of 12&nbsp;characters. It has a fix number of four decimals. Leading non-used digits are shown as spaces. If a format is specified during declaration of a <span style="font-style: italic;">float</span> variable, it is represented accordingly in the result string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="double.htm" class="topiclink">double</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The floating-point number is converted into a string with nine digits before and eight digits after the decimal point. Leading non-used digits are shown as spaces. If a format is specified during declaration of a <span style="font-style: italic;">double</span> variable, it is represented accordingly in the result string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 0px 0px 10px 19px;"><a href="bool.htm" class="topiclink">bool</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The Boolean number is converted into '0' or '1' according to the status <span style="font-style: italic;">false</span> or <span style="font-style: italic;">true</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">writestring&nbsp;</span><span class="f_CodeExample">(Host,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">date</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">time</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;OrderNo,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;'</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client.No,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;PosNo,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Article.No,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;Parts,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">tare</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">net</span><span class="f_CodeExample">));</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Numeric elements of the types <span style="font-style: italic;">int</span>, <span style="font-style: italic;">float</span>, <span style="font-style: italic;">double</span> or <span style="font-style: italic;">decimal</span> may also be formatted using the function <a href="adj.htm" class="topiclink">adj</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

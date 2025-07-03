@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>fontsize</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="fontsize" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">fontsize</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="font.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="foreground.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Selection of font size.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">fontsize</span> (int pix)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">pix</p>
+</td>
+<td style="vertical-align:top; width:989px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Font size in pixels</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">fontsize</span> specifies the character size for subsequent write operations. The parameter <span style="font-style: italic;">pix</span> specifies the text size in pixels. The font itself as well as possibly selected attributes remain unchanged. </p>
+<p>The bitmap fonts &quot;RTC&quot; and &quot;RTC Mono&quot; are only available in certain sizes. If the size specified by the parameter <span style="font-style: italic;">pix</span> is not available, the next smaller font is selected instead.</p>
+<p>For &quot;RTC&quot; (24) and &quot;RTC Mono&quot; (28) available font sizes are:</p>
+<p> &nbsp; &nbsp;11, 12, 13, 15, 17, 19, 21, 24, 27, 30, 34 and 38</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;RTC_Font&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">24</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;Bold&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Write&nbsp;headline&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">clearscreen</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">font&nbsp;</span><span class="f_CodeExample">(RTC_Font&nbsp;+&nbsp;Bold);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">fontsize&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">17</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">20</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;file&quot;</span><span class="f_CodeExample">);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

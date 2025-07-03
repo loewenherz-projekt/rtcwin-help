@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Background Task</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Multitasking</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Background Task</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="multitasking.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="funktionen_als_task_starten.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>To assign further functionality to the one fix background task, simply create a function without parameters and name it 'background_task.'</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 97px;"><span class="f_CodeExample" style="font-weight: bold;">void&nbsp;background_task&nbsp;(void)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 97px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 97px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 97px;"><span class="f_CodeExample">}</span></p>
+<p>&nbsp;</p>
+<p>The fact alone that the function is given this reserved name assures that it is linked to and executed by the fix system background task.</p>
+<p>Into the function <a href="background_task.htm" class="topiclink">background_task</a>, you put all the functions that you need to be executed in parallel to the application program. In doing so, the following needs to be taken into account:</p>
+<p>The function <span style="font-style: italic;">background_task</span> must not contain any loops. In particular, the background_task itself must not be an endless loop as it would not terminate anymore once it is called up and thus block the complete system.</p>
+<p>The function <span style="font-style: italic;">background_task</span> must not contain any delays or call functions containing possible delays, as this would delay execution of the complete background task. </p>
+
+</td></tr></table>
+
+</body>
+</html>

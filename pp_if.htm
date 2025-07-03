@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>#if</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="#elif,#else,#endif,#if,defined" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">#if</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="pp_error.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="pp_ifdef.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Checks a preprocessor condition.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">#if</span> &nbsp;expression</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Preprocessor</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:83px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">expression</p>
+</td>
+<td style="vertical-align:top; width:970px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Algebraic expression</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>With the <span style="font-style: italic; color: #008000;">#if</span> statement an algebraic expression can be evaluated and checked. If the result of the expression is <span style="font-style: italic;">true</span>, the subsequent program lines up to the <span style="font-style: italic; color: #008000;">#endif</span> statement are included in the process of compilation. If the expression returns <span style="font-style: italic;">false</span>, the subsequent program lines are discounted.</p>
+<p>Between the <span style="font-style: italic; color: #008000;">#if</span> and <span style="font-style: italic; color: #008000;">#endif</span> statement an optional <span style="font-style: italic; color: #008000;">#else</span> may be included. If the algebraic expression is <span style="font-style: italic;">true</span>, the lines between <span style="font-style: italic; color: #008000;">#if</span> and <span style="font-style: italic; color: #008000;">#else</span> are considered for compilation; otherwise the part between <span style="font-style: italic; color: #008000;">#else</span> and <span style="font-style: italic; color: #008000;">#endif</span> is used instead. If the <span style="font-style: italic; color: #008000;">#else</span> has to be followed another <span style="font-style: italic; color: #008000;">#if</span>, the two statements may be combined to an <span style="font-style: italic; color: #008000;">#elif</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">&nbsp;&nbsp;</span><span class="f_CodeExample">StartFilling();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#if&nbsp;DEBUG_LEVEL&nbsp;</span><span class="f_CodeExample">==&nbsp;2</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">gettime</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">writestring&nbsp;</span><span class="f_CodeExample">(Port,&nbsp;concat&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">time</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="color: #0000ff;">&quot;:&nbsp;Filling&nbsp;started.\r\n&quot;)</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#elif&nbsp;DEBUG_LEVEL</span><span class="f_CodeExample">&nbsp;&gt;&nbsp;0</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;StartTime&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">systemtimer&nbsp;</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The <span style="color: #008000;">#if</span> statement my also be used to check the existence of a preprocessor constant using the operator <span style="font-style: italic; color: #008000;">defined</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;FastFeed&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">decimal&nbsp;target</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">net&nbsp;</span><span class="f_CodeExample">&lt;&nbsp;target)&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">bout&nbsp;</span><span class="f_CodeExample">(O</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">_FAST</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">true</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">getweight&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">indicatedscale()</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#if&nbsp;defined&nbsp;TESTMODE</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(10,&nbsp;40,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">adj&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">net&nbsp;</span><span class="f_CodeExample">-&nbsp;target,&nbsp;8,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dp</span><span class="f_CodeExample">));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">bout&nbsp;</span><span class="f_CodeExample">(O</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">_FAST</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-style: italic; color: #008000;">#if</span> statements may be nested. However, only one preprocessor statement is accepted per line.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

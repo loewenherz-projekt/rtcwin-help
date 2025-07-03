@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>translate</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="translate" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">translate</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="textwidth.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="trim.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Shows a string in a specific language.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">string <span style="font-weight: bold;">translate</span> (string s, [string language])</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">String functions</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">s<br>
+language &nbsp; </p>
+</td>
+<td style="vertical-align:top; width:993px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">String<br>
+Optional language</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Result string</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">translate</span> returns as result a language-dependent string according to the settings specified by the parameter <span style="font-style: italic;">language</span>.The result string is copied from the file 'translation.ini' contained in the folder <span style="font-style: italic;">shared</span> or <span style="font-style: italic;">appdata</span> of the weighing terminal. The structure of the file is as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:289px; padding:0px;"><p>[English]<br>
+TX_CANCEL &nbsp;&quot;Cancel&quot;<br>
+TX_START &nbsp; &nbsp; &quot;Start&quot;<br>
+&nbsp;<br>
+[German]<br>
+TX_CANCEL &nbsp;&quot;Abbruch&quot;<br>
+TX_START &nbsp; &nbsp; &quot;Start&quot;</p>
+</td>
+<td style="vertical-align:top; width:929px; padding:0px;"><p>Language identifier in square brackets<br>
+Index (TX_CANCEL) and corresponding text<br>
+More texts in the same language<br>
+&nbsp;<br>
+Next language identifier<br>
+Texts in another language</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The parameter <span style="font-style: italic;">s</span> serves as index when searching the file <span style="font-style: italic;">translation.ini</span> during the execution of <span style="font-style: italic; color: #008000;">translate</span>. The function only searches in the group specified by the parameter <span style="font-style: italic;">language</span>. If the parameter <span style="font-style: italic;">language</span> is missing, the language set in Service Mode is searched instead. If the requested index cannot be found in the indicated language, it is searched in the language stated first in the <a href="pragma.htm" class="topiclink">pragma</a> statement (e.g. English).</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(2</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">,&nbsp;1</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">TX_ARTICLE_FILE</span><span class="f_CodeExample">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Display&nbsp;language&nbsp;as&nbsp;set&nbsp;in&nbsp;Service&nbsp;Mode</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(2</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">,&nbsp;1</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">translate&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">TX_CONFIGURATION,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;English&quot;)</span><span class="f_CodeExample">);&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Display&nbsp;in&nbsp;English,&nbsp;independent&nbsp;of&nbsp;language&nbsp;settings</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The function <span style="font-style: italic; color: #008000;">translate</span> interprets the name of the language set in Service Mode. The <a href="pragma.htm" class="topiclink">pragma</a> statement determines the selectable language options in the Service Mode.</p>
+<p>In a program, the function <a href="lsub.htm" class="topiclink">lsub</a> can be substituted with <span style="font-style: italic; color: #008000;">translate</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

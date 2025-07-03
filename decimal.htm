@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>decimal (Declaration)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="decimal" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">decimal</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="dbase.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="double.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Declaration Word</span></p>
+<p>Declaration of a formatted floating-point variable.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">decimal</span> name %len.dec</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Declaration words</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:73px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">name<br>
+len<br>
+dec</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Variable or function name<br>
+Length<br>
+Number of decimals</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The instruction <span style="font-style: italic; color: #008000;">decimal</span> declares a variable with given <span style="font-style: italic;">name</span> or the return value of a function <span style="font-style: italic;">name</span> as floating-point number. During declaration, the variable is also formatted for input and output in respect of length and number of decimals. The length <span style="font-style: italic;">len</span> is understood as overall length including decimals and the decimal point itself, as applicable, whereas <span style="font-style: italic;">dec</span> only defines the number of trailing decimals.</p>
+<p>Where an <a href="int.htm" class="topiclink">integer</a> variable is used instead of a discrete number of trailing decimals, the variable is only formatted during run time. Where the variable <a href="dp.htm" class="topiclink">dp</a> is used, the number of trailing decimals is set during run time according to the currently selected scale.</p>
+<p>The type <span style="font-style: italic; color: #008000;">decimal</span> approximately covers the range of &plusmn;10<span style="font-size: 9px; vertical-align: super;">–10</span> to &plusmn;10<span style="font-size: 9px; vertical-align: super;">10</span> with an accuracy of 10 digits. During declaration, the variable <span style="font-style: italic;">name</span> may be assigned an initial value. The types <span style="font-style: italic; color: #008000;">decimal</span>, <a href="float.htm" class="topiclink">float</a> and <a href="double.htm" class="topiclink">double</a> may be assigned each other.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;MaxValue%8.</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dp</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;SettleTime%4.1&nbsp;=&nbsp;5.0;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>When the length is specified, the comma also has to be taken into account. The format %4.1 thus defines a variable with two digits before and one digit after the decimal point.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

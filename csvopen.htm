@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>csvopen</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="csvopen" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">csvopen</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="csvclose.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="csvread.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Opens a CSV file.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">csvopen</span> (int fno, string fname)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">File handling</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">fno<br>
+fname</p>
+</td>
+<td style="vertical-align:top; width:983px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical file number<br>
+File name</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">csvopen</span><span style="font-style: italic;"> </span>opens a file and makes it available under the provided logical file number <span style="font-style: italic;">fno</span> for subsequent read and write operations using <a href="csvread.htm" class="topiclink">csvread</a>. The logical file number <span style="font-style: italic;">fno</span> can freely be chosen from the range 0 to 7.</p>
+<p>The parameter <span style="font-style: italic;">fname</span> contains the full file name as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>internal/name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the battery-backed memory of the weighing terminal and cannot be accessed externally.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>shared/name.ext</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the directory &quot;shared&quot;. This folder can be accessed externally via FTP access (login: &quot;shared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>usbstick/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a USB memory stick. Further subdirectories may be specified as applicable.</p>
+<p>Files on the USB memory stick can be accessed externally via FTP (login: &quot;usbshared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the instruction <a href="smbconnect.htm" class="topiclink">smbconnect</a>. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>internal/name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the battery-backed memory of the terminal and cannot be accessed externally.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>shared/name.ext</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the directory &quot;shared&quot;. This folder can be accessed externally via FTP access (login: &quot;shared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>usbstick/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a USB memory stick. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the instruction <a href="smbconnect.htm" class="topiclink">smbconnect</a>. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>If the file name does not specify a directory, the folder 'internal' is used as default. If the file can be opened successfully, <span style="font-style: italic; color: #008000;">csvopen</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">bool</span><span class="f_CodeExample">&nbsp;ReadCSVFile&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;directory,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;file_name)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;type;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;data[1023]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">csvopen</span><span class="f_CodeExample">&nbsp;(1,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat</span><span class="f_CodeExample">&nbsp;(directory,&nbsp;file_name,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;.csv&quot;</span><span class="f_CodeExample">)))&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">Open&nbsp;CSV&nbsp;file</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">while</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">csvread</span><span class="f_CodeExample">&nbsp;(1,&nbsp;type,&nbsp;data))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">Read&nbsp;until&nbsp;end&nbsp;of&nbsp;file...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">switch</span><span class="f_CodeExample">&nbsp;(type)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">case</span><span class="f_CodeExample">&nbsp;1&nbsp;:&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">Process&nbsp;data</span><span class="f_CodeExample" style="color: #ff0000;">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">break</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">case</span><span class="f_CodeExample">&nbsp;2&nbsp;:&nbsp;</span><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">Line&nbsp;break</span><span class="f_CodeExample" style="color: #ff0000;">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">break</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">default</span><span class="f_CodeExample">&nbsp;:</span><span class="f_CodeExample" style="color: #ff0000;">//&nbsp;Error</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #008000;">false</span><span class="f_CodeExample">);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">csvclose</span><span class="f_CodeExample">&nbsp;(1))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #008000;">true</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Fehler&nbsp;Log-Datei&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Fehler&nbsp;Log-Datei&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>After opening a file, the internal read pointer is set to the beginning of the file.</p>
+<p>Depending on type and performance of the connection, opening of a file may take several seconds. The programmer should respect this in his program design.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

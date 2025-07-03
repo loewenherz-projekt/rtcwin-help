@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>XML Syntax</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">XML Interface</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">XML Syntax</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="xml-interface.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="attribute.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Basically, an XML instance or file consists of the root element which then contains all other elements. Those elements may again include more elements or plain text. Elements that contain other elements are called nodes. </p>
+<p>The following rules apply to the names of nodes:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 25px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">XML is case sensitive, i.e. a difference is made between upper and lower case characters.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 25px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">All characters may be used, including special characters and umlauts.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 25px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The node must be closed.</td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:260px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 40px 0px 32px;"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">root</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">Text_1</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Here&nbsp;some&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/Text1</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">Text_2</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Some&nbsp;more&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/Text_2</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/root</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span></p>
+</td>
+<td style="vertical-align:top; width:594px; padding:0px;"><p>Root element or root node<br>
+First sub-element<br>
+&nbsp;<br>
+End of first sub-element<br>
+Second sub-element<br>
+&nbsp;<br>
+End of second sub-element<br>
+End of root element</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The above example can programmed using <a href="xmlinsertchild.htm" class="topiclink">xmlinsertchild</a>:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 32px;"><span class="f_CodeExample" style="color: #800000;">#define&nbsp;HANDLE</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;0;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlclear&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">);</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root&quot;</span><span class="f_CodeExample">,&nbsp;1,&nbsp;1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;root&nbsp;element</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Text_1&quot;</span><span class="f_CodeExample">,&nbsp;1,&nbsp;1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;1st&nbsp;sub-element</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_1&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Here&nbsp;some&nbsp;text&quot;</span><span class="f_CodeExample">,&nbsp;2,&nbsp;1);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;1st&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Text_2&quot;</span><span class="f_CodeExample">,&nbsp;1,&nbsp;1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;2nd&nbsp;sub-element</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_2&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Some&nbsp;more&nbsp;text&quot;</span><span class="f_CodeExample">,&nbsp;2,&nbsp;1);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;2nd&nbsp;text</span></p>
+<p>&nbsp;</p>
+<p>The above example can be written even more easily using the instruction <a href="xmlsetnodevalue.htm" class="topiclink">xmlsetnodevalue</a> utilizing the fact that not yet existing nodes are created automatically:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 32px;"><span class="f_CodeExample" style="color: #800000;">#define&nbsp;HANDLE</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;0;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlclear&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">);</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlsetnodevalue&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_1&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Here&nbsp;some&nbsp;text&quot;</span><span class="f_CodeExample">);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;1st&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlsetnodevalue&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_2&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Some&nbsp;more&nbsp;text&quot;</span><span class="f_CodeExample">);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;2nd&nbsp;text</span></p>
+<p>&nbsp;</p>
+<p>This also clearly shows the path structure. When the second sub-element is added, the first node is automatically closed because the name &quot;Text_1&quot; is not contained in the path of the second node. If &quot;Text_1&quot; were contained in the path of node <span style="font-style: italic;">Text_2</span>, it would be inserted as sub-element of node <span style="font-style: italic;">Text_1</span>. Example:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 32px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;...</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlinsertchild&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_1&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Text_2&quot;</span><span class="f_CodeExample">,&nbsp;1,&nbsp;1);&nbsp;</span><br>
+<span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;...</span></p>
+<p>&nbsp;</p>
+<p>or:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 32px;"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;...</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">xmlsetnodevalue&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;root/Text_1/Text_2&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Some&nbsp;more&nbsp;text&quot;</span><span class="f_CodeExample">);&nbsp;</span><br>
+<span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;...</span></p>
+<p>&nbsp;</p>
+<p>Thus, the example would look like this:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:260px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 40px 0px 32px;"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">root</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">Text_1</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Here&nbsp;some&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">Text_2</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some&nbsp;more&nbsp;text</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/Text_2</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/Text1</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/root</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span></p>
+</td>
+<td style="vertical-align:top; width:594px; padding:0px;"><p>Root element or root node<br>
+First sub-element<br>
+&nbsp;<br>
+Second sub-element<br>
+&nbsp;<br>
+End of second sub-element<br>
+End of first sub-element<br>
+End of root element</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The Programmer does not need to explicitly close a node. Nodes are closed automatically when the path is cut accordingly. The root element is closed when the XML instance is saved or transmitted.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

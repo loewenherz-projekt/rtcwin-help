@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>getdw</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="getdw" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">getdw</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="dw.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="setbit.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span class="f_Caption">RTC Function</span></p>
+<p>Reads a weight from a data word.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">getdw </span>(int dw, float *var, int format)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Fieldbus</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">dw<br>
+var<br>
+format</p>
+</td>
+<td style="vertical-align:top; width:994px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Number of data word<br>
+Target variable<br>
+Data word format</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">getdw</span> reads the data word addressed by <span style="font-style: italic;">dw</span> and writes the content in the target variable provided as parameter <span style="font-style: italic;">var</span>. The value read from the data word is converted according to <span style="font-style: italic;">format</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: center; margin: 0px 0px 7px 24px;">0</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">The data word content is divided by 10 as many times as the number of trailing decimals of the most recently read scale. The result is written into the provided variable. For example: the data word content 1250 is converted into 12.50 for a scale display with 2&nbsp;trailing decimals. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: center; margin: 0px 0px 7px 24px;">1</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">The data word addressed by <span style="font-style: italic;">dw</span> is interpreted in combination with the next data word as a 32-bit IEEE floating-point number. The result is written into the provided target variable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: center; margin: 0px 0px 7px 24px;">2</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">The data word addressed by <span style="font-style: italic;">dw</span> is interpreted in combination with the next data word as a 32-bit integer number. <span style="font-style: italic;">dw</span> contains the lower-bit and the next data word the higher-bit part. The content of this double word is divided by 10 as many times as the number of trailing decimals of the most recently read scale. The result is written into the provided variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">getdw&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">DW_TARGET</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample">Target</span><span class="f_CodeExample">,&nbsp;2);&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Read&nbsp;target&nbsp;quantity&nbsp;from&nbsp;data&nbsp;words&nbsp;DW_TARGET&nbsp;and&nbsp;DW_TARGET&nbsp;+&nbsp;1</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">getdw&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">DW_PREACT</span><span class="f_CodeExample">,&nbsp;Preact,&nbsp;0);&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Read&nbsp;preact&nbsp;from&nbsp;data&nbsp;word&nbsp;DW_PREACT</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

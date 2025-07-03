@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>readlog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="readlog" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">readlog</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="range.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="sealed.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Reads the ring buffer of a real-time weight log.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">readlog</span> (int sno, int *tarray, int *warray)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale functions</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:75px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">sno<br>
+tarray<br>
+warray</p>
+</td>
+<td style="vertical-align:top; width:410px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale number<br>
+<span class="f_Comment">Destination array for time values</span><br>
+<span class="f_Comment">Destination array for weight values</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Number of read records</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">readlog</span> reads the content of the weight-log ring buffer and writes the data into the provided array variables. Logging of weights has to be started and ended beforehand using the instruction <a href="startlog.htm" class="topiclink">startlog</a> and <a href="stoplog.htm" class="topiclink">stoplog</a>. After the execution of the function <span style="font-style: italic; color: #008000;">readlog</span>, the weights are contained in the integer array <span style="font-style: italic;">warray</span>, whereas the array <span style="font-style: italic;">tarray</span> contains the corresponding system times. For better performance both, weight and time arrays are of type integer and herein contained values must be converted as applicable. The weight values comply with the high-resolution net weight <a href="gross.htm" class="topiclink">nethires</a> with the decimal point omitted, whereas the time values show the time in milliseconds since start of logging. <span style="font-style: italic; color: #008000;">readlog</span> returns the number of read weight and time pairs as function result.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Determine&nbsp;flow&nbsp;rate&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">i&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">readlog&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample">,&nbsp;tlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">],&nbsp;wlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">]);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Flowrate&nbsp;=&nbsp;(wlog[i]&nbsp;-&nbsp;wlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">])&nbsp;/&nbsp;(tlog[i]&nbsp;-&nbsp;tlog[</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">])&nbsp;*&nbsp;Factor;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

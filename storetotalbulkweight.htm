@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>storetotalbulkweight</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="storetotalbulkweight" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">storetotalbulkweight</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="stoplog.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="taremode.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Stores the totalized weight in the approved weight storage.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:995px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">storetotalbulkweight</span> (int sno)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:995px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale functions</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">sno</p>
+</td>
+<td style="vertical-align:top; width:915px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:995px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Error code</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">storetotalbulkweight</span> concludes totalizing of weights of a totalizing bulk weigher and stores the current content of the variable <a href="totalbulkweight.htm" class="topiclink">totalbulkweight</a> in the approved weight storage (alibi memory). The variable <a href="alibino.htm" class="topiclink">alibino</a> thereafter contains the identification number the weights total is stored against.</p>
+<p>If the function can be completed successfully, <span style="font-style: italic; color: #008000;">storetotalbulkweight</span> returns 0 as function result; otherwise the corresponding <a href="laufzeitfehler.htm" class="topiclink">error code</a> is returned instead and the variable <a href="alibino.htm" class="topiclink">alibino</a> contains 0. </p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

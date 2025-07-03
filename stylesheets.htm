@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Usage of Style Sheets</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Usage of Style Sheets</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="objekte.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="reaktion_auf_ereignisse.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>To specify the look of a page, a window or an object more in detail, the style sheet syntax of QT can be used. Applicable commands are <a href="pagestyle.htm" class="topiclink">pagestyle</a>, <a href="windowstyle.htm" class="topiclink">windowstyle</a> and <a href="widget_style.htm" class="topiclink">widget_style</a>.</p>
+<p>A style sheet command consist of a property name followed by a colon and the associated value. If more than one properties are to be set, they have to be separated by semicolons.</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 13px;"><span class="f_CodeExample" style="font-weight: bold;">windowstyle</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">WINDOW_ID</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;background:&nbsp;#5a7cf9;&quot;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-style:&nbsp;solid;&quot;\&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-width:&nbsp;2px;&quot;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-color:&nbsp;white&nbsp;gray&nbsp;gray&nbsp;white;&quot;</span><span class="f_CodeExample">)</span><span class="f_CodeExample">;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The available properties are:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p><span style="font-style: italic; font-weight: bold;">Property</span></p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p><span style="font-style: italic; font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p>background</p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p>Sets the background color. The color is specified by a hex number representing the RGB values as follows: #rrggbb. Alternatively, the following color names may be used:</p>
+<p><span style="font-style: italic;">black</span> (#000000), <span style="font-style: italic;">blue</span> (#0000ff), <span style="font-style: italic;">gray</span> (#808080), <span style="font-style: italic;">green</span> (#008000), <span style="font-style: italic;">orange</span> (#ffa500), <span style="font-style: italic;">red</span> (#ff0000), <span style="font-style: italic;">silver</span> (#c0c0c0), <span style="font-style: italic;">white</span> (#ffffff), and <span style="font-style: italic;">yellow</span> (#ffff00).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p>border-style</p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p>Sets the style of the border to <span style="font-style: italic;">none</span>, <span style="font-style: italic;">solid</span>, <span style="font-style: italic;">inset</span>, <span style="font-style: italic;">outset</span>, <span style="font-style: italic;">dotted</span>, <span style="font-style: italic;">double</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p>border-color</p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p>Sets the color of the border as described above. If more than one color (up to four) is given, they specify the top, right, bottom and left edges of a box, respectively. If the left color is not specified, it is taken to be the same as the right color. If the bottom color is not specified, it is taken to be the same as the top color. If the right color is not specified, it is taken to be the same as the top color.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p>border-width</p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p>Width of the border in pixels. The syntax is &quot;npx&quot; with <span style="font-style: italic;">n</span> number of pixels. Up to 4 values can be given specifying the top, right, bottom, and left edges of a box, respectively. If the left width is not specified, it is taken to be the same as the right width. If the bottom width is not specified, it is taken to be the same as the top width. If the right width is not specified, it is also taken to be the same as the top width.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:164px; padding:0px;"><p>margin</p>
+</td>
+<td style="vertical-align:top; width:601px; padding:0px;"><p>Specifies the margin of the object in pixels. Up to 4 values can be specified that are handled as described above.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Further attributes can be found in the &quot;Qt Style Sheets Reference&quot; in the internet.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>widget_text</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="widget_text" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">widget_text</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="widget_style.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="widget_text_alignment.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span class="f_Caption">RTC Function</span></p>
+<p>Sets the text of an input or output object.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">widget_text</span> (int id, string text, &nbsp;[int row], [int column])</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:78px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+text<br>
+row<br>
+column</p>
+</td>
+<td style="vertical-align:top; width:688px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the object<br>
+Text to be shown<br>
+Optional row number<br>
+Optional column number</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">widget_text</span> sets the <span style="font-style: italic;">text</span> the object specified by the parameter <span style="font-style: italic;">id</span>. The object has to be a text object e.g. of type <a href="createwidget.htm" class="topiclink">WIDGET_TYPE_TEXT_OUTPUT</a>, <a href="createwidget.htm" class="topiclink">WIDGET_TYPE_TEXT_INPUT</a> or a list or table object of type <a href="createwidget.htm" class="topiclink">WIDGET_TYPE_LIST</a> or <a href="createwidget.htm" class="topiclink">WIDGET_TYPE_TABLE</a>.</p>
+<p>If the object is a list or table object, the two optional parameters <span style="font-style: italic;">row</span> and <span style="font-style: italic;">column</span> have to be used to address the respective position of the text. If the object only contains one text, the parameters can be omitted.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Beispiel:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">void&nbsp;</span><span class="f_CodeExample">CreateMyInputBox</span><span class="f_CodeExample" style="font-weight: bold;">&nbsp;(void)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;begindraw&nbsp;();</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;createpage&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">PAGE_MY_INPUT_BOX</span><span class="f_CodeExample" style="font-weight: bold;">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;beginlayout&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_VBOX</span><span class="f_CodeExample" style="font-weight: bold;">,</span><span class="f_CodeExample">&nbsp;0,&nbsp;2);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beginlayout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_HBOX</span><span class="f_CodeExample">,&nbsp;0);&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Layout&nbsp;for&nbsp;headline</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_TEXT_OUTPUT</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontsize</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;30);&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontface</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">FT_RTC</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_size_policy</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUMEXPANDING</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">);&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_background</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;#5a7cf9&quot;</span><span class="f_CodeExample">);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;//&nbsp;SysTec&nbsp;Default</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_foreground</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;white&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text_alignment</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TEXT_ALIGN_LEFT</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_HEADLINE</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">lsub</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">TX_INPUTBOX</span><span class="f_CodeExample">));</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endlayout</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Further&nbsp;input&nbsp;or&nbsp;output&nbsp;objects&nbsp;*/</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beginlayout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_HBOX</span><span class="f_CodeExample">,&nbsp;0,&nbsp;2);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Layout&nbsp;for&nbsp;Codepage&nbsp;selection</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_PROMPT</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_TEXT_OUTPUT</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_PROMPT</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Codepage&quot;</span><span class="f_CodeExample">,&nbsp;0);&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_COMBOBOX</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;None&quot;</span><span class="f_CodeExample">,&nbsp;0);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;850&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;1);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;852&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;2);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,</span><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&quot;866&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;3);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_set_index</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_CODE_PAGE_SELECTION</span><span class="f_CodeExample">,&nbsp;2,&nbsp;0);</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endlayout</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;endlayout</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">enddraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The instruction <span style="font-style: italic; color: #008000;">widget_text</span> cannot be used for a drawing area of type <a href="createwidget.htm" class="topiclink">WIDGET_TYPE_SKETCH</a>. Use the instruction <a href="showtext.htm" class="topiclink">showtext</a> instead.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

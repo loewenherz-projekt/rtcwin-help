@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>dw</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="dw" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">dw</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="clrbit.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="getdw.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Variable</span></p>
+<p>Shared memory area for fieldbus communication.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int &nbsp; <span style="font-weight: bold; color: #0000ff;">dw </span>[128]</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Fieldbus</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For the exchange of data via fieldbus, a shared memory area is used. This area is designed as array of data words. The assignment of the individual data words is part of the application. The program can access this memory for read and write as usual.</p>
+<p>Exchange of the contents of data words with the host system is automatically carried out by the operating system using the fieldbus communication protocol set up in Service Mode.</p>
+<p>The data words <span style="font-style: italic; color: #339966;">dw</span>[0] to <span style="font-style: italic; color: #339966;">dw</span>[63] are used as RTC output words and correspond to the input words IW0 to IW63 of the host system. The data words <span style="font-style: italic; color: #339966;">dw</span>[64] to <span style="font-style: italic; color: #339966;">dw</span>[127] are input words and are read only. They correspond to the output data words OW0 to OW63 of the host system.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>sftpopen</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="sftpopen" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">sftpopen</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="sftplistread.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="sftpput.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Opens a connection to an SFTP server.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">sftpopen</span> (int sfno, string ipaddr, int port, string user, string pw)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">File handling</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">sfno<br>
+ipaddr<br>
+port<br>
+user<br>
+pw</p>
+</td>
+<td style="vertical-align:top; width:354px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical connection number<br>
+IP address of SFTP server<br>
+SFTP port<br>
+User name<br>
+User password</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">sftpopen</span><span style="font-style: italic;"> </span>opens a secured connection to an SFTP server and makes it available for subsequent file access (e.g. via <a href="sftpget.htm" class="topiclink">sftpget</a>) under the logical connection number specified by the parameter <span style="font-style: italic;">fno</span>. The logical connection number <span style="font-style: italic;">sno</span> can freely be chosen from the range 0 to 7.</p>
+<p>The parameter <span style="font-style: italic;">ipaddr</span> contains the IP address of the SFTP server as string, whereas the integer parameter <span style="font-style: italic;">port</span> defines the port of the SFTP server. The two parameters <span style="font-style: italic;">user</span> and <span style="font-style: italic;">pw</span> specify the user name and password to log-in on the given server. If the connection can be opened successfully, <span style="font-style: italic; color: #008000;">sftpopen</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>. The connection status can be checked using the instruction <a href="sftpconnected.htm" class="topiclink">sftpconnected</a>.</p>
+<p>After file access is completed, the connection to the SFTP server should be closed using <a href="sftpclose.htm" class="topiclink">sftpclose</a>. </p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Get&nbsp;order&nbsp;file&nbsp;from&nbsp;FTP&nbsp;server&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#define&nbsp;SFTP_PORT</span><span class="f_CodeExample" style="font-weight: bold;">&nbsp;</span><span class="f_CodeExample">22</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">bool</span><span class="f_CodeExample">&nbsp;GetOrders&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">bool</span><span class="f_CodeExample">&nbsp;result&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(s</span><span class="f_CodeExample" style="font-weight: bold;">ftpopen&nbsp;</span><span class="f_CodeExample">(0,&nbsp;ServerIP,&nbsp;S</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">FTP_PORT</span><span class="f_CodeExample">))&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Open&nbsp;FTP&nbsp;connection...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;get&nbsp;new&nbsp;orders&nbsp;and&nbsp;copy&nbsp;to&nbsp;'shared'...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">ftpget&nbsp;</span><span class="f_CodeExample">(0,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Production/Scale_1/Orders.csv&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;shared/Orders.csv&quot;</span><span class="f_CodeExample">))&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">result&nbsp;</span><span class="f_CodeExample">=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">true</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;delete&nbsp;order&nbsp;file&nbsp;from&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(!&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">ftpremove&nbsp;</span><span class="f_CodeExample">(0,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Production/Scale_1/Orders.csv&quot;</span><span class="f_CodeExample">))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;SFTP&nbsp;access&nbsp;denied!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;No&nbsp;new&nbsp;orders&nbsp;available!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;SFTP&nbsp;access&nbsp;denied!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(!</span><span class="f_CodeExample" style="font-weight: bold;">ftpclose&nbsp;</span><span class="f_CodeExample">(0))&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Close&nbsp;FTP&nbsp;connection...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;SFTP&nbsp;access&nbsp;denied!&quot;</span><span class="f_CodeExample">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;SFTP&nbsp;server&nbsp;not&nbsp;available!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;return&nbsp;</span><span class="f_CodeExample">(result);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Depending on type and load of the network, opening an SFTP connection may take several seconds. The programmer should respect this in his program design.</p>
+<p>If the SFTP connection is already open when <span style="font-style: italic; color: #008000;">sftpopen</span> is executed, it is automatically closed and reopened anew.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

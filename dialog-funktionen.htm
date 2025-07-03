@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Dialog Functions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Output macros" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Output to the Display</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Dialog Functions</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="elementare_funktionen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="digitale_ein-ausgaenge.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Besides the basic functions for output to the display, RTC provides a set of powerful macros. Some of them are complete dialogs and accordingly affect settings of colors, fonts, character sizes and others.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="inputbox.htm" class="topiclink">inputbox</a> (string title) ...</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Complete dialog for variable and parameter entry. Function keys may also be assigned additional functions.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="select.htm" class="topiclink">select</a> (dbase db, int x1, int y1,<br>
+ int x2, int y2)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Dialog for selection of a record from a database table.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="searchbox.htm" class="topiclink">searchbox</a> &nbsp;(dbase db)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Provides a list of available records of the specified database table with the option to browse and select a record.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="selectbox.htm" class="topiclink">selectbox</a> (string title) ...</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Select menu to choose a function from a set of options (e.g. main or supervisor menu).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="edit.htm" class="topiclink">edit</a> (dbase db)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Complete dialog to create and edit a record for/of the specified database table.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="infobox.htm" class="topiclink">infobox</a> (string text)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Pop-up message box with specified text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="yesnobox.htm" class="topiclink">yesnobox</a> (string text, bool f)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Create a yes/no query box.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="codebox.htm" class="topiclink">codebox</a> &nbsp;(string prompt,<br>
+ string pw)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Input box for hidden password entry.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="fctinfo.htm" class="topiclink">fctinfo</a> (int n, string info)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Create a label for a function key (soft key).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="setinfo.htm" class="topiclink">setinfo</a> (any v, string infotext)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Assign an additional help text to the variable <span style="font-style: italic;">v infotext</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="setunit.htm" class="topiclink">setunit</a> (any v, string unittext)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Assign a unit sign to the variable <span style="font-style: italic;">v unittext</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:225px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="setsearchtitle.htm" class="topiclink">setsearchtitle</a> (dbase db,<br>
+ string titletext)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Assign a headline to the database table <span style="font-style: italic;">db</span> for the use of <a href="searchbox.htm" class="topiclink">searchbox</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

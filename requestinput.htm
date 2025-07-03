@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>requestinput</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="requestinput" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">requestinput</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="removewindow.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="selectpage.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Enables data input by the operator.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">string <span style="font-weight: bold;">requestinput</span> (int kmode, string prompt, string preset, int format, int len, int decs)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:83px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">kmode<br>
+prompt<br>
+preset<br>
+format<br>
+len<br>
+decs</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Keyboard mode<br>
+Operator prompt<br>
+Preset value for the input<br>
+Input format<br>
+Length of the input field<br>
+Number of decimals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Text entered by the operator</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">requestinput</span> opens the window for data input by the operator. The input type is specified by the parameter <span style="font-style: italic;">format</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_STRING</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Normal text input</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_PASSWORT</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Hidden password entry showing asterisks</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_DATE</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Date input</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_TIME</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Time input</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_INTEGER</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Numeric input without decimals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">5</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_BOOL</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Yes / No input</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">6</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_FLOAT</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Numeric input with optional decimals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">7</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_DECIMAL</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Numeric input with fixed decimals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>INPUT_FORMAT_NUMERIC_STRING</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Numeric input as string</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The parameter <span style="font-style: italic;">len</span> defines the maximum length of the input (maximum number of characters). When the input type <span style="font-style: italic;">INPUT_FORMAT_DECIMAL</span> is used, the parameter <span style="font-style: italic;">decs</span> is used to define the number of decimals; for all other formats this parameter is ignored.</p>
+<p>The parameter <span style="font-style: italic;">kmode</span> specifies which keypad is used for the input:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>KEYBOARD_MODE_ALPHANUMERIC</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Alphanumeric keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>KEYBOARD_MODE_NUMERIC</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Numeric keyboard</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The parameter <span style="font-style: italic;">preset</span> can be used to preset the input field with an initial value. The operator can accept this value with the enter key or press the clear key and enter a new value.</p>
+<p>The parameter <span style="font-style: italic;">prompt</span> can be used to put a fix text in front of the input field.</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">requestinput</span> returns a string containing the operator input as function result. If data entry was aborted by the operator, the function result is an empty string.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">BatchNo&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">requestinput&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">KEYBOARD_MODE_NUMERIC</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Order&nbsp;No.&quot;,&nbsp;&quot;&quot;,</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">INPUT_FORMAT_NUMERIC</span><span class="f_CodeExample">,&nbsp;13,&nbsp;0);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Applicable preprocessor constants (e.g. INPUT_FORMAT_STRING) are available in the file &quot;qtmonitor.h.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

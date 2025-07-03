@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>jsontomsg</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="jsontomsg" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">jsontomsg</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="jsonsetvalue.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="jsontostring.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sends a JSON statement list to the message handler.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">jsontomsg</span> (int id, int dest, int type, string data)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">JSON interface</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+dest<br>
+type<br>
+data</p>
+</td>
+<td style="vertical-align:top; width:492px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the JSON statement list<br>
+Destination of the JSON statement list<br>
+Message type<br>
+Additional data for destination</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">jsontomsg</span><span style="font-style: italic;"> </span>sends the content of the JSON statement list specified by the parameter <span style="font-style: italic;">id</span> to the message handler for subsequent transfer to another instance. The parameter <span style="font-style: italic;">dest</span> specifies the destination of the statement list as follows<span style="font-style: italic;">:</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Destination</span></p>
+</td>
+<td style="vertical-align:top; width:694px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:694px; padding:0px;"><p>Undefined</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td style="vertical-align:top; width:694px; padding:0px;"><p>Application (interpreter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; width:694px; padding:0px;"><p>Web interface</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">9</p>
+</td>
+<td style="vertical-align:top; width:694px; padding:0px;"><p>JSON server (Java script object notification)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Other destinations exist for internal communication. The parameter <span style="font-style: italic;">type</span> specifies the message type as follows<span style="font-style: italic;">:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Message</span></p>
+</td>
+<td style="vertical-align:top; width:692px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">9</p>
+</td>
+<td style="vertical-align:top; width:692px; padding:0px;"><p>The data contain the configuration parameters requested by the WEB interface of the application.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">10</p>
+</td>
+<td style="vertical-align:top; width:692px; padding:0px;"><p>The data contain the settings requested by the WEB interface of the application. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">11</p>
+</td>
+<td style="vertical-align:top; width:692px; padding:0px;"><p>Java script object notification (JSON) for the process visualization. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:122px; padding:0px;"><p style="text-align: center;">14</p>
+</td>
+<td style="vertical-align:top; width:692px; padding:0px;"><p>Message for the web server.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Other message numbers are reserved for internal purpose. If necessary, the parameter <span style="font-style: italic;">data</span> can be used to send additional data (metadata) to the destination. </p>
+<p>If the JSON statement list can be transferred to the message handler successfully, <span style="font-style: italic; color: #008000;">jsontomsg</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; width:1072px; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">#define&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">EVENT_APPLICATION_WS_SERVER</span><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;9</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">#define&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">MSG_WEB_LINK</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&nbsp;14</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">jsonsetvalue</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">JSON_HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;cmd&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;wss-connection-status&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">jsontomsg</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">JSON_HANDLE</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">EVENT_APPLICATION_WS_SERVER</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">MSG_WEB_LINK</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;</span><span class="f_CodeExample">);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

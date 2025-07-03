@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>widget_fontface</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="widget_fontface" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">widget_fontface</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="widget_focus.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="widget_fontsize.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets the font of an object.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">widget_fontface</span> (int id, int font)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+font</p>
+</td>
+<td style="vertical-align:top; width:689px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the object<br>
+Font</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">widget_fontface</span> defines the font to be used in the object specified by the parameter <span style="font-style: italic;">id</span>. The parameter <span style="font-style: italic;">font</span> determines the font to be used as follows. Font size and color remain unchanged and have – if required – to be set using the instructions <a href="widget_fontsize.htm" class="topiclink">widget_fontsize</a> and <a href="widget_foreground.htm" class="topiclink">widget_foreground</a>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Number</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Font</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;">24</p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;">RTC</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Proportional bitmap font, display font</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;">28</p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;">RTC Mono</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Monospaced bitmap font, display font</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Fonts 24 (RTC) and 28 (RTC Mono) contain the character tables ISO&nbsp;8859-1 to -5, -7, -11 and -15 with all European characters as well as Cyrillic, Greek and Thai characters.</p>
+<p>If applicable, one of the following attribute values may be added to the font number:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Number</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Attributes</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;">normal</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:77px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:111px; padding:0px;"><p style="text-align: center;">bold</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;CreateButtonWidget&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample">&nbsp;id,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;button_text)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(id,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_BUTTON</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_dimensions</span><span class="f_CodeExample">&nbsp;(id,&nbsp;100,&nbsp;55);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontsize</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;(id,&nbsp;24);&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontface</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;(id,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">FT_RTC_BOLD</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_foreground</span><span class="f_CodeExample">&nbsp;(id,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;white&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_background</span><span class="f_CodeExample">&nbsp;(id,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;darkblue&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;widget_style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">(id,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">ST_BUTTON_STYLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(id,&nbsp;button_text);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>The if Statement</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Conditions,else,if" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Conditions</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">The </span><span class="f_Heading2" style="font-style: italic;">if</span><span class="f_Heading2"> Statement</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="deklaration_von_strukturen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="switch-anweisung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The <span style="font-style: italic;">if</span> statement is used to put program execution under certain conditions. The structure is as follows:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 24px;"><span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(&nbsp;Expression&nbsp;)</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;Statement_1;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">else<a name="else"></a></span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;Statement_2;</span><br>
+<span class="f_CodeExample">&nbsp;</span></p>
+<p>If the result of the Boolean Expression is <span style="font-style: italic;">true</span>, the following <span style="font-style: italic;">Statement_1</span> is executed, otherwise the <span style="font-style: italic;">Statement_2</span> following the word <span style="font-style: italic;">else</span> is carried out. If the <span style="font-style: italic;">else</span> portion is missing, the <span style="font-style: italic;">if</span> statement has no effect in case that <span style="font-style: italic;">expression</span> results in <span style="font-style: italic;">false</span>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">There is no semicolon behind Expression,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The <span style="font-style: italic;">else</span> part is optional and may be omitted,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none"><span style="font-style: italic;">Statement_1</span> and <span style="font-style: italic;">Statement_2</span> may consist of multiple statements combined by a pair of curved brackets (compound statement).</td></tr></table></div><p><span style="font-style: italic;">Statement_1</span> and <span style="font-style: italic;">Statement_2</span> again may be <span style="font-style: italic;">if</span> statements, i.e. <span style="font-style: italic;">if</span> statements may be nested. By definition it is agreed upon that the <span style="font-style: italic;">else</span> always refers to the last <span style="font-style: italic;">if</span> that has not yet been assigned an <span style="font-style: italic;">else</span> part. Thus, the construction</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Expression_1)&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Expression_2)&nbsp;Statement_1;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span><span class="f_CodeExample">&nbsp;Statement_2;</span><br>
+<span class="f_CodeExample">&nbsp;</span></p>
+<p>is interpreted as:</p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 96px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Expression_1)</span><br>
+<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(Expression_2)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Statement_1;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Statement_2;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 23px;"><span class="f_CodeExample">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

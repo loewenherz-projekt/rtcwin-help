@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>range</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="range" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">range</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="ntep.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="readlog.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Variable</span></p>
+<p>Current weighing range of a multiple-range or multi-interval scale.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">loc int &nbsp; <span style="font-weight: bold; color: #0000ff;">range</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Scale functions</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The variable <span style="font-style: italic; color: #008000;">range</span> is a predefined variable of type <a href="int.htm" class="topiclink">integer</a> showing the number of the weighing range the scale was in when the functions <a href="getweight.htm" class="topiclink">getweight</a> or <a href="getapprovedweight.htm" class="topiclink">getapprovedweight</a> were executed last. If the read scale is neither a multiple-range nor a multi-interval scale, the content of <span style="font-style: italic; color: #008000;">range</span> is 0.</p>
+<p>The variable <span style="font-style: italic; color: #008000;">range</span> is a <a href="deklaration_von_variablen.htm#task-local" class="topiclink">task local variable</a>, i.e. it may be used in multiple tasks, however assigns different physical memory for each task.</p>
+
+</td></tr></table>
+
+</body>
+</html>

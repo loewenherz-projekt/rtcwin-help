@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>string (Declaration)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="string" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">string</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="semaphore.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="struct.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Declaration Word</span></p>
+<p>Declaration of a formatted text variable.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">string</span> name [len]</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Declaration words</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:83px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">name<br>
+len</p>
+</td>
+<td style="vertical-align:top; width:990px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Variable or function name<br>
+Length</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">string</span> declares a variable with given <span style="font-style: italic;">name</span> or the return value of a function <span style="font-style: italic;">name</span> as character string (text). During declaration, also the maximum length of the variable is specified. The type <span style="font-style: italic; color: #008000;">string</span> represents a character string with dynamic length that is assigned a constant memory section of 1–2047&nbsp;bytes. The actual length of the string can be determined using the function <a href="length.htm" class="topiclink">length</a>. During declaration, the variable <span style="font-style: italic;">name</span> may be assigned an initial value. At a length of 1, the type <span style="font-style: italic; color: #008000;">string</span> is compatible to the data type <a href="char.htm" class="topiclink">char</a>.</p>
+<p>If a variable of type <span style="font-style: italic; color: #008000;">string</span> is assigned a text, the complete character string must be enclosed in double quotes. Inside a string, the following escape sequences are allowed:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right;"><span style="font-weight: bold;">Symbol</span><span style="font-family: Courier;"> </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;"><span style="font-weight: bold;">Char.</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">ASCII</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;"><span style="font-family: Courier;">\b  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">BS</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Backspace</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;"><span style="font-family: Courier;">\t  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">HT</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">9</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Horizontal tabulation (tab)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 0px 8px 0px;"><span style="font-family: Courier;">\n  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center; margin: 0px 0px 8px 0px;">LF</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">10</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Line feed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\f  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">FF</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">12</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Form feed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\r  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">CR</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">13</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Carriage return</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\&quot;  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">&quot;</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">34</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Double quote (when contained in the text)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\\  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">\</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">92</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Backslash (when contained in the text)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\'  </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">'</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">39</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;Single quote</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><span style="font-family: Courier;">\ddd </span></p>
+</td>
+<td style="vertical-align:top; width:61px; padding:0px;"><p style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:56px; padding:0px;"><p style="text-align: center;">ddd</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p> &nbsp;The character with ASCII code <span style="font-style: italic;">ddd</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;RxBuffer[20];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;Version[6]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;3.00&quot;</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;OK_Msg[10]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;\002OK\n&quot;</span><span class="f_CodeExample">;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

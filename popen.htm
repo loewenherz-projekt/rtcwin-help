@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>popen</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="popen" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">popen</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="pconnected.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="pread.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Opens a logical communication channel.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">popen</span> (int port, string s)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Communication</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:92px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">port<br>
+s</p>
+</td>
+<td style="vertical-align:top; width:981px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical port number<br>
+Parameter string to open the communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Error code</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">popen</span><span style="font-style: italic;"> </span>opens a communication channel and makes it available under the provided logical port number <span style="font-style: italic;">port</span> for subsequent read and write operations (e.g. <a href="pwritechar.htm" class="topiclink">pwritechar</a>). If the communication channel can be opened successfully, <span style="font-style: italic; color: #008000;">popen</span> returns 0 as function result; otherwise the corresponding <a href="laufzeitfehler.htm" class="topiclink">error code</a> is returned instead.</p>
+<p>The logical <span style="font-style: italic;">port</span> number can freely be chosen from the range 8 to 31. The port numbers 0 to 7 are reserved for the internal serial channels according the table below and are assigned automatically by the operating system after power on. Calling <span style="font-style: italic; color: #008000;">popen</span> is not necessary.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: center; margin: 0px 0px 7px 24px;"><span style="font-weight: bold;">0</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">Internal Ethernet connection Eth0 (Port 1234)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: center; margin: 0px 0px 7px 24px;"><span style="font-weight: bold;">1–6</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 7px 0px;">SIM1 to SIM6 on mainboard or on optional extension boards</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The parameter <span style="font-style: italic;">s</span> contains the required parameter string to open the communication channel as follows:</p>
+<p>&nbsp;<br>
+<span style="font-weight: bold;">Connection via the Ethernet</span></p>
+<p>In the case that the communication is activated by the weighing terminal, the connection string is composed of the target IP address, a colon and the number of the port on the target device. If contrariwise the terminal is to make a port available for external access (listen mode), <span style="font-style: italic;">s</span> only contains a colon and the port number.</p>
+<p>&nbsp;<br>
+<span style="font-weight: bold;">Connection to a USB printer</span></p>
+<p>For connection with the (first) printer via USB the connection string &quot;/dev/usblp0&quot; (&quot;/dev/lp0&quot; for IT9000E) has to be used.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Examples:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Open&nbsp;port&nbsp;2500&nbsp;for&nbsp;remote&nbsp;access&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">popen</span><span class="f_CodeExample">(OnlineChannel,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;:2500&quot;</span><span class="f_CodeExample">)&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ShowErrorMsg(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Online&nbsp;channel&nbsp;could&nbsp;not&nbsp;be&nbsp;opened!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Connect&nbsp;with&nbsp;target&nbsp;device&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">popen</span><span class="f_CodeExample">(HostChannel,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat</span><span class="f_CodeExample">(HostIP,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;:&quot;&nbsp;</span><span class="f_CodeExample">,HostPort))&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ShowErrorMsg(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Could&nbsp;not&nbsp;open&nbsp;host&nbsp;channel!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Connect&nbsp;to&nbsp;USB&nbsp;printer&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">popen</span><span class="f_CodeExample">(PrtPort,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/dev/usblp0&quot;</span><span class="f_CodeExample">))&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ShowErrorMsg(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;USB&nbsp;printer&nbsp;not&nbsp;available&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The internal port numbers below 2100 are reserved for internal communication and must not be used.</p>
+<p>For USB and network printers, it is recommended to close the communication channel using <a href="pclose.htm" class="topiclink">pclose</a> after data has been sent. Otherwise the printer may wait for more data to come and the operator has to press a button to release printing. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

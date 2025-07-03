@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Totalizing Scales</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Totalizing Scales</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="waagenfunktionen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="schnelle_gewichtserfassung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>RTC provides a set of instructions especially tailored for totalizing scales, where the total weight after a series of tips is subject of weights and measures:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 7px;"><span style="font-weight: bold;">Function</span></p>
+</td>
+<td style="vertical-align:top; width:592px; padding:0px;"><p style="margin: 5px 0px 5px 0px;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">decimal <a href="totalbulkweight.htm" class="topiclink">totalbulkweight</a> %10.dp</p>
+</td>
+<td style="vertical-align:top; width:592px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Variable for the totalized bulk weight over all tips.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="startbulkweighing.htm" class="topiclink">startbulkweighing</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:592px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Resets the total bulk weight and starts totalizing.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="getfilledbulkweight.htm" class="topiclink">getfilledbulkweight</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:592px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Requests the approved weight of the filled weigh hopper and updates all weight and status variables.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="getdischargedbulkweight.htm" class="topiclink">getdischargedbulkweight</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:592px; height:25px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Requests the approved weight of the discharged weigh hopper and updates all weight and status variables. The difference between filled and discharged weight of the hopper is added to the total bulk weight.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:237px; padding:0px;"><p style="margin: 5px 0px 5px 7px;">int <a href="storetotalbulkweight.htm" class="topiclink">storetotalbulkweight</a> (int sno)</p>
+</td>
+<td style="vertical-align:top; width:592px; padding:0px;"><p style="margin: 5px 0px 5px 0px;">Stores the total bulk weight in the approved weight storage and updates the ID (alibi number).</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

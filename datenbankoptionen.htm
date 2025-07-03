@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Database options" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Databases</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Options</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="datenbankfunktionen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="druckbildformatierung.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The behavior of the functions <a href="select.htm" class="topiclink">select</a> and <a href="edit.htm" class="topiclink">edit</a> can be customized through optional control statements. The control statements are appended to the field in the table declaration as below.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold;">dbase</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Article[1</span><span class="f_CodeExample" style="color: #000080;">00</span><span class="f_CodeExample">]</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;No%3.</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectmode</span><span class="f_CodeExample">=</span><span class="f_CodeExample" style="font-weight: bold;">input</span><span class="f_CodeExample">;&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Name&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Name[</span><span class="f_CodeExample" style="color: #000080;">25</span><span class="f_CodeExample">];</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Price/kg&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;Price%6.2;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Consumption&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;Total%8.</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dp</span><span class="f_CodeExample">;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">editmode</span><span class="f_CodeExample">=</span><span class="f_CodeExample" style="font-weight: bold;">skip</span><span class="f_CodeExample">;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The following control statements are available:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;"><span style="font-weight: bold;">Statement</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Applies to</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">selectmode=input</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;"><a href="select.htm" class="topiclink">select</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">During selection, a new record can be created after pressing F4 function key.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">editmode=skip</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;"><a href="edit.htm" class="topiclink">edit</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">The field is invisible during entry.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">editmode=showonly</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;">edit</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">The field can only be viewed but not entered.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">editmode=select(db)</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;">edit</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">Entry of this field is made via selection from another database table.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">range=expr</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;">edit</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">The entry is only accepted if <span style="font-style: italic;">expr</span> returns <span style="font-style: italic;">true</span>. This function can be used to check plausibility of entry.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:152px; padding:0px;"><p style="margin: 0px 0px 10px 12px;">skipcondition=expr</p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p style="text-align: center;">edit</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 10px 11px;">The entry is skipped if <span style="font-style: italic;">expr</span> returns <span style="font-style: italic;">true</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

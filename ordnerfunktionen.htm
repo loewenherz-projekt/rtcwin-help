@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Directory handling</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Communication and File Access</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Directory Handling</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="zugriff_auf_dateien.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="zugriff_auf_externe_dateien.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>RTC also provides functions to manage the accessible directories. Application-accessible directories are:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>&quot;internal&quot; or &quot;&quot;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Internal battery-backed memory, externally not accessible. If no directory name is specified, 'internal' is default.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>&quot;shared&quot;</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>Folder &quot;shared&quot; in the internal battery-backed memory that is accessible from the external via FTP.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>&quot;usbstick&quot;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Memory on the external USB memory stick. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>External network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the function <a href="smbconnect.htm" class="topiclink">smbconnect</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For directory management the following instructions are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="dopen.htm" class="topiclink">dopen</a> (int refno, string path)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Opens a directory for subsequent access.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="dclose.htm" class="topiclink">dclose</a> (int refno)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Closes a directory.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="dsort.htm" class="topiclink">dsort</a> (int refno, int crit, int dir)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Sorts the files in the directory for subsequent read cycles.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="dread.htm" class="topiclink">dread</a> (int refno, string *name)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Reads the next file name from the directory.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:149px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="dseekfirst.htm" class="topiclink">dseekfirst</a> (int refno)</p>
+</td>
+<td style="vertical-align:top; width:333px; padding:0px;"><p>Reads the first file name from the directory.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ftpget</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ftpget" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">ftpget</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="ftpconnected.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="ftplist.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Copies a file from an FTP server.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">ftpget</span> (int fno, string sname, string dname)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">File handling</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:69px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">fno<br>
+sname<br>
+dname</p>
+</td>
+<td style="vertical-align:top; width:364px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical connection number<br>
+Path and name of the source file<br>
+Path and name of the target file</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">ftpget</span><span style="font-style: italic;"> </span>copies the file specified by the parameter <span style="font-style: italic;">sname</span> from an FTP server. For this purpose, a connection has to be established beforehand via <a href="ftpopen.htm" class="topiclink">ftpopen</a> and – if applicable – a log-in performed using <a href="ftpauthenticate.htm" class="topiclink">ftpauthenticate</a>. The parameter <span style="font-style: italic;">fno</span> is the logical connection number assigned with the execution of the function <span style="font-style: italic;">ftpopen</span>.</p>
+<p>The parameter <span style="font-style: italic;">sname</span> contains the full file name and path (if applicable) of the source file on the FTP server. The parameter <span style="font-style: italic;">dname</span> contains the full name and path of the target file as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>internal/name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the battery-backed memory of the weighing terminal and cannot be accessed externally.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>shared/name.ext</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the directory &quot;shared&quot;. This folder can be accessed externally via FTP access (login: &quot;shared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>usbstick/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a USB memory stick. Further subdirectories may be specified as applicable.</p>
+<p>Files on the USB memory stick can be accessed externally via FTP (login: &quot;usbshared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the instruction <a href="smbconnect.htm" class="topiclink">smbconnect</a>. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>internal/name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the battery-backed memory of the terminal and cannot be accessed externally.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>shared/name.ext</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the directory &quot;shared&quot;. This folder can be accessed externally via FTP access (login: &quot;shared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>usbstick/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a USB memory stick. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the instruction <a href="smbconnect.htm" class="topiclink">smbconnect</a>. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>If the file name does not specify a directory, the folder 'internal' is used as default.</p>
+<p>If the file can be copied from the FTP server successfully, <span style="font-style: italic; color: #008000;">ftpget</span> returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>After file copy is completed, the FTP connection should be closed using <a href="ftpclose.htm" class="topiclink">ftpclose</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

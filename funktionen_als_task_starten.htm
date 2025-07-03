@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Run a Function as a Task</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Multitasking</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Run a Function as a Task</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="nebenablauf.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="uebersicht.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Besides the option to link certain functions to the fix system background task, it is also possible to run any function without parameters as a task. For this purpose, the following instructions are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="starttask.htm" class="topiclink">starttask</a> (procname p)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Installs and runs the given function without parameters as a background task.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="stoptask.htm" class="topiclink">stoptask</a> (procname p)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Stops execution of the given background task.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For access to commonly used system resources so-called semaphores can be defined and used for synchronization. The following instructions can be used:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;"><a href="semaphore.htm" class="topiclink">semaphore</a> name;</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Declares a semaphore variable with the provided name.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="lock.htm" class="topiclink">lock</a> (semaphore sp)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Checks the status of the given semaphore variable and locks it if possible. If the semaphore variable is already locked, further program execution is delayed until the semaphore is released.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="trylock.htm" class="topiclink">trylock</a> (semaphore sp)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Checks the status of the given semaphore variable and locks it if possible. If the semaphore variable can be locked successfully, the function returns <span style="font-style: italic;">true</span> as function result; otherwise the result is <span style="font-style: italic;">false</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="unlock.htm" class="topiclink">unlock</a> (semaphore sp)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Unlocks the given semaphore variable.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>char</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="char" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">char</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="bool.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="dbase.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Declaration Word</span></p>
+<p>Declaration of a &quot;char<span style="font-style: italic;">&quot;</span>type variable.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">char</span> name</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Declaration words</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">name &nbsp; &nbsp; </p>
+</td>
+<td style="vertical-align:top; width:1002px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Variable or function name</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">char</span> declares a variable with given <span style="font-style: italic;">name</span> or the return value of a function with <span style="font-style: italic;">name</span> as &quot;char.&quot; The type <span style="font-style: italic; color: #008000;">char</span> can contain any character from the character set or the corresponding ASCII code. During declaration, the variable <span style="font-style: italic;">name</span> may be assigned an initial value. The data type <span style="font-style: italic; color: #008000;">char</span> is compatible to the type <a href="string.htm" class="topiclink">string</a> with a length of 1.</p>
+<p>Where a variable or return value of type <span style="font-style: italic; color: #008000;">char</span> is assigned an <a href="int.htm" class="topiclink">integer</a> variable, the integer variable thereafter contains the ASCII code of the character. Contrariwise, the lower 8&nbsp;bit of the integer variable are interpreted as ASCII code.</p>
+<p>The following assignments are allowed for the data type <span style="font-style: italic; color: #008000;">char</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 19px 8px 0px;"><span style="font-family: Courier;"> &nbsp; &nbsp; &nbsp;'A'</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">The character itself in single quotes</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 18px 8px 0px;"><span style="font-family: Courier;"> &nbsp; &nbsp; &nbsp;255</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">The ASCII code of the character in decimal</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 18px 8px 0px;"><span style="font-family: Courier;"> &nbsp; &nbsp; &nbsp;0xff</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">The ASCII code of the character in hexadecimal</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="text-align: right; margin: 0px 18px 8px 0px;"><span style="font-family: Courier;"> &nbsp; &nbsp; &nbsp;'\n'</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 0px 0px 8px 0px;">The character as escape symbol (refer to <a href="string.htm" class="topiclink">string</a>)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For the function keys of the keyboard, the following constants are defined:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">ok</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The ok and enter keys of the terminal as well as the return key of a connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">cup</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Cursor-up key of the weighing terminal or the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">cdown</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Cursor-down key of the weighing terminal or the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">cright</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Cursor-right key of the weighing terminal or the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">cleft</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Cursor-left key of the weighing terminal or the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">info</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Info key of the weighing terminal</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">fct1 ... fct6</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The function keys F1 to F6 of the weighing terminal or the connected PC keyboard</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For the scale function keys, the following constants are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">tar</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Tare key of the weighing terminal or the F10 key of the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">ptar</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Preset tare key of the weighing terminal or the F8 key of the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">set0</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Zero setting key of the weighing terminal or the F11 key of the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">scale</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Scale select key of the weighing terminal or the F12 key of the connected PC keyboard</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p style="text-align: right; margin: 0px 20px 10px 0px;">sel</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Toggle key of the weighing terminal or the F9 key of the connected PC keyboard</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">char</span><span class="f_CodeExample">&nbsp;ch;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">char</span><span class="f_CodeExample">&nbsp;AbortKey&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">fct6</span><span class="f_CodeExample">;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

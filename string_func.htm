@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>string (Type Conversion)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="string" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">string</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="itof.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="adj.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Converts an expression into data type <span style="font-style: italic;">string</span>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">string</span> (any v)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Type conversion</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">v</p>
+</td>
+<td style="vertical-align:top; width:991px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Variable or function with result of any type</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">string</span> converts the variable of any type specified by the parameter <span style="font-style: italic;">v</span> into the data type <a href="string.htm" class="topiclink">string</a>. Numeric variable of type <a href="int.htm" class="topiclink">int</a>, <a href="float.htm" class="topiclink">float</a>, <a href="double.htm" class="topiclink">double</a> or <a href="decimal.htm" class="topiclink">decimal</a> are converted into a string containing the value as text, if applicable with minus sign and decimal point or comma. Variables of type <a href="bool.htm" class="topiclink">bool</a> are converted into a string of length 1, containing e.g. a 'Y' for <span style="font-style: italic;">true</span> or an 'N' for <span style="font-style: italic;">false</span>, depending on the chosen language.</p>
+<p>Instead of a variable <span style="font-style: italic;">v</span>, also a function or an algebraic expression may be provided as parameter. The numeric or Boolean result is then converted into a string as described above.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample">msg&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Deviation&nbsp;=&nbsp;&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string&nbsp;</span><span class="f_CodeExample">(deviation),&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&nbsp;%&quot;</span><span class="f_CodeExample">);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>For a formatted conversion of a number into a string, the function <a href="adj.htm" class="topiclink">adj</a> can be used.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

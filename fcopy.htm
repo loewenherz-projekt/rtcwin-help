@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>fcopy</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="fcopy" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">fcopy</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="fclose.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="fexists.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Copies the content of a file to another.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">bool <span style="font-weight: bold;">fcopy</span> (string f_source, string f_dest)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">File handling</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:85px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">f_source<br>
+f_dest </p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Name of source file<br>
+Name of target file</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Function result</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">fcopy </span>copies the content of the file specified by the parameter <span style="font-style: italic;">f_source</span> into the target file specified by the parameter <span style="font-style: italic;">f_dest</span>. The parameters <span style="font-style: italic;">f_source</span> and <span style="font-style: italic;">f_dest</span> contain the full file names and paths as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>internal/name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the battery-backed memory of the weighing terminal and cannot be accessed externally.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; height:25px; padding:0px;"><p>shared/name.ext</p>
+</td>
+<td style="vertical-align:top; height:25px; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained in the directory &quot;shared&quot;. This folder can be accessed externally via FTP access (login: &quot;shared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>usbstick/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a USB memory stick. Further subdirectories may be specified as applicable.</p>
+<p>Files on the USB memory stick can be accessed externally via FTP (login: &quot;usbshared,&quot; password as set in Service Mode).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:146px; padding:0px;"><p>sharename/.../name.ext</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The file <span style="font-style: italic;">name</span> with the extension <span style="font-style: italic;">ext</span> is contained on a network drive. <span style="font-style: italic;">sharename</span> is the symbolic path name as it was returned by the instruction <a href="smbconnect.htm" class="topiclink">smbconnect</a>. Further subdirectories may be specified as applicable.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>If the file name does not specify a directory, the folder 'internal' is used as default.</p>
+<p>If the target file does not exist, it is created by <span style="font-style: italic; color: #008000;">fcopy</span>. If the file can be copied successfully, <span style="font-style: italic; color: #339966;">fcopy</span> returns <span style="font-style: italic;">true</span> as function result. &nbsp;If the specified directory does not exist or the file cannot be copied, <span style="font-style: italic; color: #008000;">fcopy</span> returns <span style="font-style: italic;">false</span>, accordingly.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Copy&nbsp;log&nbsp;file&nbsp;to&nbsp;USB&nbsp;stick&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">bool</span><span class="f_CodeExample">&nbsp;CopyDataToLogFile&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;source_name,&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;dest_name)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;source_file[1023]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;shared/&quot;</span><span class="f_CodeExample">,&nbsp;source_name,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;.csv&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;destination_file[1023]&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">concat</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;usbstick/&quot;</span><span class="f_CodeExample">,&nbsp;dest_name,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;.csv&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">infobox</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Kopiere&nbsp;Log-Datei...&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">fexists</span><span class="f_CodeExample">&nbsp;(destination_file)&nbsp;==&nbsp;1)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">fremove</span><span class="f_CodeExample">&nbsp;(destination_file)&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Zugriff&nbsp;verweigert&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(!&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">fcopy</span><span class="f_CodeExample">&nbsp;(source_file,&nbsp;destination_file))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Datei&nbsp;konnte&nbsp;nicht&nbsp;kopiert&nbsp;werden!&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">false</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold; color: #008000;">true</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

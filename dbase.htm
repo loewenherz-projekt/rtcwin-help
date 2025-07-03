@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>dbase</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="dbase,editmode,range,selectmode,skip,skipcondition" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">dbase</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="char.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="decimal.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Declaration Word</span></p>
+<p>Declaration of a database table.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">dbase</span> prompt_t name [ recs ]<br>
+{<br>
+ &nbsp; prompt_f &nbsp; field  <span style="font-weight: bold;">editmode </span>= em ;  <span style="font-weight: bold;">selectmode </span>= sm ;<br>
+ &nbsp; ...<br>
+}</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Declaration words</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">prompt_t<br>
+name<br>
+recs<br>
+prompt_f<br>
+field<br>
+sm<br>
+em</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Operator prompt of database table (title)<br>
+Table name<br>
+Maximum number of records<br>
+Operator prompt of table field<br>
+Declaration of table field<br>
+Optional selectmode<br>
+Optional editmode</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The instruction <span style="font-style: italic; color: #008000;">dbase</span> declares a database table with given <span style="font-style: italic;">name</span>. The name is followed – in square brackets – by the maximum number of table entries (records) and – in curved brackets – by the declaration of the individual table fields. The table name may precede an optional display text for the function <a href="edit.htm" class="topiclink">edit</a>. If it is missing, the table name is displayed instead.</p>
+<p>The declaration of a table field complies with the declaration of a variable which is also given the optional operator prompting for displaying and editing the field. For table fields all types <a href="bool.htm" class="topiclink">bool</a>, <a href="char.htm" class="topiclink">char</a>, <a href="int.htm" class="topiclink">int</a>, <a href="float.htm" class="topiclink">float</a>, <a href="decimal.htm" class="topiclink">decimal</a> and <a href="string.htm" class="topiclink">string</a> are allowed. Again, the operator prompt can be omitted; a combination of table and field names is displayed in that case. Each database field can be addressed with its unique identifier consisting of the table name, a full stop and the field name, e.g. table.fieldname.</p>
+<p>The table field declared first automatically serves as index field, i.e. all entries are stored against this first field. When a record is inserted, an existing record with identical index field is overwritten. The table field declared in second position serves as additional sort criteria for the function <a href="select.htm" class="topiclink">select</a> and as an optional search field for the operation <a href="inputbox.htm" class="topiclink">inputbox</a>. </p>
+<p>If applicable, the individual table fields may be assigned the control commands <a name="selectmode"></a><span style="font-style: italic; color: #008000;">selectmode</span> and <span style="font-style: italic; color: #008000;">editmode</span>. The instruction <span style="font-style: italic; color: #008000;">selectmode</span> controls the database function <a href="select.htm" class="topiclink">select</a> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:193px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;selectmode = input</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>During execution of <a href="select.htm" class="topiclink">select</a>, the record can be edited/created after pressing the F4 key. If a value other than zero is entered in the index field, the newly created record is inserted in the database table. If zero is entered, the entered data is not stored and only temporarily available. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>The instruction <a name="editmode"></a><span style="font-style: italic; color: #008000;">editmode</span> controls the database function <a href="edit.htm" class="topiclink">edit</a> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:194px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;editmode = showonly</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The table field is only shown and cannot be edited.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:194px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;editmode = skip</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The table field is invisible during input.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:194px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;editmode = select</span>(db_name)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The entry for this database field must be a selection from another database <span style="font-style: italic;">db_name.</span> Free data entry is not allowed.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Furthermore, editing of a database field via the function <a href="edit.htm" class="topiclink">edit</a> can be controlled through the following instructions:<a name="range"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:194px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;range = </span>expr</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The table field input is checked. The entry is only accepted if the expression <span style="font-style: italic;">expr</span> returns <span style="font-style: italic;">true</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:194px; padding:0px;"><p><span style="font-weight: bold;"> &nbsp;skipcondition = </span>expr</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Entry for the table field is only enabled if the expression <span style="font-style: italic;">expr</span> returns <span style="font-style: italic;">false</span>. If the expression returns <span style="font-style: italic;">true</span>, the table field is disabled and entry is skipped.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; width:561px; padding:0px;"><p>The above listed instructions may be assigned to multiple table fields. The instruction &quot;selectmode = input,&quot; however, is only applicable for the first field.</p>
+<p>Fields with &quot;editmode=skip&quot; have to be put to the end of the table.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">dbase</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Customer&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Clients&nbsp;[1</span><span class="f_CodeExample" style="color: #000080;">00</span><span class="f_CodeExample">]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Customer&nbsp;No.&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;No%3.</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectmode&nbsp;</span><span class="f_CodeExample">=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">input;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Name&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Name[</span><span class="f_CodeExample" style="color: #000080;">25</span><span class="f_CodeExample">];</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&nbsp;&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Name2[</span><span class="f_CodeExample" style="color: #000080;">25</span><span class="f_CodeExample">];&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">skipcondition&nbsp;</span><span class="f_CodeExample">=&nbsp;Clients.Name&nbsp;==&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Street&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Street[25];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;ZIP&nbsp;Code&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Zip[</span><span class="f_CodeExample" style="color: #000080;">5</span><span class="f_CodeExample">];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">range&nbsp;</span><span class="f_CodeExample">=&nbsp;Clients.Zip&nbsp;!=&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&quot;;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;City&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">string</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;City[2</span><span class="f_CodeExample" style="color: #000080;">5</span><span class="f_CodeExample">];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Total&quot;</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">decimal</span><span class="f_CodeExample">&nbsp;&nbsp;Total%8.</span><span class="f_CodeExample" style="font-weight: bold; color: #0000ff;">dp</span><span class="f_CodeExample">;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">editmode&nbsp;</span><span class="f_CodeExample">=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">skip;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The declaration of a database table supports multi-lingual prompting. The use of the function <a href="lsub.htm" class="topiclink">lsub</a> is not necessary.</p>
+<p>All table fields are <a href="deklaration_von_variablen.htm#task-local" class="topiclink">task local</a> variables; the database table itself is stored in the non-volatile storage of the weighing terminal.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

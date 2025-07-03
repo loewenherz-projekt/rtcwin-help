@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>preadstring</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="preadstring" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">preadstring</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="preadchar.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="preceived.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Reads a string from a communication channel.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">preadstring</span> (int port, string *s, int len, char ec, float t)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Communication</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:85px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">port<br>
+s<br>
+len<br>
+ec<br>
+t</p>
+</td>
+<td style="vertical-align:top; width:988px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical port number<br>
+String variable for characters received<br>
+Number of characters to receive<br>
+End character<br>
+Timeout value</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Status</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">preadstring</span><span style="font-style: italic;"> </span>reads a string from the communication channel specified by the logical port number <span style="font-style: italic;">port</span>. The port has to be opened first (e.g. using <a href="popen.htm" class="topiclink">popen</a>). The function is terminated if either the number of characters specified by the parameter <span style="font-style: italic;">len</span> is read or the end character specified by the parameter <span style="font-style: italic;">ec</span> is received or if the maximum receive time <span style="font-style: italic;">t</span> (in seconds) has elapsed (timeout). If a string can be received successfully, it is written into the provided variable <span style="font-style: italic;">s</span>. In that case, <span style="font-style: italic; color: #008000;">preadstring</span> returns 0 as function result; otherwise the corresponding <a href="laufzeitfehler.htm" class="topiclink">error code</a> is returned instead.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Read&nbsp;data,&nbsp;end&nbsp;character&nbsp;=&nbsp;ETX,&nbsp;timeout&nbsp;=&nbsp;5&nbsp;sec.&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">preadstring&nbsp;</span><span class="f_CodeExample">(port,&nbsp;ReceiveBuffer,&nbsp;255,&nbsp;'\003',&nbsp;5)&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;ShowErrorMsg&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Error&nbsp;data&nbsp;transmission&quot;</span><span class="f_CodeExample">);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The function <span style="font-style: italic; color: #008000;">preadstring</span> only reads up to the specified end character, i.e. it is not convenient for receiving binary strings. For this purpose, the function <a href="pread.htm" class="topiclink">pread</a> should be used.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

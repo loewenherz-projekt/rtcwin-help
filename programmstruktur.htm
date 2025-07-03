@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Program Structure</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="main,Program structure,void" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Program Design</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Program Structure</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="einfuhrung.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="sprachelemente.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>In the following, the principal structure of an RTC program is shown:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">Declarations</span></p>
+</td>
+<td style="vertical-align:top; width:1004px; padding:0px;"><p>Declaration of global variables, constants, database tables, print formats, etc.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">Functions</span></p>
+</td>
+<td style="vertical-align:top; width:1004px; padding:0px;"><p>Definition of required functions and subroutines</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 48px;"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;</span><a name="main"></a><span class="f_CodeExample" style="font-weight: bold;">main</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 48px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 48px;"><span class="f_CodeExample">&nbsp;&nbsp;Statements</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 48px;"><span class="f_CodeExample">}</span></p>
+</td>
+<td style="vertical-align:top; width:1004px; padding:0px;"><p>Main program</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The first line of the main program is the program header, consisting of the type declaration <span style="font-style: italic;">void</span>, the name <span style="font-style: italic;">main</span> and a list of parameters in parentheses, which in this case is empty (void). The instructions within the curved brackets build the program code that normally consists of multiple instructions and functions calls.</p>
+<p>Above the function <span style="font-style: italic;">main</span>, further functions with any names may be defined and called up from within the main program and/or frequently used variables may be declared. Thus, the program can be structured in manageable pieces and arranged clearly.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Variables and functions have to be declared prior to the first usage.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Already existing names or reserved tokens are not permitted as variable and function names.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Names of variables and functions may consist of the characters A–Z or a–z, the numbers 0–9 and the underline character. Any special characters are not permitted. The first character of the name must not be a number.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">The length of variable and function names is limited to 64&nbsp;characters. However, account must be taken of the fact that the name of variables local to a function is composed of the function name and the variable name itself. For task local variables, also the name of the task is included in the full name.</td></tr></table></div><p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

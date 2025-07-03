@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>widget_attribute</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="widget_attribute" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">widget_attribute</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="showwindow.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="widget_background.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets the properties of an object.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">widget_attribute</span> (int id, int opt, any val)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+opt<br>
+val</p>
+</td>
+<td style="vertical-align:top; width:695px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number of the object<br>
+Property to be modified<br>
+Value the property is set to</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">widget_attribute</span> sets specific properties of the object specified by the parameter <span style="font-style: italic;">id</span>. The parameter <span style="font-style: italic;">opt</span> determines the property to be modified with the value specified by the parameter <span style="font-style: italic;">val</span> as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Property</span></p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p>WIDGET_ATTRIBUTE_NONE</p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p>No property</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p>WIDGET_ATTRIBUTE_ROWS</p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p>Sets the number of rows in a table or list object of type <a href="createwidget.htm#widget_type_table" class="topiclink">WIDGET_TYPE_TABLE</a> or <a href="createwidget.htm#widget_type_list" class="topiclink">WIDGET_TYPE_LIST</a> to the value specified by <span style="font-style: italic;">val</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p>WIDGET_ATTRIBUTE_COLUMNS</p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p>Sets the number of columns in a table object of type <a href="createwidget.htm#widget_type_table" class="topiclink">WIDGET_TYPE_TABLE</a> to the value specified by <span style="font-style: italic;">val</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p>WIDGET_ATTRIBUTE_VERTICAL_HEADER</p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p>Sets the row titles (descriptions) in a table object of type <a href="createwidget.htm#widget_type_table" class="topiclink">WIDGET_TYPE_TABLE</a> to the value specified by <span style="font-style: italic;">val</span>. The individual title texts contained in <span style="font-style: italic;">val</span> are separated by semicolons.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:63px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:276px; padding:0px;"><p>WIDGET_ATTRIBUTE_HORIZONTAL_HEADER</p>
+</td>
+<td style="vertical-align:top; width:454px; padding:0px;"><p>Sets the column titles in a table or list object of type <a href="createwidget.htm#widget_type_table" class="topiclink">WIDGET_TYPE_TABLE</a> or <a href="createwidget.htm#widget_type_list" class="topiclink">WIDGET_TYPE_LIST</a> to the value specified by <span style="font-style: italic;">val</span>. The individual title texts contained in <span style="font-style: italic;">val</span> are separated by semicolons.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>If a property is set for an object that does not support this property, the function <span style="font-style: italic; color: #008000;">widget_attribute</span> has no effect.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Prepare&nbsp;article&nbsp;table...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;CreateMyTable&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">begindraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createpage</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">PAGE_MY_TABLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">beginlayout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_VBOX</span><span class="f_CodeExample">,&nbsp;0,&nbsp;2);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_TABLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontsize</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;20);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_attribute</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_ATTRIBUTE_COLUMNS</span><span class="f_CodeExample">,&nbsp;3);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_attribute</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_ATTRIBUTE_HORIZONTAL_HEADER</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article-Nr.;</span><span class="f_CodeExample" style="color: #0000ff;">Description</span><span class="f_CodeExample" style="color: #0000ff;">;Target&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_attribute</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_ATTRIBUTE_ROWS</span><span class="f_CodeExample">,&nbsp;5);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Current&nbsp;consec&nbsp;is&nbsp;displayed,&nbsp;if&nbsp;ID5&nbsp;isn&acute;t&nbsp;predefined,&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_attribute</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_ATTRIBUTE_VERTICAL_HEADER</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;ID1;ID2;ID3;ID4&quot;</span><span class="f_CodeExample">);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Predefinded&nbsp;default&nbsp;descriptions&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;1&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;0,&nbsp;0);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Row=1,&nbsp;Column=0</span><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Descr.1&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0,&nbsp;1);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Target&nbsp;1&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;0,&nbsp;2);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;2&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;1,&nbsp;0);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Descr.2&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,&nbsp;1);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Target&nbsp;2&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;1,&nbsp;2);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;3&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;2,&nbsp;0);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Descr.3&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,&nbsp;1);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Target&nbsp;3&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;2,&nbsp;2);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Article&nbsp;4&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;3,&nbsp;0);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Descr.4&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3,&nbsp;1);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">ID_TABLE_GUI</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Target&nbsp;4&quot;</span><span class="f_CodeExample">,&nbsp;&nbsp;&nbsp;&nbsp;3,&nbsp;2);&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Row=3,&nbsp;Column=2</span><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">endlayout</span><span class="f_CodeExample">&nbsp;();&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">enddraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Applicable preprocessor constants (e.g. WIDGET_ATTRIBUTE_ROWS) are available in the file &quot;qtmonitor.h.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

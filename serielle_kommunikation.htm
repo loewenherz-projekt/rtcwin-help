@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Serial Communication</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Communication and File Access</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Serial Communication</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="analog_ein-ausgaenge.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="zugriff_auf_dateien.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>For the communication via serial interface or TCP/IP port, the following functions are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="popen.htm" class="topiclink">popen</a> (int port, string s)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Open a communication channel (ports 0–7 are generally open)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">void <a href="pclose.htm" class="topiclink">pclose</a> (int port)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Close a communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="pconnected.htm" class="topiclink">pconnected</a> (int port)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Check the connection status of a communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="preceived.htm" class="topiclink">preceived</a> (int port)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Check communication channel for available characters not yet read</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">bool <a href="ptxready.htm" class="topiclink">ptxready</a> (int port)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Check if communication channel is ready for transmission</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">char <a href="preadchar.htm" class="topiclink">preadchar</a> (int port)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Read a character from a communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="pwritechar.htm" class="topiclink">pwritechar</a> (int port, char ch)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Output a character to a communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="preadstring.htm" class="topiclink">preadstring</a> (int port, string s, int len,<br>
+ char eoc, float timeout)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Read string from a communication channel under consideration of an end character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="pread.htm" class="topiclink">pread</a> (int port, string s, int len,<br>
+ float timeout)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Read string from a communication channel without consideration of an end character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="pwritestring.htm" class="topiclink">pwritestring</a> (int port, string s, int len)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Output a string to a communication channel</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="readstring.htm" class="topiclink">readstring</a> (int port, string s)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Read a string from a communication channel using the communication protocol set up in Service Mode</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:252px; padding:0px;"><p style="margin: 0px 0px 10px 7px;">int <a href="writestring.htm" class="topiclink">writestring</a> (int port, string s)</p>
+</td>
+<td style="vertical-align:top; width:659px; padding:0px;"><p>Output a string to a communication channel using the communication protocol set up in Service Mode</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

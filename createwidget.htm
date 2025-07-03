@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>createwidget</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="createwidget,Widget types" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">createwidget</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="createpage.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="createwindow.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Creates an object.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">void <span style="font-weight: bold;">createwidget</span> (int id, int type)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Touch screen programming</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:78px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">id<br>
+type</p>
+</td>
+<td style="vertical-align:top; width:770px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Logical reference number to access the object<br>
+Object type</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; width:78px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">-</p>
+</td>
+<td style="vertical-align:top; width:770px; padding:0px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">createwidget</span> creates a new object on the current page. The parameter <span style="font-style: italic;">id</span> can freely be chosen by the programmer and has to be unique on the given page. It is used to identify and reference the object for later use. </p>
+<p>The parameter <span style="font-style: italic;">type</span> specifies the object type as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;"><span style="font-weight: bold;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p><span style="font-weight: bold;">Alias</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">0</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_BUTTON</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a button.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">1</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_TEXT_OUTPUT</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">2</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_TEXT_INPUT</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a text input field.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">3</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_LIST</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a list from which the user can select an item.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_TABLE</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a table.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">5</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_CHECKBOX</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a box which the user can check or uncheck (Boolean).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">6</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_COMBOBOX</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a selectbox.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">7</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_SKETCH</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a drawing area for the standard RTC write and drawing instructions.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_STRETCH</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a spacer.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">9</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_TEXT_INPUT_USER</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is a text input with proximity search, e.g. to lookup data from a database table.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">10</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_TAB</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p><span style="font-style: italic;">reserved</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50px; padding:0px;"><p style="text-align: center;">11</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:0px;"><p>WIDGET_TYPE_ONOFF</p>
+</td>
+<td style="vertical-align:top; width:502px; padding:0px;"><p>Object is an on/off button which the user can switch (Boolean).</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">enum</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">PAGE_1</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">PAGE_2</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">PAGE_3</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">&nbsp;&nbsp;/*&nbsp;..&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Draw&nbsp;Window</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #800000;">#define&nbsp;ST_BOX_STYLE</span><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;background:&nbsp;&nbsp;&nbsp;&nbsp;#5a7cf9;&quot;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-style:&nbsp;&nbsp;outset;&quot;&nbsp;\&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-width:&nbsp;&nbsp;0.1px;&quot;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Ouput&nbsp;of&nbsp;the&nbsp;window</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #800000;">#define&nbsp;ST_BOXTEXT_STYLE</span><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&quot;background:&nbsp;&nbsp;&nbsp;&nbsp;#5a7cf9;&quot;&nbsp;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;foreground:&nbsp;&nbsp;&nbsp;&nbsp;white;&quot;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;padding:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.3em;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-color:&nbsp;&nbsp;white&nbsp;white&nbsp;white&nbsp;white;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;padding-left:&nbsp;&nbsp;0.5em;&nbsp;padding-right:&nbsp;0.5em;&quot;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;padding-top:&nbsp;&nbsp;&nbsp;10px;&nbsp;padding-bottom:&nbsp;10px;&quot;&nbsp;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-style:&nbsp;&nbsp;solid;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;border-radius:&nbsp;5px&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;CreateInfoBox&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">begindraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwindow</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WINDOW_TYPE_POPUP</span><span class="f_CodeExample">,&nbsp;&quot;&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">windowstyle</span><span class="f_CodeExample">&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">ST_BOX_STYLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">beginlayout</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">LAYOUT_TYPE_VBOX</span><span class="f_CodeExample">,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">createwidget</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TYPE_TEXT_OUTPUT</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_size_policy</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">SIZE_POLICY_MINIMUM</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_style</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #800000;">ST_BOXTEXT_STYLE</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_fontsize</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;30);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_foreground</span><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;white&quot;</span><span class="f_CodeExample">);&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;white&nbsp;or&nbsp;#FFFFF</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text_alignment</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">WIDGET_TEXT_ALIGN_HCENTER&nbsp;</span><span class="f_CodeExample">|</span><span class="f_CodeExample" style="color: #800000;">&nbsp;WIDGET_TEXT_ALIGN_VCENTER</span><span class="f_CodeExample">));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">endlayout</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">enddraw</span><span class="f_CodeExample">&nbsp;();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">//&nbsp;Show&nbsp;version&nbsp;info&nbsp;for&nbsp;2&nbsp;seconds&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&nbsp;StartUpMessage&nbsp;(</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">begindraw</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">selectwindow</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">widget_text</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">GUI_OUTPUT_STATUS</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #800000;">TX_PROGRAM_VERSION</span><span class="f_CodeExample">));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">showwindow</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">enddraw</span><span class="f_CodeExample">();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delay</span><span class="f_CodeExample">&nbsp;(2);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">hidewindow</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #800000;">SOFTWARE_VERSION_WINDOW</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Note:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Applicable preprocessor constants (e.g. <span style="font-style: italic;">WIDGET_TYPE_BUTTON</span>) are available in the file &quot;qtmonitor.h.&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

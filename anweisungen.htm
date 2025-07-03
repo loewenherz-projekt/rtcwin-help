@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Statements</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Assignments,Compound statements,Statements" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp;  </span><span class="f_Heading1" style="font-style: italic;">Program Design</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Statements</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="sprachelemente.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="ausdruecke.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The instruction part between the two curved brackets defines the action of the program or function. It typically consists of multiple individual statements and expressions. In detail:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Assignments</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:242px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">i = 0;</span></p>
+</td>
+<td style="vertical-align:top; width:976px; padding:0px;"><p>A variable is assigned a constant value.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:242px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">j = ConsNo;</span></p>
+</td>
+<td style="vertical-align:top; width:976px; padding:0px;"><p>A variable is assigned the content of another variable.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:242px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">i = j + 1;</span></p>
+</td>
+<td style="vertical-align:top; width:976px; padding:0px;"><p>A variable is assigned the result of a mathematical operation.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Function calls</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">PrintHeader();</span></p>
+</td>
+<td style="vertical-align:top; width:978px; padding:0px;"><p>Call of the function <span style="font-style: italic;">PrintHeader</span> (without parameters).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New'; font-weight: bold;">mantare </span><span style="font-family: 'Courier New';">(2, 12.5);</span></p>
+</td>
+<td style="vertical-align:top; width:978px; padding:0px;"><p>Call of the function <span style="font-style: italic;">mantare</span> with two parameters.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">i = </span><span style="font-family: 'Courier New'; font-weight: bold;">length </span><span style="font-family: 'Courier New';">(s);</span></p>
+</td>
+<td style="vertical-align:top; width:978px; padding:0px;"><p>Call of the function <span style="font-style: italic;">length</span>. The function result is assigned to the variable <span style="font-style: italic;">i</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Control structures</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:242px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">if (i &gt; 0) j = i * 2;</span></p>
+</td>
+<td style="vertical-align:top; width:976px; padding:0px;"><p>Conditional assignment or function call.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:242px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New'; font-weight: bold;">while</span><span style="font-family: 'Courier New';"> (ch != 0)</span><br>
+<span style="font-family: 'Courier New';"> &nbsp;ch = </span><span style="font-family: 'Courier New'; font-weight: bold;">readkey</span><span style="font-family: 'Courier New';">();</span></p>
+</td>
+<td style="vertical-align:top; width:976px; padding:0px;"><p>Repetitive statement or function call.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:13px;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span></td><td style="border:none">Compound statements</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:243px; padding:0px;"><p style="margin: 0px 0px 10px 49px;"><span style="font-family: 'Courier New';">{</span><br>
+<span style="font-family: 'Courier New';">  </span><span style="font-family: 'Courier New'; font-weight: bold;">getweight </span><span style="font-family: 'Courier New';">(1);</span><br>
+<span style="font-family: 'Courier New';"> &nbsp;PosNo = i + 1;</span><br>
+<span style="font-family: 'Courier New';"> &nbsp;PrintTicket();</span><br>
+<span style="font-family: 'Courier New';">}</span></p>
+</td>
+<td style="vertical-align:top; width:975px; padding:0px;"><p>By a pair of curved brackets, multiple statements and function calls may be combined to a so-called compound statement.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Every statement or assignment must be terminated by a semicolon.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

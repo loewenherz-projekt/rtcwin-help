@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>input</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="input" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">input</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="infobox.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="inputbox.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Entry of a variable in default display.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">char <span style="font-weight: bold;">input</span> (int x, int y, any v)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Display and keyboard</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:78px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">x<br>
+y<br>
+v</p>
+</td>
+<td style="vertical-align:top; width:324px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Horizontal coordinate x in pixels<br>
+Vertical coordinate y in pixels<br>
+Variable of any type to be entered</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Code of terminating function key</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The instruction <span style="font-style: italic; color: #008000;">input</span> creates an input field for the variable specified by <span style="font-style: italic;">v</span> at the position specified by the parameters <span style="font-style: italic;">x</span> and <span style="font-style: italic;">y</span> and enables data entry for the variable through the terminal keyboard or the connected PC keyboard on the default display. The function uses font 28 (RTC Mono) with the currently selected font size. The writing color is black; the background is changed to blue. </p>
+<p>The entry is terminated when the enter key, a function key or any other special key is pressed. The <a href="tastencodes.htm" class="topiclink">key code</a> of the key pressed for termination is returned as function result.</p>
+<p>If in advance the variable has been assigned an additional help text via the instruction <a href="setinfo.htm" class="topiclink">setinfo</a>, the F5 key can be pressed during data entry to call up that help text. Accordingly, the F5 key is labeled 'Info' and thus no more available for termination of the entry.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold;">showtext&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">&quot;Order&quot;</span><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ch&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">input&nbsp;</span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="color: #000080;">80</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">10</span><span class="f_CodeExample">,&nbsp;OrderNo);</span></p>
+<p class="p_Image"><img src="input.png" width="422" height="160" alt="" style="width:422px;height:160px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">bool</span></p>
+<p>The value of <span style="font-style: italic;">v</span> is shown as 'N' for <span style="font-style: italic;">false</span> and – according to the current language setting in Service Mode – with 'Y' (Yes) or e.g. 'O' ('Oui) for <span style="font-style: italic;">true</span>. The keys '0' (<span style="font-style: italic;">false</span>) and '1' (<span style="font-style: italic;">true</span>) can be used for input. Alternatively, the operator can use the horizontal cursor keys to toggle between Yes and No.</p>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">string</span></p>
+<p>The content of <span style="font-style: italic;">v</span> is shown left-adjusted in the input field. The width of the input field is the length given to the variable during declaration. Data entry is from left to right.</p>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">decimal</span></p>
+<p>The value of <span style="font-style: italic;">v</span> is shown right-adjusted in the input field. The length of the input field as well as the number of decimals correspond to the format specified during declaration of the variable. During entry, first the digits left of the decimals point are entered right-adjusted with previously entered numbers being shifted left. After pressing the decimal point key, the decimal digits are entered from left to right.</p>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">int</span></p>
+<p>The value of <span style="font-style: italic;">v</span> is shown right-adjusted in the input field. The length of the input field corresponds to the format specified during declaration of the variable. If no length has been specified during declaration, the variable is shown in a field with a fix length of 10&nbsp;digits. The input is right-adjusted with previously entered figures being shifted left.</p>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">float</span></p>
+<p>The value of <span style="font-style: italic;">v</span> is shown right-adjusted in the input field. The length of the input field as well as the number of decimals correspond to the format specified during declaration of the variable. If no format has been specified during declaration, the variable is shown in a field with a fix length of 12&nbsp;digits. In this case, the number of decimals is fixed to four. The data entry of <span style="font-style: italic;">float</span> variables corresponds to <span style="font-style: italic;">decimal</span> variables.</p>
+<p class="p_Caption"><span class="f_Caption">Input of a variable of type </span><span class="f_Caption" style="font-style: italic;">double</span></p>
+<p>The value of <span style="font-style: italic;">v</span> is shown right-adjusted in the input field. The length of the input field as well as the number of decimals correspond to the format specified during declaration of the variable. If no format has been specified during declaration, the variable is shown in a field with a fix length of 19&nbsp;digits and a fix number 8&nbsp;trailing decimals. The data entry of <span style="font-style: italic;">float</span> variables corresponds to <span style="font-style: italic;">decimal</span> variables.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

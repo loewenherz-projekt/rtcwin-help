@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Arrays</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Arrays" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Variables and Constants</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Arrays</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="deklaration_von_variablen.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="deklaration_von_strukturen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Where multiple implementations of the identical variable are needed, e.g. for multiple setpoint values, the variable may be declared as array. Doing so, only the first variable element is declared, followed by the number of required implementations.</p>
+<p style="margin: 0px 0px 10px 96px;">Type &nbsp;Name [ Number ]</p>
+<p><span style="font-style: italic;">Type</span> is the data type specifying the value facet of the variable; <span style="font-style: italic;">Name</span> is the name of the variable. <span style="font-style: italic;">Number</span> is an integer value greater 0 that specifies the number of array elements.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;decimal</span><span style="font-family: 'Courier New';"> FixTare%6.1[8];</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of a decimal array for 8 fix tare values (length of 6 and one decimal each)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;string </span><span style="font-family: 'Courier New';">InfoText[4][40];</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>String array for four 40-character information texts (see notes)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Arrays may also be two-dimensional.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:240px; padding:0px;"><p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;int</span><span style="font-family: 'Courier New';"> Matrix[4][6];</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Declaration of a matrix with 4 lines and 6 columns</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Arrays with three and more dimensions are not supported. <a href="string.htm" class="topiclink">String</a> arrays can only have one dimension since they already have to be considered as <a href="char.htm" class="topiclink">char</a> arrays.</p>
+<p>Reference to a certain array element is accomplished via the name of the array followed by the ID of the element in square brackets. The ID starts with zero for the first element.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:239px; padding:0px;"><p><span style="font-family: 'Courier New'; font-weight: bold;">  </span><span style="font-family: 'Courier New';">FixTare[2];</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Access to the third (!) fix tare value</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:239px; padding:0px;"><p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;for </span><span style="font-family: 'Courier New';">(i = 0; i &lt; 4; i++)</span><br>
+<span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; </span><span style="font-family: 'Courier New';">InfoText[i] = &nbsp;&quot;&quot;;</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Clearing of the four info texts</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:239px; height:28px; padding:0px;"><p><span style="font-family: 'Courier New';"> &nbsp;Matrix[1][3];</span></p>
+</td>
+<td style="vertical-align:top; height:28px; padding:0px;"><p>Access to the fourth element of the second line</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Arrays may also be assigned start values during declaration:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:239px; padding:0px;"><p><span class="f_CodeExample" style="font-weight: bold;"> &nbsp;float</span><span class="f_CodeExample"> Fixpoints[3] = {0.5,</span><br>
+<span class="f_CodeExample"> &nbsp; &nbsp; 1.75, 3};</span></p>
+</td>
+<td style="vertical-align:top; width:537px; padding:0px;"><p>Declaration of a three-element array <span style="font-style: italic;">Fixpoints</span> with start values 0.5, 1.75 and 3.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:239px; padding:0px;"><p><span class="f_CodeExample" style="font-weight: bold;"> &nbsp;int</span><span class="f_CodeExample"> Matrix[2][3] = {10, 11,</span><br>
+<span class="f_CodeExample"> &nbsp; &nbsp; 12, 20, 21, 22};</span></p>
+</td>
+<td style="vertical-align:top; width:537px; padding:0px;"><p>Declaration of a two-dimensional array matrix with the two lines containing the values 10, 11, and 12 and 20, 21 and 22.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:98px; padding:0px;"><p><span style="font-weight: bold;">Notes:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>During the declaration of a <span style="font-style: italic;">string</span> variable, strictly spoken an array of type <a href="char.htm" class="topiclink">char</a> is declared. This explains why the maximum string length has to be specified in square brackets.</p>
+<p>For the same reason in a <span style="font-style: italic;">string</span> array (i.e. a two-dimensional <span style="font-style: italic;">char</span> arrays), the order of string length (columns) and number of array elements (lines) is apparently interchanged.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

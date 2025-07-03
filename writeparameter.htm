@@ -1,0 +1,853 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>writeparameter</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="writeparameter" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">writeparameter</span></h1>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="time.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="background_task.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Caption"><span class="f_Caption">RTC Function</span></p>
+<p>Sets a system or Service Mode parameter.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Declaration:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">int <span style="font-weight: bold;">writeparameter</span> (string group, string par, string val)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Group:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">System</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Parameters:</span></p>
+</td>
+<td style="vertical-align:top; width:49px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">group<br>
+par<br>
+val</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Parameter group<br>
+Parameter name<br>
+Value</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Return value:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Error code</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The function <span style="font-style: italic; color: #008000;">writeparameter</span><span style="font-style: italic;"> </span>sets the parameter specified by <span style="font-style: italic;">par</span> in the group <span style="font-style: italic;">group</span> to the value specified by the parameter <span style="font-style: italic;">val</span>. This may concern system settings as well as Service Mode parameters. If the parameter can be set successfully, <span style="font-style: italic; color: #008000;">writeparameter </span>returns 0 as function result; otherwise an <a href="laufzeitfehler.htm" class="topiclink">error code</a> is returned instead.</p>
+<p>Following a list of system parameters that can be modified using <span style="font-style: italic; color: #008000;">writeparameter</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Default / Sample</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">System</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Languages</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;German,1,de;English,1,[gb,us]&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Installs language selection in Service Mode. The individual language strings have to be separated by semicolons and consist of the language prompt, the number of the applicable ISO&nbsp;8859 code page and the layout of the external PC keyboard.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Printer</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;2&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Port number of default printer channel, e.g. as used by the function <a href="edit.htm" class="topiclink">edit</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">X1</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;15&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Horizontal start position of operator prompting for the functions <a href="inputbox.htm" class="topiclink">inputbox</a> and <a href="edit.htm" class="topiclink">edit</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">X2</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;120&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Horizontal start position of variables for the functions <a href="inputbox.htm" class="topiclink">inputbox</a> and <a href="edit.htm" class="topiclink">edit</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Y1</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;2&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Vertical start position of the title for <a href="inputbox.htm" class="topiclink">inputbox</a>, <a href="selectbox.htm" class="topiclink">selectbox</a> and <a href="edit.htm" class="topiclink">edit</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Y2</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;18&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Vertical start position of the line below the title for <a href="inputbox.htm" class="topiclink">inputbox</a>, <a href="selectbox.htm" class="topiclink">selectbox</a> and <a href="edit.htm" class="topiclink">edit</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Y3</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;24&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Vertical start position of the topmost line for <a href="inputbox.htm" class="topiclink">inputbox</a>, <a href="selectbox.htm" class="topiclink">selectbox</a> and <a href="edit.htm" class="topiclink">edit</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Delta</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;15&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Line spacing for <a href="inputbox.htm" class="topiclink">inputbox</a>, <a href="selectbox.htm" class="topiclink">selectbox</a> and <a href="edit.htm" class="topiclink">edit</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Lines</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;7&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Number of lines for <a href="inputbox.htm" class="topiclink">inputbox</a> and <a href="edit.htm" class="topiclink">edit</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Lines_Findbox</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;8&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Lines for <a href="searchbox.htm" class="topiclink">searchbox</a> incl. title.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Delta_Findbox</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;16&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Line spacing for <a href="searchbox.htm" class="topiclink">searchbox</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">PPN_Font</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;24&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Standard proportional font</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">PPB_Font</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;25&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Standard proportional font, bold</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">MSN_Font</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;28&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Standard monospaced font</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">MSB_Font</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;29&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Standard monospaced font, bold</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Size</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;13&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Default font size of all standard dialog functions</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Titlesize</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;13&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Font size of the title for <a href="inputbox.htm" class="topiclink">inputbox</a>, <a href="selectbox.htm" class="topiclink">selectbox</a> and <a href="edit.htm" class="topiclink">edit</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;20&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Default background color</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Foreground</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;0&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Default drawing color</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background_Errorbox</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;88&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background color for run-time errors</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background_Inputfield</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;238&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background color of input field</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background_Infobox</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;25&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background color for <a href="infobox.htm" class="topiclink">infobox</a> and <a href="codebox.htm" class="topiclink">codebox</a></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background_Yesnobox</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;25&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background color for <a href="yesnobox.htm" class="topiclink">yesnobox</a></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:150px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background_Info</p>
+</td>
+<td style="vertical-align:top; width:133px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;255&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">Background color for additional help texts with <a href="setinfo.htm" class="topiclink">setinfo</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>In addition, <span style="font-style: italic; color: #008000;">writeparameter</span> allows to modify the following language dependent strings that are internally used by the standard dialog functions:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; width:232px; padding:0px;"><p style="margin: 4px 0px 4px 0px;"><span style="font-weight: bold;">Default / Sample</span></p>
+</td>
+<td style="vertical-align:top; width:575px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">System</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX01_Y</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Y&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX01_N</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;N&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_NO</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;No&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_YES</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Yes&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_PRINT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Print&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_EDIT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Edit&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_SELECT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Select&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_FIND</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Search&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_DELETE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Delete&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_RESTORE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Restore&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_FINISH</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Finish&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_RETURN</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Return&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_INPUT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Input&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG1</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Please verify input&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG2</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Password is wrong!&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG3</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Are you sure?&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG4</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Print... (Abort=F6)&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG5</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;\\New entry|&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_MSG6</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;No label found!&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_WAITSCALE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Waiting for scale...&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_NO_LABEL_FOUND</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;No label found!&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_NO_LABEL</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;No label&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX07_INFO</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Info&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX32_LOCKED</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;locked&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_DATABASE_SAVE_DATA</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Loading data from file...\n&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_DATABASE_LOAD_DATA</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Saving data for file...\n&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_DATABASE_FILE_NOT_FOUND</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;File not found!\n&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_SAVE_INPUT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Save entries?&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_OK</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;OK&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_ENTRY_NOT_FOUND</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Record not found!&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_LAST_ENTRY_DELETED</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Last record deleted!&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_SAVE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Save&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_ABORT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Abort&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_BUTTON_NEW_ENTRY</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;New entry&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_NOT_EDITABLE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Print format cannot be\nedited!\nRestore default?&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_FIELD</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Field&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_LINE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Line&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_COLUMN</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Column&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_PREFIX</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Prefix&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_SUFFIX</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Suffix&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p>TX_FORMAT_NAME</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Name&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_TEXT</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Text&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_ATTRIBUTE</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Attr.&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_FORMAT_GENERAL</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;General&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:244px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">TX_SAVE_FAILED</p>
+</td>
+<td colspan="2" style="vertical-align:top; width:807px; padding:0px;"><p style="margin: 4px 0px 4px 0px;">&quot;Error saving!&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Following a selection of <a href="service_mode_parameter.htm" class="topiclink">Service Mode parameters</a>that can be set using <span style="font-style: italic; color: #008000;">writeparameter</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Group</span></p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;"><span style="font-weight: bold;">Example</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;"><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">General</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Language<br>
+Dateformat<br>
+Timeformat<br>
+Decimal Char<br>
+Approval Signs<br>
+Terminal</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 10px;">&quot;1,English&quot;<br>
+&quot;9,DD.MM.YYYY&quot;<br>
+&quot;1,HH:MM:SS&quot;<br>
+&quot;,&quot;<br>
+&quot;0<br>
+&quot;001</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Network</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">IPAddress<br>
+Netmask<br>
+Gateway</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;10.0.1.175&quot;<br>
+&quot;255.255.0.0&quot;<br>
+&quot;0.0.0.0&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Sio1<br>
+Sio2 ...</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Baudrate<br>
+Bits<br>
+Parity<br>
+Handshake<br>
+Protocol</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;19200&quot;<br>
+&quot;8&quot;<br>
+&quot;0&quot;<br>
+&quot;0&quot;<br>
+&quot;0&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">Sio1 refers to the Ethernet port whereas Sio2 and higher refer to the serial ports COM1 etc.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AIn1<br>
+AIn2 ...</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">AOut1<br>
+AOut2 ...</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Maximum<br>
+Offset<br>
+Mode<br>
+Module<br>
+Address<br>
+Port<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Combus</p>
+</td>
+<td style="vertical-align:top; width:151px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">Address<br>
+Type</p>
+</td>
+<td style="vertical-align:top; width:132px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&quot;3&quot;<br>
+&quot;0&quot;</p>
+</td>
+<td style="vertical-align:top; width:521px; padding:0px;"><p style="margin: 10px 0px 10px 12px;">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:145px; padding:0px;"><p><span style="font-weight: bold;">Example:</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-style: italic; color: #ff0000;">/*&nbsp;Set&nbsp;date&nbsp;format&nbsp;to&nbsp;DD/MM/YY&nbsp;*/</span><br>
+<span class="f_CodeExample">result&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">writeparameter</span><span class="f_CodeExample">&nbsp;(</span><span class="f_CodeExample" style="color: #0000ff;">&quot;General&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;Dateformat&quot;</span><span class="f_CodeExample">,&nbsp;</span><span class="f_CodeExample" style="color: #0000ff;">&quot;6&quot;</span><span class="f_CodeExample">);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

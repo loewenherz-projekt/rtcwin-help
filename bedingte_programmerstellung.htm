@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Conditional Programming</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#158AFF">
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">The Programming Language RTC &nbsp; &nbsp; </span><span class="f_Heading1" style="font-style: italic;">Preprocessor</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Conditional Programming</span></h2>
+
+    </td>
+    <td align="right" valign="bottom">
+     <span style="font-size: 9pt">
+     <a href="einfuhrung.htm"><img src="top_btn.png" border=0 alt="Anfang"></a>&nbsp;
+     <a href="einbinden_externer_dateien.htm"><img src="prev_btn.png" border=0 alt="Zurück"></a>&nbsp;
+     <a href="steueranweisungen.htm"><img src="next_btn.png" border=0 alt="Weiter"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Constants defined via the <span style="font-family: Courier;">#define</span> statement may be evaluated by the preprocessor in an if-clause to generate different programs out of the same source file. The following structures are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#ifdef&nbsp;&nbsp;name</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;RTC&nbsp;statements</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>The preprocessor includes the RTC statements between the <span style="font-family: Courier;">#ifdef</span> and the <span style="font-family: Courier;">#endif</span> in the generated program only if &quot;name&quot; does exist.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#ifndef&nbsp;&nbsp;name</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;RTC&nbsp;statements</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>The preprocessor includes the RTC statements between the <span style="font-family: Courier;">#ifndef</span> and the <span style="font-family: Courier;">#endif</span> in the generated program only if &quot;name&quot; does not exist.</p>
+<p>Both instructions <span style="font-family: Courier;">#ifdef</span> and <span style="font-family: Courier;">#ifndef</span> may be extended with an optional <span style="font-family: Courier;">#else</span> portion:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:0px;"><p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#ifdef&nbsp;&nbsp;name</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;RTC&nbsp;statements-1</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#else</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample">&nbsp;&nbsp;RTC&nbsp;statements-2</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 11px;"><span class="f_CodeExample" style="font-weight: bold; color: #800000;">#endif</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>If &quot;name&quot; exists, the preprocessor includes the RTC statements-1 in the program; otherwise the RTC statements-2 are included.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span></p>
+<p>Predefined <a href="praeprozessor-konstanten.htm" class="topiclink">preprocessor constants</a> are available to customize application programs for different hardware platforms or interpreter versions.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>
